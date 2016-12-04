@@ -18,11 +18,6 @@
  */
 
 #include <ioport.h>
-extern void bl_init(void);
-extern void bl_testloop(void);
-extern void bl_loop_poll(void);
-extern void bl_spi_test_loop(void);
-
 #include <asf.h>
 #include <board.h>
 #include <conf_board.h>
@@ -53,9 +48,7 @@ void board_init(void) {
 extern void jump_into_user_code(void)  __attribute__((noreturn));
 
 int main (void) {
-    uint32_t stable;
     board_init();
-    load_calib();
 
     // Verify BL policy
     uint32_t active = 0;
@@ -81,3 +74,4 @@ int main (void) {
         jump_into_user_code();
     }
 }
+

@@ -90,15 +90,33 @@ src/bl_commands.o \
 src/crc32.o \
 src/jumpfunc.o
 
-OUTPUT_FILE_PATH +=STORM_v3.elf
+BINARY_NAME=hail_bootloader
+
+OUTPUT_FILE_PATH +=$(BINARY_NAME).elf
 CCBIN=arm-none-eabi-gcc
 OBJCOPY=arm-none-eabi-objcopy
 OBJDUMP=arm-none-eabi-objdump
 SIZE=arm-none-eabi-size
 JLINK=JLinkExe
-CINCLUDES=-I"../src" -I"../src/ASF/common/boards/user_board" -I"../src/ASF/common/utils" -I"../src/ASF/sam/utils" -I"../src/ASF/sam/utils/cmsis/sam4l/include" -I"../src/ASF/sam/utils/cmsis/sam4l/source/templates" -I"../src/ASF/sam/utils/header_files" -I"../src/ASF/sam/utils/preprocessor" -I"../src/ASF/thirdparty/CMSIS/Include" -I"../src/ASF/thirdparty/CMSIS/Lib/GCC" -I"../src/config" -I"$(ToolchainDir)\..\..\CMSIS_Atmel" -I"$(ToolchainDir)\..\..\CMSIS_Atmel\CMSIS\Include" -I"$(ToolchainDir)\..\..\CMSIS_Atmel\Device\ATMEL" -I"$(ToolchainDir)\..\..\CMSIS_Atmel\Device\ATMEL\sam4l\include" -I"../src/ASF/sam/drivers/bpm" -I"../src/ASF/sam/drivers/flashcalw" -I"../src/ASF/common/services/clock" -I"../src/ASF/common/services/ioport" -I"../src/ASF/sam/drivers/wdt" -I"../src/ASF/common/boards" -I"../src/ASF/sam/drivers/acifc" -I"../src/ASF/sam/drivers/adcife" -I"../src/ASF/sam/drivers/aesa" -I"../src/ASF/sam/drivers/ast" -I"../src/ASF/sam/drivers/cpu" -I"../src/ASF/sam/drivers/crccu" -I"../src/ASF/sam/drivers/dacc" -I"../src/ASF/sam/drivers/freqm" -I"../src/ASF/sam/drivers/eic" -I"../src/ASF/sam/drivers/events" -I"../src/ASF/sam/drivers/gloc" -I"../src/ASF/sam/drivers/gpio" -I"../src/ASF/sam/drivers/hmatrixb" -I"../src/ASF/sam/drivers/lcdca" -I"../src/ASF/sam/drivers/pdca" -I"../src/ASF/sam/drivers/picouart" -I"../src/ASF/sam/drivers/spi" -I"../src/ASF/sam/drivers/tc" -I"../src/ASF/sam/drivers/twim" -I"../src/ASF/sam/drivers/twis" -I"../src/ASF/sam/drivers/usart" -I"../src/ASF/common/services/serial/sam_uart" -I"../src/ASF/common/services/serial" -I"../src/ASF/common/services/sleepmgr" -I"../src/ASF/common/utils/stdio/stdio_serial" -I"../src/ASF/sam/drivers/parc"
+CINCLUDES=-I"../src" -I"../src/ASF/common/boards/user_board" -I"../src/ASF/common/utils" -I"../src/ASF/sam/utils"
+CINCLUDES+=-I"../src/ASF/sam/utils/cmsis/sam4l/include" -I"../src/ASF/sam/utils/cmsis/sam4l/source/templates"
+CINCLUDES+=-I"../src/ASF/sam/utils/header_files" -I"../src/ASF/sam/utils/preprocessor" -I"../src/ASF/thirdparty/CMSIS/Include"
+CINCLUDES+=-I"../src/ASF/thirdparty/CMSIS/Lib/GCC" -I"../src/config" -I"$(ToolchainDir)\..\..\CMSIS_Atmel"
+CINCLUDES+=-I"$(ToolchainDir)\..\..\CMSIS_Atmel\CMSIS\Include" -I"$(ToolchainDir)\..\..\CMSIS_Atmel\Device\ATMEL"
+CINCLUDES+=-I"$(ToolchainDir)\..\..\CMSIS_Atmel\Device\ATMEL\sam4l\include" -I"../src/ASF/sam/drivers/bpm"
+CINCLUDES+=-I"../src/ASF/sam/drivers/flashcalw" -I"../src/ASF/common/services/clock" -I"../src/ASF/common/services/ioport"
+CINCLUDES+=-I"../src/ASF/sam/drivers/wdt" -I"../src/ASF/common/boards" -I"../src/ASF/sam/drivers/acifc"
+CINCLUDES+=-I"../src/ASF/sam/drivers/adcife" -I"../src/ASF/sam/drivers/aesa" -I"../src/ASF/sam/drivers/ast"
+CINCLUDES+=-I"../src/ASF/sam/drivers/cpu" -I"../src/ASF/sam/drivers/crccu" -I"../src/ASF/sam/drivers/dacc"
+CINCLUDES+=-I"../src/ASF/sam/drivers/freqm" -I"../src/ASF/sam/drivers/eic" -I"../src/ASF/sam/drivers/events"
+CINCLUDES+=-I"../src/ASF/sam/drivers/gloc" -I"../src/ASF/sam/drivers/gpio" -I"../src/ASF/sam/drivers/hmatrixb"
+CINCLUDES+=-I"../src/ASF/sam/drivers/lcdca" -I"../src/ASF/sam/drivers/pdca" -I"../src/ASF/sam/drivers/picouart"
+CINCLUDES+=-I"../src/ASF/sam/drivers/spi" -I"../src/ASF/sam/drivers/tc" -I"../src/ASF/sam/drivers/twim"
+CINCLUDES+=-I"../src/ASF/sam/drivers/twis" -I"../src/ASF/sam/drivers/usart" -I"../src/ASF/common/services/serial/sam_uart"
+CINCLUDES+=-I"../src/ASF/common/services/serial" -I"../src/ASF/common/services/sleepmgr"
+CINCLUDES+=-I"../src/ASF/common/utils/stdio/stdio_serial" -I"../src/ASF/sam/drivers/parc"
 
-CWARNS=-Wchar-subscripts -Wcomment -Wformat=2 -Wimplicit-int -Wmain -Wparentheses -Wsequence-point -Wreturn-type -Wswitch -Wtrigraphs -Wunused -Wuninitialized -Wunknown-pragmas -Wfloat-equal -Wundef -Wshadow -Wbad-function-cast -Wwrite-strings -Wsign-compare -Waggregate-return  -Wmissing-declarations -Wformat -Wmissing-format-attribute -Wno-deprecated-declarations -Wpacked -Wredundant-decls -Wnested-externs -Wlong-long -Wunreachable-code -Wcast-align -Wall -Wstrict-prototypes -Wmissing-prototypes -Werror-implicit-function-declaration -Wpointer-arith -Wall
+CWARNS=-Wchar-subscripts -Wcomment -Wformat=2 -Wimplicit-int -Wmain -Wparentheses -Wsequence-point -Wreturn-type -Wswitch -Wtrigraphs -Wunused -Wuninitialized -Wunknown-pragmas -Wfloat-equal -Wundef -Wshadow -Wbad-function-cast -Wwrite-strings -Wsign-compare -Waggregate-return -Wformat -Wmissing-format-attribute -Wno-deprecated-declarations -Wpacked -Wredundant-decls -Wnested-externs -Wlong-long -Wunreachable-code -Wcast-align -Wall -Wstrict-prototypes -Werror-implicit-function-declaration -Wpointer-arith -Wall
 CMISCFLAGS=-mthumb -D__SAM4LC8C__ -D__ATSAM4LC8C__ -DARM_MATH_CM4=true  -O1 -fdata-sections -ffunction-sections -mlong-calls -g3 -mcpu=cortex-m4 -c -pipe -fno-strict-aliasing -std=gnu99 -ffunction-sections -fdata-sections --param max-inline-insns-single=500
 
 CPROJFLAGS=-DBOARD=USER_BOARD -Dprintf=iprintf -Dscanf=iscanf -DPARC_CALLBACK_MODE=false
@@ -245,6 +263,7 @@ ifneq ($(strip $(C_DEPS)),)
 endif
 endif
 
+
 LFILE=../src/bootloader.ld
 
 # All Target
@@ -254,9 +273,9 @@ src/jumpfunc.o: ../src/jumpfunc.s
 	$(CCBIN) -c -o "$@" "$<"
 
 $(OUTPUT_FILE_PATH): $(OBJS) $(USER_OBJS)
-	$(CCBIN) -o$(OUTPUT_FILE_PATH) $(OBJS) $(LIBS) -mthumb -Wl,-Map="STORM_v3.map" -Wl,--start-group -larm_cortexM4l_math -lm  -Wl,--end-group -L"../src/ASF/thirdparty/CMSIS/Lib/GCC"  -Wl,--gc-sections -mcpu=cortex-m4 -Wl,--entry=Reset_Handler -Wl,--cref -mthumb -T $(LFILE)
-	$(SIZE) "STORM_v3.elf"
-	$(OBJCOPY) -O binary "STORM_v3.elf" "STORM_v3.bin"
+	$(CCBIN) -o$(OUTPUT_FILE_PATH) $(OBJS) $(LIBS) -mthumb -Wl,-Map="$(BINARY_NAME).map" -Wl,--start-group -larm_cortexM4l_math -lm  -Wl,--end-group -L"../src/ASF/thirdparty/CMSIS/Lib/GCC"  -Wl,--gc-sections -mcpu=cortex-m4 -Wl,--entry=Reset_Handler -Wl,--cref -mthumb -T $(LFILE)
+	$(SIZE) $(BINARY_NAME).elf
+	$(OBJCOPY) -O binary $(BINARY_NAME).elf $(BINARY_NAME).bin
 
 prog: all
 	$(JLINK) prog.jlink || true
@@ -266,4 +285,4 @@ calib: all
 # Other Targets
 clean:
 	-$(RM) $(OBJS) $(EXECUTABLES)
-	rm -rf "STORM_v3.elf"
+	rm -rf $(BINARY_NAME).elf
