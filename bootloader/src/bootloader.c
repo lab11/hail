@@ -64,9 +64,9 @@ void bl_init(void) {
     rx_ptr = 0;
 
     // Enable BL USART
-    ioport_set_pin_mode(PIN_PA12A_USART0_TXD, MUX_PB12A_USART0_TXD);
+    ioport_set_pin_mode(PIN_PA12A_USART0_TXD, MUX_PA12A_USART0_TXD);
     ioport_disable_pin(PIN_PA12A_USART0_TXD);
-    ioport_set_pin_mode(PIN_PA11A_USART0_RXD, MUX_PB11A_USART0_RXD);
+    ioport_set_pin_mode(PIN_PA11A_USART0_RXD, MUX_PA11A_USART0_RXD);
     ioport_disable_pin(PIN_PA11A_USART0_RXD);
     sysclk_enable_peripheral_clock(USART0);
     usart_reset(USART0);

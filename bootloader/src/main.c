@@ -34,36 +34,20 @@ extern void bl_spi_test_loop(void);
 
 
 void board_init(void) {
-    /*
-    struct wdt_dev_inst wdt_inst;
-    struct wdt_config   wdt_cfg;
-    wdt_get_config_defaults(&wdt_cfg);
-    wdt_init(&wdt_inst, WDT, &wdt_cfg);
-    wdt_disable(&wdt_inst);
-    */
-
-
-    /* Initialize IOPORT */
+    // Setup GPIO
     ioport_init();
-    ioport_set_pin_dir(PIN_PA19, IOPORT_DIR_OUTPUT);
-    ioport_set_pin_dir(PIN_PB06, IOPORT_DIR_INPUT);
-    ioport_set_pin_mode(PIN_PB06, IOPORT_MODE_PULLUP | IOPORT_MODE_GLITCH_FILTER);
+
+    // This is probably not used by the bootloader.
+    // But is here in case we ever want to support the CMD_CLKOUT command.
+    ioport_set_pin_dir(PIN_PA10, IOPORT_DIR_OUTPUT);
+
+    // Pin which is pulled low to enter bootloader mode.
+    ioport_set_pin_dir(PIN_PA08, IOPORT_DIR_INPUT);
+    ioport_set_pin_mode(PIN_PA08, IOPORT_MODE_PULLUP | IOPORT_MODE_GLITCH_FILTER);
+
+    // Setup Clock
     bpm_set_clk32_source(BPM, BPM_CLK32_SOURCE_RC32K);
     sysclk_init();
-}
-
-int load_calib(void) {
-    uint32_t osc_calib;
-    if (*((volatile uint32_t*)(0xfe00)) != 0x69C0FFEE)
-    {
-        return 1;
-    }
-    osc_calib = *((volatile uint32_t*)(0xfe04));
-    *((volatile uint32_t*)(0x400F0418)) = 0xAA000028;
-    *((volatile uint32_t*)(0x400F0428)) = osc_calib;
-    *((volatile uint32_t*)(0x400F0418)) = 0xAA000024;
-    *((volatile uint32_t*)(0x400F0424)) = 0x87; //enable temp compensation
-    return 2;
 }
 
 extern void jump_into_user_code(void)  __attribute__((noreturn));

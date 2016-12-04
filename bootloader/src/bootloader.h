@@ -209,7 +209,6 @@ void bl_c_epage(void);
 void bl_c_crcrx(void);
 void bl_c_rrange(void);
 void bl_c_crcif(void);
-void bl_c_crcef(void);
 void bl_c_unknown(void);
 void bl_c_clkout(void);
 void bl_c_wuser(void);
