@@ -31,28 +31,28 @@ extern void bl_spi_test_loop(void);
 #include "bootloader.h"
 #include "ASF/common/services/ioport/sam/ioport_gpio.h"
 #include "ASF/common/services/ioport/ioport.h"
-void board_init(void)
-{
-	/*
-	struct wdt_dev_inst wdt_inst;
-	struct wdt_config   wdt_cfg;
-	wdt_get_config_defaults(&wdt_cfg);
-	wdt_init(&wdt_inst, WDT, &wdt_cfg);
-	wdt_disable(&wdt_inst);
-	*/
 
 
-	/* Initialize IOPORT */
-	ioport_init();
-	ioport_set_pin_dir(PIN_PA19, IOPORT_DIR_OUTPUT);
-	ioport_set_pin_dir(PIN_PB06, IOPORT_DIR_INPUT);
-	ioport_set_pin_mode(PIN_PB06, IOPORT_MODE_PULLUP | IOPORT_MODE_GLITCH_FILTER);
-	bpm_set_clk32_source(BPM, BPM_CLK32_SOURCE_RC32K);
-	sysclk_init();
+void board_init(void) {
+    /*
+    struct wdt_dev_inst wdt_inst;
+    struct wdt_config   wdt_cfg;
+    wdt_get_config_defaults(&wdt_cfg);
+    wdt_init(&wdt_inst, WDT, &wdt_cfg);
+    wdt_disable(&wdt_inst);
+    */
+
+
+    /* Initialize IOPORT */
+    ioport_init();
+    ioport_set_pin_dir(PIN_PA19, IOPORT_DIR_OUTPUT);
+    ioport_set_pin_dir(PIN_PB06, IOPORT_DIR_INPUT);
+    ioport_set_pin_mode(PIN_PB06, IOPORT_MODE_PULLUP | IOPORT_MODE_GLITCH_FILTER);
+    bpm_set_clk32_source(BPM, BPM_CLK32_SOURCE_RC32K);
+    sysclk_init();
 }
 
-int load_calib(void)
-{
+int load_calib(void) {
     uint32_t osc_calib;
     if (*((volatile uint32_t*)(0xfe00)) != 0x69C0FFEE)
     {
@@ -68,46 +68,32 @@ int load_calib(void)
 
 extern void jump_into_user_code(void)  __attribute__((noreturn));
 
-int main (void)
-{
+int main (void) {
     uint32_t stable;
     board_init();
     load_calib();
-/*
-    //pa19 as gclk0 (peripheral E)
-    //DFLL/48
-    *((volatile uint32_t*)(0x400E0800 + 0x074)) = 0x00170201; //GCLK0=dfll/48
-    //RCSYS NO DIV
-    //*((volatile uint32_t*)(0x400E0800 + 0x074)) = 0x00170001;
-    //RC32
-    //*((volatile uint32_t*)(0x400E0800 + 0x074)) = 0x00170d01;
-    *((volatile uint32_t*)(0x400E1000 + 0x008)) = (1<<19); //disable GPIO
-    *((volatile uint32_t*)(0x400E1000 + 0x168)) = (1<<19); //disable ST
-    *((volatile uint32_t*)(0x400E1000 + 0x018)) = (1<<19); //pmr0c
-    *((volatile uint32_t*)(0x400E1000 + 0x028)) = (1<<19); //pmr1c
-    *((volatile uint32_t*)(0x400E1000 + 0x034)) = (1<<19); //pmr2s
-*/
+
     // Verify BL policy
     uint32_t active = 0;
     uint32_t inactive = 0;
     uint32_t samples = 10000;
-    while(samples)
-    {
-        if (ioport_get_pin_level(PIN_PB06) == 0) active++;
-        else inactive++;
+    while (samples) {
+        if (ioport_get_pin_level(PIN_PA08) == 0) {
+            active++;
+        } else {
+            inactive++;
+        }
         samples--;
     }
 
-    if (active > inactive)
-    {
+    if (active > inactive) {
+        // Enter bootloader mode and wait for commands from sload
         bl_init();
-        while (1)
-        {
+        while (1) {
             bl_loop_poll();
         }
-    }
-    else
-    {
+    } else {
+        // Go to main application code
         jump_into_user_code();
     }
 }

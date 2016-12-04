@@ -31,8 +31,6 @@ inline void _escape_set(uint8_t *dat, uint16_t len, uint8_t cmd);
 inline uint32_t _rx_u32(uint16_t offset);
 inline uint16_t _rx_u16(uint16_t offset);
 
-uint8_t _poll_xfbusy(void);
-
 inline void _escape_cat(uint8_t *dat, uint16_t len)
 {
     while(len-- && (tx_left < (TXBUFSZ-1)))
@@ -72,27 +70,6 @@ inline uint16_t _rx_u16(uint16_t offset)
     return rv;
 }
 
-uint8_t _poll_xfbusy()
-{
-    uint32_t timeout = 0;
-    for (timeout = 50000; timeout > 0; timeout--)
-    {
-        uint8_t xf [] = {0xD7, 0x00, 0x00};
-        bl_spi_xfer(xf,xf,3);
-        if ((xf[2] >> 5) & 1) //Program/erase failure
-            return 2;
-        if (xf[2] >> 7)
-            return 0;
-    }
-    return 1;
-}
-
-void _reset_xflash()
-{
-    uint8_t rst [] = {0xF0, 0x00, 0x00, 0x00};
-    bl_spi_tx(rst, 4, 1);
-}
-
 // COMMANDS
 // ========
 
@@ -107,8 +84,7 @@ void bl_c_info()
     memset(rv, 0, 193);
     uint8_t len = snprintf(&rv[1], 191, "StormLoader "BOOTLOADER_VERSION" ("BOOTLOADER_DATE")\n"
                       "Copyright 2014 Michael Andersen, UC Berkeley\n\n"
-                      "This is free software, and you are welcome to redistribute it\n"
-                      "See http://storm.pm/license for details\n");
+                      "Modified for Hail IoT Module.\n");
     rv[0] = len;
     _escape_set((uint8_t*)&rv[0], 193, RES_INFO);
 }
@@ -142,6 +118,7 @@ void bl_c_clkout()
     *((volatile uint32_t*)(0x400E1000 + 0x034)) = (1<<19); //pmr2s
     while(1);
 }
+
 void bl_c_epage()
 {
     if (rx_ptr != (4))
@@ -180,7 +157,6 @@ void bl_c_epage()
 
     _escape_set(NULL, 0, RES_OK);
     return;
-
 }
 
 void bl_c_wpage()
@@ -238,83 +214,6 @@ void bl_c_wpage()
 
 }
 
-void bl_c_xeblock(void)
-{
-    if (rx_ptr != 4)
-    {
-        _escape_set(NULL, 0, RES_BADARGS);
-        return;
-    }
-    uint32_t baddr = _rx_u32(0);
-    if (baddr < ALLOWED_XFLASH_FLOOR || baddr >= ALLOWED_XFLASH_CEILING
-          ||  (baddr & (XBLOCKSIZE-1)) != 0)
-    {
-        _escape_set(NULL, 0, RES_BADADDR);
-        return;
-    }
-    uint8_t eblock [] = {0x50, 0, 0, 0};
-    eblock[1] = (uint8_t) (baddr >> 16);
-    eblock[2] = (uint8_t) (baddr >>  8);
-    eblock[3] = (uint8_t) (baddr);
-    bl_spi_tx(eblock, 4, 1);
-
-    uint8_t iserr = _poll_xfbusy();
-    if (iserr == 1)
-    {
-        _escape_set(NULL, 0, RES_XFTIMEOUT);
-        return;
-    }
-    else if (iserr == 2)
-    {
-        _escape_set(NULL, 0, RES_XFEPE);
-        return;
-    }
-    else
-    {
-        _escape_set(NULL, 0, RES_OK);
-        return;
-    }
-}
-
-void bl_c_xwpage(void)
-{
-    if (rx_ptr != 260)
-    {
-        _escape_set(NULL, 0, RES_BADARGS);
-        return;
-    }
-    uint32_t addr = _rx_u32(0);
-    if (addr < ALLOWED_XFLASH_FLOOR || addr >= ALLOWED_XFLASH_CEILING
-           || (addr & (XPAGESIZE-1)) != 0)
-    {
-        _escape_set(NULL, 0, RES_BADADDR);
-        return;
-    }
-
-    uint8_t startprog [] = {0x82, 0x00, 0x00, 0x00};
-    startprog[1] = (uint8_t) (addr >> 16);
-    startprog[2] = (uint8_t) (addr >>  8);
-    startprog[3] = (uint8_t) (addr);
-    bl_spi_tx(startprog, 4, 0);
-    bl_spi_tx(&rx_stage_ram[4],256,1);
-    uint8_t iserr = _poll_xfbusy();
-    if (iserr == 1)
-    {
-        _escape_set(NULL, 0, RES_XFTIMEOUT);
-        return;
-    }
-    else if (iserr == 2)
-    {
-        _escape_set(NULL, 0, RES_XFEPE);
-        return;
-    }
-    else
-    {
-        _escape_set(NULL, 0, RES_OK);
-        return;
-    }
-}
-
 void bl_c_crcrx(void)
 {
     uint8_t rv [6];
@@ -362,110 +261,6 @@ void bl_c_rrange(void)
     return;
 }
 
-void bl_c_xrrange(void)
-{
-    if (rx_ptr != 6)
-    {
-        _escape_set(NULL, 0, RES_BADARGS);
-        return;
-    }
-    uint16_t len = _rx_u16(4);
-    //We only go to half the buffer because of escape expanding
-    if (rx_ptr != 6 || len >= (TXBUFSZ>>1))
-    {
-        _escape_set(NULL, 0, RES_BADARGS);
-        return;
-    }
-    uint32_t addr = _rx_u32(0);
-    if ((addr+len) > ALLOWED_XFLASH_CEILING+1)
-    {
-        _escape_set(NULL, 0, RES_BADADDR);
-        return;
-    }
-
-    uint8_t rd [] = {0x1B, 0x00, 0x00, 0x00, 0x00, 0x00};
-    rd[1] = (uint8_t) (addr >> 16);
-    rd[2] = (uint8_t) (addr >>  8);
-    rd[3] = (uint8_t) (addr);
-    bl_spi_tx(rd,6,0);
-    //We store the data in RX stage so we can escape it into tx
-    bl_spi_rx(rx_stage_ram, len);
-    _escape_set(rx_stage_ram, len, RES_XRRANGE);
-    return;
-}
-
-void bl_c_sattr(void)
-{
-    uint8_t vlen = rx_stage_ram[9];
-    if (rx_ptr != 10+vlen)
-    {
-        _escape_set(NULL, 0, RES_BADARGS);
-        return;
-    }
-    //Attributes are stored in the first four pages of flash.
-    //Each attribute is 64 bytes long.
-    uint8_t idx = rx_stage_ram[0];
-    if (idx >= 16 || vlen >=56)
-    {
-        _escape_set(NULL, 0, RES_BADADDR);
-        return;
-    }
-    uint32_t addr = idx*64;
-    uint8_t fcmd [68];
-    fcmd[0] = 0x58;
-    fcmd[1] = (uint8_t) (addr >> 16);
-    fcmd[2] = (uint8_t) (addr >>  8);
-    fcmd[3] = (uint8_t) (addr);
-    uint8_t i;
-    for (i=0;i<8;i++) fcmd[4+i] = rx_stage_ram[1+i];
-    fcmd[12] = vlen;
-    for (i=0;i<vlen;i++) fcmd[13+i] = rx_stage_ram[10+i];
-    bl_spi_tx(fcmd,13+vlen,1);
-
-    uint8_t iserr = _poll_xfbusy();
-    if (iserr == 1)
-    {
-        _escape_set(NULL, 0, RES_XFTIMEOUT);
-        return;
-    }
-    else if (iserr == 2)
-    {
-        _escape_set(NULL, 0, RES_XFEPE);
-        return;
-    }
-    else
-    {
-        _escape_set(NULL, 0, RES_OK);
-        return;
-    }
-}
-
-void bl_c_gattr(void)
-{
-    if (rx_ptr != 1)
-    {
-        _escape_set(NULL, 0, RES_BADARGS);
-        return;
-    }
-    if (rx_stage_ram[0] >= 16)
-    {
-        _escape_set(NULL, 0, RES_BADADDR);
-        return;
-    }
-    uint32_t addr = rx_stage_ram[0]*64;
-    uint8_t buf[64];
-
-    uint8_t rd [] = {0x1B, 0x00, 0x00, 0x00, 0x00, 0x00};
-    rd[1] = (uint8_t) (addr >> 16);
-    rd[2] = (uint8_t) (addr >>  8);
-    rd[3] = (uint8_t) (addr);
-    bl_spi_tx(rd,6,0);
-    //We store the data in RX stage so we can escape it into tx
-    bl_spi_rx(buf, 64);
-    _escape_set(buf, 64, RES_GATTR);
-    return;
-}
-
 void bl_c_crcif(void)
 {
     if (rx_ptr != 8)
@@ -491,96 +286,6 @@ void bl_c_crcif(void)
     rv[3] = (uint8_t) (crc & 0xFF);
 
     _escape_set(rv, 6, RES_CRCIF);
-}
-
-void bl_c_crcef(void)
-{
-    if (rx_ptr != 8)
-    {
-        _escape_set(NULL, 0, RES_BADARGS);
-        return;
-    }
-    uint32_t len = _rx_u16(4);
-    uint32_t addr = _rx_u32(0);
-    if ((addr+len) > ALLOWED_XFLASH_CEILING+1)
-    {
-        _escape_set(NULL, 0, RES_BADADDR);
-        return;
-    }
-
-    uint32_t left = len;
-    uint32_t crc = 0;
-    while(left > 0)
-    {
-        uint16_t toread = 4096;
-        if (toread > left) toread = left;
-        uint8_t rd [] = {0x1B, 0x00, 0x00, 0x00, 0x00, 0x00};
-        rd[1] = (uint8_t) (addr >> 16);
-        rd[2] = (uint8_t) (addr >>  8);
-        rd[3] = (uint8_t) (addr);
-        bl_spi_tx(rd,6,0);
-        //We store the data in RX stage so we can escape it into tx
-        bl_spi_rx(&rx_stage_ram[0], toread);
-        uint16_t i;
-        crc = crc32(crc, &rx_stage_ram[0], toread);
-        left -= toread;
-        addr += toread;
-    }
-
-    uint8_t rv [4];
-    rv[0] = (uint8_t) (crc & 0xFF); crc >>=8;
-    rv[1] = (uint8_t) (crc & 0xFF); crc >>=8;
-    rv[2] = (uint8_t) (crc & 0xFF); crc >>=8;
-    rv[3] = (uint8_t) (crc & 0xFF);
-
-    _escape_set(rv, 4, RES_CRCXF);
-    return;
-}
-
-void bl_c_xepage(void)
-{
-    if (rx_ptr != 4)
-    {
-        _escape_set(NULL, 0, RES_BADARGS);
-        return;
-    }
-    uint32_t addr = _rx_u32(0);
-    if (addr < ALLOWED_XFLASH_FLOOR || addr >= ALLOWED_XFLASH_CEILING
-          ||  (addr & (XPAGESIZE-1)) != 0)
-    {
-        _escape_set(NULL, 0, RES_BADADDR);
-        return;
-    }
-    uint8_t epage [] = {0x81, 0, 0, 0};
-    epage[1] = (uint8_t) (addr >> 16);
-    epage[2] = (uint8_t) (addr >>  8);
-    epage[3] = (uint8_t) (addr);
-    bl_spi_tx(epage, 4, 1);
-
-    uint8_t iserr = _poll_xfbusy();
-    if (iserr == 1)
-    {
-        _escape_set(NULL, 0, RES_XFTIMEOUT);
-        return;
-    }
-    else if (iserr == 2)
-    {
-        _escape_set(NULL, 0, RES_XFEPE);
-        return;
-    }
-    else
-    {
-        _escape_set(NULL, 0, RES_OK);
-        return;
-    }
-}
-
-void bl_c_xfinit(void)
-{
-    uint8_t switch_to_264b [] = {0x3D, 0x2A, 0x80, 0xA6};
-    bl_spi_tx(switch_to_264b, 4, 1);
-    _escape_set(NULL, 0, RES_OK);
-    return;
 }
 
 void bl_c_wuser(void)
