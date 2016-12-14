@@ -5,8 +5,8 @@ r
 r
 r
 h
-loadbin STORM_v3.bin, 0
-verifybin STORM_v3.bin, 0
+loadbin hail_bootloader.bin, 0
+verifybin hail_bootloader.bin, 0
 exec device
 r
 g

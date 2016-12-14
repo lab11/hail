@@ -96,7 +96,7 @@ void bl_loop_poll(void) {
 }
 
 void bl_txb(uint8_t b) {
-    usart_putchar(USART3, b);
+    usart_putchar(USART0, b);
 }
 
 void bl_rxb(uint8_t b) {
