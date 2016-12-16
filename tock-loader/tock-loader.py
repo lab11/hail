@@ -8,50 +8,51 @@ import time
 import crcmod
 import serial
 import serial.tools.list_ports
+import serial.tools.miniterm
 
 
+# "This was chosen as it is infrequent in .bin files" - immesys
+ESCAPE_CHAR = 0xFC
 
-# port = '/dev/ttyUSB0'
-
-
-ESCAPE_CHAR       = 0xFC
-
-COMMAND_PING       = 0x01
-COMMAND_INFO       = 0x03
-COMMAND_ID         = 0x04
-COMMAND_RESET      = 0x05
-COMMAND_ERASE_PAGE = 0x06
-COMMAND_WRITE_PAGE = 0x07
-COMMAND_XEBLOCK    = 0x08
-COMMAND_XWPAGE     = 0x09
-COMMAND_CRCRX      = 0x10
-COMMAND_RRANGE     = 0x11
-COMMAND_XRRANGE    = 0x12
-COMMAND_SATTR      = 0x13
-COMMAND_GATTR      = 0x14
+# Commands from this tool to the bootloader.
+# The "X" commands are for external flash.
+COMMAND_PING               = 0x01
+COMMAND_INFO               = 0x03
+COMMAND_ID                 = 0x04
+COMMAND_RESET              = 0x05
+COMMAND_ERASE_PAGE         = 0x06
+COMMAND_WRITE_PAGE         = 0x07
+COMMAND_XEBLOCK            = 0x08
+COMMAND_XWPAGE             = 0x09
+COMMAND_CRCRX              = 0x10
+COMMAND_RRANGE             = 0x11
+COMMAND_XRRANGE            = 0x12
+COMMAND_SATTR              = 0x13
+COMMAND_GATTR              = 0x14
 COMMAND_CRC_INTERNAL_FLASH = 0x15
-COMMAND_CRCEF     = 0x16
-COMMAND_XEPAGE    = 0x17
-COMMAND_XFINIT    = 0x18
-COMMAND_CLKOUT    = 0x19
-COMMAND_WUSER     = 0x20
+COMMAND_CRCEF              = 0x16
+COMMAND_XEPAGE             = 0x17
+COMMAND_XFINIT             = 0x18
+COMMAND_CLKOUT             = 0x19
+COMMAND_WUSER              = 0x20
 
-RESPONSE_OVERFLOW  = 0x10
-RESPONSE_PONG      = 0x11
-RESPONSE_BADADDR   = 0x12
-RESPONSE_INTERROR  = 0x13
-RESPONSE_BADARGS   = 0x14
-RESPONSE_OK        = 0x15
-RESPONSE_UNKNOWN   = 0x16
-RESPONSE_XFTIMEOUT = 0x17
-RESPONSE_XFEPE     = 0x18
-RESPONSE_CRCRX     = 0x19
-RESPONSE_RRANGE    = 0x20
-RESPONSE_XRRANGE   = 0x21
-RESPONSE_GATTR     = 0x22
-RESPONSE_CRC_INTERNAL_FLASH     = 0x23
-RESPONSE_CRCXF     = 0x24
-RESPONSE_INFO      = 0x25
+# Responses from the bootloader.
+RESPONSE_OVERFLOW           = 0x10
+RESPONSE_PONG               = 0x11
+RESPONSE_BADADDR            = 0x12
+RESPONSE_INTERROR           = 0x13
+RESPONSE_BADARGS            = 0x14
+RESPONSE_OK                 = 0x15
+RESPONSE_UNKNOWN            = 0x16
+RESPONSE_XFTIMEOUT          = 0x17
+RESPONSE_XFEPE              = 0x18
+RESPONSE_CRCRX              = 0x19
+RESPONSE_RRANGE             = 0x20
+RESPONSE_XRRANGE            = 0x21
+RESPONSE_GATTR              = 0x22
+RESPONSE_CRC_INTERNAL_FLASH = 0x23
+RESPONSE_CRCXF              = 0x24
+RESPONSE_INFO               = 0x25
 
 # Tell the bootloader to reset its buffer to handle a new command.
 SYNC_MESSAGE = bytes([0x00, ESCAPE_CHAR, COMMAND_RESET])
@@ -254,6 +255,33 @@ class TockLoader:
 
 		return True
 
+	def run_terminal (self):
+		# Make sure starting the terminal does not put it in bootloader mode
+		# or in constant reset.
+		self.sp.dtr = 0
+		self.sp.rts = 0
+
+		# Use trusty miniterm
+		miniterm = serial.tools.miniterm.Miniterm(
+			self.sp,
+			echo=False,
+			eol='crlf',
+			filters=['default'])
+
+		# Ctrl+c to exit.
+		miniterm.exit_character = serial.tools.miniterm.unichr(0x03)
+		miniterm.set_rx_encoding('UTF-8')
+		miniterm.set_tx_encoding('UTF-8')
+
+		miniterm.start()
+		try:
+			miniterm.join(True)
+		except KeyboardInterrupt:
+			pass
+		miniterm.join()
+		miniterm.close()
+
+
 
 
 
@@ -306,40 +334,14 @@ if args.command == 'flash':
 
 
 elif args.command == 'listen' or args.command == 'tail':
-	import serial.tools.miniterm
+	# Open a terminal to listen to UART output
+	tock_loader = TockLoader()
+	success = tock_loader.open(port=args.port)
+	if not success:
+		print('Could not open the serial port. Make sure the board is plugged in.')
+		sys.exit(1)
+	tock_loader.run_terminal()
 
-	sp = serial.Serial(port='/dev/ttyUSB0',
-	                        baudrate=115200,
-	                        bytesize=8,
-	                        parity=serial.PARITY_NONE,
-	                        stopbits=1,
-	                        xonxoff=0,
-	                        rtscts=0,
-	                        timeout=0.5)
 
-	# Make sure starting the terminal does not put it in bootloader mode
-	# or in constant reset.
-	sp.dtr = 0
-	sp.rts = 0
-
-	# Use trusty miniterm
-	miniterm = serial.tools.miniterm.Miniterm(
-        sp,
-        echo=False,
-        eol='crlf',
-        filters=['default'])
-
-	# Ctrl+c to exit.
-	miniterm.exit_character = serial.tools.miniterm.unichr(0x03)
-	miniterm.set_rx_encoding('UTF-8')
-	miniterm.set_tx_encoding('UTF-8')
-
-	miniterm.start()
-	try:
-		miniterm.join(True)
-	except KeyboardInterrupt:
-		pass
-	miniterm.join()
-	miniterm.close()
 
 
