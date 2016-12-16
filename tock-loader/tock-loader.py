@@ -77,42 +77,48 @@ class TockLoader:
 			port = ports[0][0]
 
 		# Open the actual serial port
-		self.sp = serial.Serial(port=port,
-		                        baudrate=115200,
-		                        bytesize=8,
-		                        parity=serial.PARITY_NONE,
-		                        stopbits=1,
-		                        xonxoff=0,
-		                        rtscts=0,
-		                        timeout=0.5)
+		self.sp = serial.Serial()
+		self.sp.port = port
+		self.sp.baudrate = 115200
+		self.sp.parity=serial.PARITY_NONE
+		self.sp.stopbits=1
+		self.sp.xonxoff=0
+		self.sp.rtscts=0
+		self.sp.timeout=0.5
+		# Try to set initial conditions, but not all platforms support them.
+		# https://github.com/pyserial/pyserial/issues/124#issuecomment-227235402
+		self.sp.dtr = 0
+		self.sp.rts = 0
+		self.sp.open()
+
 		return True
 
 	# Reset the chip and assert the bootloader select pin to enter bootloader
 	# mode.
 	def enter_bootloader_mode (self):
 		# Reset the SAM4L
-		self.sp.setDTR(1)
+		self.sp.dtr = 1
 		# Set RTS to make the SAM4L go into bootloader mode
-		self.sp.setRTS(1)
+		self.sp.rts = 1
 		# Wait for the reset to take effect
 		time.sleep(0.1)
 		# Let the SAM4L startup
-		self.sp.setDTR(0)
+		self.sp.dtr = 0
 		# Wait for 500 ms to make sure the bootloader enters bootloader mode
 		time.sleep(0.5)
 		# The select line can go back high
-		self.sp.setRTS(0)
+		self.sp.rts = 0
 
 	# Reset the chip to exit bootloader mode
 	def exit_bootloader_mode (self):
 		# Reset the SAM4L
-		self.sp.setDTR(1)
+		self.sp.dtr = 1
 		# Make sure this line is de-asserted (high)
-		self.sp.setRTS(0)
+		self.sp.rts = 0
 		# Let the reset take effect
 		time.sleep(0.1)
 		# Let the SAM4L startup
-		self.sp.setDTR(0)
+		self.sp.dtr = 0
 
 	# Returns True if the device is there and responding, False otherwise
 	def ping_bootloader_and_wait_for_response (self):
@@ -256,11 +262,6 @@ class TockLoader:
 		return True
 
 	def run_terminal (self):
-		# Make sure starting the terminal does not put it in bootloader mode
-		# or in constant reset.
-		self.sp.dtr = 0
-		self.sp.rts = 0
-
 		# Use trusty miniterm
 		miniterm = serial.tools.miniterm.Miniterm(
 			self.sp,
@@ -284,64 +285,65 @@ class TockLoader:
 
 
 
+def main ():
+
+	# Setup command line arguments
+	parser = argparse.ArgumentParser()
+
+	parser.add_argument('command',
+		help='Which feature of this tool to use',
+		choices=['flash', 'listen', 'tail'])
+	parser.add_argument('binary',
+		help='The binary file or files to flash to the chip',
+		nargs='*')
+
+	parser.add_argument('--port', '-p',
+		help='The serial port to use')
+	parser.add_argument('--address', '-a',
+		help='Address to flash the binary at',
+		type=lambda x: int(x, 0),
+		default=0x30000)
+
+	args = parser.parse_args()
 
 
-# Setup command line arguments
-parser = argparse.ArgumentParser()
+	# Flash binaries to the chip
+	if args.command == 'flash':
+		# Load in all binaries
+		binary = bytes([])
+		for binary_filename in args.binary:
+			try:
+				with open(binary_filename, 'rb') as f:
+					binary += f.read()
+			except Exception as e:
+				print('Error opening and reading "{}"'.format(binary_filename))
+				sys.exit(1)
 
-parser.add_argument('command',
-	help='Which feature of this tool to use',
-	choices=['flash', 'listen', 'tail'])
-parser.add_argument('binary',
-	help='The binary file or files to flash to the chip',
-	nargs='*')
+		# Temporary: append 0x00s to signal the end of valid applications
+		binary += bytes([0]*8)
 
-parser.add_argument('--port', '-p',
-	help='The serial port to use')
-parser.add_argument('--address', '-a',
-	help='Address to flash the binary at',
-	type=lambda x: int(x, 0),
-	default=0x30000)
-
-args = parser.parse_args()
-
-
-# Flash binaries to the chip
-if args.command == 'flash':
-	# Load in all binaries
-	binary = bytes([])
-	for binary_filename in args.binary:
-		try:
-			with open(binary_filename, 'rb') as f:
-				binary += f.read()
-		except Exception as e:
-			print('Error opening and reading "{}"'.format(binary_filename))
+		# Flash the binary to the chip
+		tock_loader = TockLoader()
+		success = tock_loader.open(port=args.port)
+		if not success:
+			print('Could not open the serial port. Make sure the board is plugged in.')
+			sys.exit(1)
+		success = tock_loader.flash_binary(binary, args.address)
+		if not success:
+			print('Could not flash the binaries.')
 			sys.exit(1)
 
-	# Temporary: append 0x00s to signal the end of valid applications
-	binary += bytes([0]*8)
 
-	# Flash the binary to the chip
-	tock_loader = TockLoader()
-	success = tock_loader.open(port=args.port)
-	if not success:
-		print('Could not open the serial port. Make sure the board is plugged in.')
-		sys.exit(1)
-	success = tock_loader.flash_binary(binary, args.address)
-	if not success:
-		print('Could not flash the binaries.')
-		sys.exit(1)
-
-
-elif args.command == 'listen' or args.command == 'tail':
 	# Open a terminal to listen to UART output
-	tock_loader = TockLoader()
-	success = tock_loader.open(port=args.port)
-	if not success:
-		print('Could not open the serial port. Make sure the board is plugged in.')
-		sys.exit(1)
-	tock_loader.run_terminal()
+	elif args.command == 'listen' or args.command == 'tail':
+		tock_loader = TockLoader()
+		success = tock_loader.open(port=args.port)
+		if not success:
+			print('Could not open the serial port. Make sure the board is plugged in.')
+			sys.exit(1)
+		tock_loader.run_terminal()
 
 
-
+if __name__ == "__main__":
+    main()
 
