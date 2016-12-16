@@ -283,6 +283,40 @@ class TockLoader:
 		miniterm.close()
 
 
+def command_flash (args):
+	# Load in all binaries
+	binary = bytes([])
+	for binary_filename in args.binary:
+		try:
+			with open(binary_filename, 'rb') as f:
+				binary += f.read()
+		except Exception as e:
+			print('Error opening and reading "{}"'.format(binary_filename))
+			sys.exit(1)
+
+	# Temporary: append 0x00s to signal the end of valid applications
+	binary += bytes([0]*8)
+
+	# Flash the binary to the chip
+	tock_loader = TockLoader()
+	success = tock_loader.open(port=args.port)
+	if not success:
+		print('Could not open the serial port. Make sure the board is plugged in.')
+		sys.exit(1)
+	success = tock_loader.flash_binary(binary, args.address)
+	if not success:
+		print('Could not flash the binaries.')
+		sys.exit(1)
+
+
+def command_listen (args):
+	tock_loader = TockLoader()
+	success = tock_loader.open(port=args.port)
+	if not success:
+		print('Could not open the serial port. Make sure the board is plugged in.')
+		sys.exit(1)
+	tock_loader.run_terminal()
+
 
 
 def main ():
@@ -290,58 +324,75 @@ def main ():
 	# Setup command line arguments
 	parser = argparse.ArgumentParser()
 
-	parser.add_argument('command',
-		help='Which feature of this tool to use',
-		choices=['flash', 'listen', 'tail'])
-	parser.add_argument('binary',
+	parser.add_argument('--port', '-p',
+		help='The serial port to use')
+
+	subparser = parser.add_subparsers(
+		title='Commands')
+
+	flash = subparser.add_parser('flash',
+		help='Flash binaries to the chip')
+	flash.set_defaults(func=command_flash)
+
+	# parser.add_argument('command',
+	# 	help='Which feature of this tool to use',
+	# 	choices=['flash', 'listen', 'tail'])
+	flash.add_argument('binary',
 		help='The binary file or files to flash to the chip',
 		nargs='*')
 
-	parser.add_argument('--port', '-p',
-		help='The serial port to use')
-	parser.add_argument('--address', '-a',
+
+	flash.add_argument('--address', '-a',
 		help='Address to flash the binary at',
 		type=lambda x: int(x, 0),
 		default=0x30000)
 
+
+
+	listen = subparser.add_parser('listen',
+		help='Open a terminal to receive UART data')
+	listen.set_defaults(func=command_listen)
+
 	args = parser.parse_args()
+	args.func(args)
 
 
-	# Flash binaries to the chip
-	if args.command == 'flash':
-		# Load in all binaries
-		binary = bytes([])
-		for binary_filename in args.binary:
-			try:
-				with open(binary_filename, 'rb') as f:
-					binary += f.read()
-			except Exception as e:
-				print('Error opening and reading "{}"'.format(binary_filename))
-				sys.exit(1)
 
-		# Temporary: append 0x00s to signal the end of valid applications
-		binary += bytes([0]*8)
+	# # Flash binaries to the chip
+	# if args.command == 'flash':
+	# 	# Load in all binaries
+	# 	binary = bytes([])
+	# 	for binary_filename in args.binary:
+	# 		try:
+	# 			with open(binary_filename, 'rb') as f:
+	# 				binary += f.read()
+	# 		except Exception as e:
+	# 			print('Error opening and reading "{}"'.format(binary_filename))
+	# 			sys.exit(1)
 
-		# Flash the binary to the chip
-		tock_loader = TockLoader()
-		success = tock_loader.open(port=args.port)
-		if not success:
-			print('Could not open the serial port. Make sure the board is plugged in.')
-			sys.exit(1)
-		success = tock_loader.flash_binary(binary, args.address)
-		if not success:
-			print('Could not flash the binaries.')
-			sys.exit(1)
+	# 	# Temporary: append 0x00s to signal the end of valid applications
+	# 	binary += bytes([0]*8)
+
+	# 	# Flash the binary to the chip
+	# 	tock_loader = TockLoader()
+	# 	success = tock_loader.open(port=args.port)
+	# 	if not success:
+	# 		print('Could not open the serial port. Make sure the board is plugged in.')
+	# 		sys.exit(1)
+	# 	success = tock_loader.flash_binary(binary, args.address)
+	# 	if not success:
+	# 		print('Could not flash the binaries.')
+	# 		sys.exit(1)
 
 
-	# Open a terminal to listen to UART output
-	elif args.command == 'listen' or args.command == 'tail':
-		tock_loader = TockLoader()
-		success = tock_loader.open(port=args.port)
-		if not success:
-			print('Could not open the serial port. Make sure the board is plugged in.')
-			sys.exit(1)
-		tock_loader.run_terminal()
+	# # Open a terminal to listen to UART output
+	# elif args.command == 'listen' or args.command == 'tail':
+	# 	tock_loader = TockLoader()
+	# 	success = tock_loader.open(port=args.port)
+	# 	if not success:
+	# 		print('Could not open the serial port. Make sure the board is plugged in.')
+	# 		sys.exit(1)
+	# 	tock_loader.run_terminal()
 
 
 if __name__ == "__main__":
