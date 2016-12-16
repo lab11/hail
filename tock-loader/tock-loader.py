@@ -229,7 +229,7 @@ class TockLoader:
 		if ret[1] != RESPONSE_CRC_INTERNAL_FLASH:
 			print('Error: Error when flashing page')
 			if ret[1] == RESPONSE_BADADDR:
-				print('Error: RESPONSE_BADADDR: Invalid address for CRC (address: 0x{:X}'.format(address))
+				print('Error: RESPONSE_BADADDR: Invalid address for CRC (address: 0x{:X})'.format(address))
 			elif ret[1] == RESPONSE_BADARGS:
 				print('Error: RESPONSE_BADARGS: Invalid length for CRC check')
 			else:
@@ -263,7 +263,7 @@ parser = argparse.ArgumentParser()
 
 parser.add_argument('command',
 	help='Which feature of this tool to use',
-	choices=['flash'])
+	choices=['flash', 'listen', 'tail'])
 parser.add_argument('binary',
 	help='The binary file or files to flash to the chip',
 	nargs='*')
@@ -272,7 +272,7 @@ parser.add_argument('--port', '-p',
 	help='The serial port to use')
 parser.add_argument('--address', '-a',
 	help='Address to flash the binary at',
-	type=int,
+	type=lambda x: int(x, 0),
 	default=0x30000)
 
 args = parser.parse_args()
@@ -304,5 +304,42 @@ if args.command == 'flash':
 		print('Could not flash the binaries.')
 		sys.exit(1)
 
+
+elif args.command == 'listen' or args.command == 'tail':
+	import serial.tools.miniterm
+
+	sp = serial.Serial(port='/dev/ttyUSB0',
+	                        baudrate=115200,
+	                        bytesize=8,
+	                        parity=serial.PARITY_NONE,
+	                        stopbits=1,
+	                        xonxoff=0,
+	                        rtscts=0,
+	                        timeout=0.5)
+
+	# Make sure starting the terminal does not put it in bootloader mode
+	# or in constant reset.
+	sp.dtr = 0
+	sp.rts = 0
+
+	# Use trusty miniterm
+	miniterm = serial.tools.miniterm.Miniterm(
+        sp,
+        echo=False,
+        eol='crlf',
+        filters=['default'])
+
+	# Ctrl+c to exit.
+	miniterm.exit_character = serial.tools.miniterm.unichr(0x03)
+	miniterm.set_rx_encoding('UTF-8')
+	miniterm.set_tx_encoding('UTF-8')
+
+	miniterm.start()
+	try:
+		miniterm.join(True)
+	except KeyboardInterrupt:
+		pass
+	miniterm.join()
+	miniterm.close()
 
 
