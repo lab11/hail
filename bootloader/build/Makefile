@@ -124,110 +124,138 @@ CPROJFLAGS=-DBOARD=USER_BOARD -Dprintf=iprintf -Dscanf=iscanf -DPARC_CALLBACK_MO
 CFLAGS=$(CINCLUDES) $(CWARNS) $(CMISCFLAGS) $(CPROJFLAGS)
 
 src/ASF/common/services/clock/sam4l/%.o: ../src/ASF/common/services/clock/sam4l/%.c
+	mkdir -p src/ASF/common/services/clock/sam4l
 	$(CCBIN) $(CFLAGS) -o "$@" "$<"
 
 
 src/ASF/common/services/serial/%.o: ../src/ASF/common/services/serial/%.c
+	mkdir -p src/ASF/common/services/serial
 	$(CCBIN) $(CFLAGS) -o "$@" "$<"
 
 
 src/ASF/common/services/sleepmgr/sam4l/%.o: ../src/ASF/common/services/sleepmgr/sam4l/%.c
+	mkdir -p src/ASF/common/services/sleepmgr/sam4l
 	$(CCBIN) $(CFLAGS) -o "$@" "$<"
 
 
 src/ASF/common/utils/stdio/%.o: ../src/ASF/common/utils/stdio/%.c
+	mkdir -p src/ASF/common/utils/stdio
 	$(CCBIN) $(CFLAGS) -o "$@" "$<"
 
 
 src/ASF/sam/drivers/acifc/%.o: ../src/ASF/sam/drivers/acifc/%.c
+	mkdir -p src/ASF/sam/drivers/acifc
 	$(CCBIN) $(CFLAGS) -o "$@" "$<"
 
 
 src/ASF/sam/drivers/adcife/%.o: ../src/ASF/sam/drivers/adcife/%.c
+	mkdir -p src/ASF/sam/drivers/adcife
 	$(CCBIN) $(CFLAGS) -o "$@" "$<"
 
 
 src/ASF/sam/drivers/aesa/%.o: ../src/ASF/sam/drivers/aesa/%.c
+	mkdir -p src/ASF/sam/drivers/aesa
 	$(CCBIN) $(CFLAGS) -o "$@" "$<"
 
 
 src/ASF/sam/drivers/ast/%.o: ../src/ASF/sam/drivers/ast/%.c
+	mkdir -p src/ASF/sam/drivers/ast
 	$(CCBIN) $(CFLAGS) -o "$@" "$<"
 
 
 src/ASF/sam/drivers/bpm/%.o: ../src/ASF/sam/drivers/bpm/%.c
+	mkdir -p src/ASF/sam/drivers/bpm
 	$(CCBIN) $(CFLAGS) -o "$@" "$<"
 
 
 src/ASF/sam/drivers/crccu/%.o: ../src/ASF/sam/drivers/crccu/%.c
+	mkdir -p src/ASF/sam/drivers/crccu
 	$(CCBIN) $(CFLAGS) -o "$@" "$<"
 
 
 src/ASF/sam/drivers/dacc/%.o: ../src/ASF/sam/drivers/dacc/%.c
+	mkdir -p src/ASF/sam/drivers/dacc
 	$(CCBIN) $(CFLAGS) -o "$@" "$<"
 
 
 src/ASF/sam/drivers/eic/%.o: ../src/ASF/sam/drivers/eic/%.c
+	mkdir -p src/ASF/sam/drivers/eic
 	$(CCBIN) $(CFLAGS) -o "$@" "$<"
 
 src/ASF/sam/drivers/freqm/%.o: ../src/ASF/sam/drivers/freqm/%.c
+	mkdir -p src/ASF/sam/drivers/freqm
 	$(CCBIN) $(CFLAGS) -o "$@" "$<"
 
 src/ASF/sam/drivers/events/%.o: ../src/ASF/sam/drivers/events/%.c
+	mkdir -p src/ASF/sam/drivers/events
 	$(CCBIN) $(CFLAGS) -o "$@" "$<"
 
 src/ASF/sam/drivers/flashcalw/%.o: ../src/ASF/sam/drivers/flashcalw/%.c
+	mkdir -p src/ASF/sam/drivers/flashcalw
 	$(CCBIN) $(CFLAGS) -o "$@" "$<"
 
 src/ASF/sam/drivers/gloc/%.o: ../src/ASF/sam/drivers/gloc/%.c
+	mkdir -p src/ASF/sam/drivers/gloc
 	$(CCBIN) $(CFLAGS) -o "$@" "$<"
 
 
 src/ASF/sam/drivers/gpio/%.o: ../src/ASF/sam/drivers/gpio/%.c
+	mkdir -p src/ASF/sam/drivers/gpio
 	$(CCBIN) $(CFLAGS) -o "$@" "$<"
 
 
 src/ASF/sam/drivers/hmatrixb/%.o: ../src/ASF/sam/drivers/hmatrixb/%.c
+	mkdir -p src/ASF/sam/drivers/hmatrixb
 	$(CCBIN) $(CFLAGS) -o "$@" "$<"
 
 
 src/ASF/sam/drivers/lcdca/%.o: ../src/ASF/sam/drivers/lcdca/%.c
+	mkdir -p src/ASF/sam/drivers/lcdca
 	$(CCBIN) $(CFLAGS) -o "$@" "$<"
 
 
 src/ASF/sam/drivers/parc/%.o: ../src/ASF/sam/drivers/parc/%.c
+	mkdir -p src/ASF/sam/drivers/parc
 	$(CCBIN) $(CFLAGS) -o "$@" "$<"
 
 
 src/ASF/sam/drivers/pdca/%.o: ../src/ASF/sam/drivers/pdca/%.c
+	mkdir -p src/ASF/sam/drivers/pdca
 	$(CCBIN) $(CFLAGS) -o "$@" "$<"
 
 
 src/ASF/sam/drivers/picouart/%.o: ../src/ASF/sam/drivers/picouart/%.c
+	mkdir -p src/ASF/sam/drivers/picouart
 	$(CCBIN) $(CFLAGS) -o "$@" "$<"
 
 
 src/ASF/sam/drivers/spi/%.o: ../src/ASF/sam/drivers/spi/%.c
+	mkdir -p src/ASF/sam/drivers/spi
 	$(CCBIN) $(CFLAGS) -o "$@" "$<"
 
 
 src/ASF/sam/drivers/tc/%.o: ../src/ASF/sam/drivers/tc/%.c
+	mkdir -p src/ASF/sam/drivers/tc
 	$(CCBIN) $(CFLAGS) -o "$@" "$<"
 
 
 src/ASF/sam/drivers/twim/%.o: ../src/ASF/sam/drivers/twim/%.c
+	mkdir -p src/ASF/sam/drivers/twim
 	$(CCBIN) $(CFLAGS) -o "$@" "$<"
 
 
 src/ASF/sam/drivers/twis/%.o: ../src/ASF/sam/drivers/twis/%.c
+	mkdir -p src/ASF/sam/drivers/twis
 	$(CCBIN) $(CFLAGS) -o "$@" "$<"
 
 
 src/ASF/sam/drivers/usart/%.o: ../src/ASF/sam/drivers/usart/%.c
+	mkdir -p src/ASF/sam/drivers/usart
 	$(CCBIN) $(CFLAGS) -o "$@" "$<"
 
 
 src/ASF/sam/drivers/wdt/%.o: ../src/ASF/sam/drivers/wdt/%.c
+	mkdir -p src/ASF/sam/drivers/wdt
 	$(CCBIN) $(CFLAGS) -o "$@" "$<"
 
 
@@ -236,22 +264,27 @@ src/%.o: ../src/%.c
 
 
 src/ASF/common/boards/user_board/%.o: ../src/ASF/common/boards/user_board/%.c
+	mkdir -p src/ASF/common/boards/user_board
 	$(CCBIN) $(CFLAGS) -o "$@" "$<"
 
 
 src/ASF/common/utils/interrupt/%.o: ../src/ASF/common/utils/interrupt/%.c
+	mkdir -p src/ASF/common/utils/interrupt
 	$(CCBIN) $(CFLAGS) -o "$@" "$<"
 
 
 src/ASF/sam/utils/cmsis/sam4l/source/templates/%.o: ../src/ASF/sam/utils/cmsis/sam4l/source/templates/%.c
+	mkdir -p src/ASF/sam/utils/cmsis/sam4l/source/templates
 	$(CCBIN) $(CFLAGS) -o "$@" "$<"
 
 
 src/ASF/sam/utils/cmsis/sam4l/source/templates/gcc/%.o: ../src/ASF/sam/utils/cmsis/sam4l/source/templates/gcc/%.c
+	mkdir -p src/ASF/sam/utils/cmsis/sam4l/source/templates/gcc
 	$(CCBIN) $(CFLAGS) -o "$@" "$<"
 
 
 src/ASF/sam/utils/syscalls/gcc/%.o: ../src/ASF/sam/utils/syscalls/gcc/%.c
+	mkdir -p src/ASF/sam/utils/syscalls/gcc
 	$(CCBIN) $(CFLAGS) -o "$@" "$<"
 
 
@@ -285,4 +318,7 @@ calib: all
 # Other Targets
 clean:
 	-$(RM) $(OBJS) $(EXECUTABLES)
-	rm -rf $(BINARY_NAME).elf
+	rm -f $(BINARY_NAME).elf
+	rm -f $(BINARY_NAME).bin
+	rm -f $(BINARY_NAME).map
+	rm -rf src
