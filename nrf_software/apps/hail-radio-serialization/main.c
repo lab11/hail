@@ -33,7 +33,7 @@
 
 #include "boards.h"
 #include "led.h"
-#define DEBUG_LEDS false
+//#define DEBUG_LEDS
 
 
 // make errors evident to anyone watching
