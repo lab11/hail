@@ -35,7 +35,7 @@ echo "done"
 
 
 echo "Ensuring the submodule for the nRF is checked out"
-pushd ../nrf_software
+pushd ../nrf-software
 git submodule update --init nrf5x-base
 popd
 
@@ -46,7 +46,7 @@ echo "This requires moving the JTAG."
 echo "Move the tag connect header to the bottom of the board."
 read -n1 -r -p "Press any key to continue..." key
 
-pushd ../nrf_software/apps/hail-radio-serialization
+pushd ../nrf-software/apps/hail-radio-serialization
 make flash ID=$idcolon
 popd
 echo "done"
