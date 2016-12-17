@@ -5,6 +5,8 @@ me=`basename "$0"`
 if [[ $# -ne 1 ]]; then
 	echo "You must supply the Hail ID as the argument to this script."
 	echo "Example: $me c098e5130001"
+	echo ""
+	echo "Script also expects JTAG attached to the SAM4L to start."
 	exit 1
 fi
 
