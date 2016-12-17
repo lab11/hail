@@ -1295,8 +1295,12 @@ This Sunstone Circuits 4 Layer .DRU has been set to cover our minimum requiremen
 <attribute name="DIGIKEY" value="497-13637-1-ND" x="9.017" y="6.223" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="NAME" x="9.9568" y="5.5238" size="0.508" layer="25" font="vector" ratio="18" rot="R180" align="bottom-center"/>
 </element>
-<element name="JP3" library="Particle" package="1X12-CASTELLATED" value="M12PTH-CST-L" x="1.27" y="18.288" smashed="yes" rot="R180"/>
-<element name="JP4" library="Particle" package="1X12-CASTELLATED" value="M12PTH-CST-R" x="19.05" y="18.288" smashed="yes"/>
+<element name="JP3" library="Particle" package="1X12-CASTELLATED" value="M12PTH-CST-L" x="1.27" y="18.288" smashed="yes" rot="R180">
+<attribute name="DIGIKEY" value="S1011E-12-ND" x="1.27" y="18.288" size="1.778" layer="27" rot="R180" display="off"/>
+</element>
+<element name="JP4" library="Particle" package="1X12-CASTELLATED" value="M12PTH-CST-R" x="19.05" y="18.288" smashed="yes">
+<attribute name="DIGIKEY" value="S1011E-12-ND" x="19.05" y="18.288" size="1.778" layer="27" display="off"/>
+</element>
 <element name="U1" library="chips" package="QFN-20-4MM" value="FT231XQ" x="10.16" y="28.956" smashed="yes" rot="R180">
 <attribute name="MPN" value="FT231XQ-R" x="10.16" y="28.956" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="DIGIKEY" value="768-1128-1-ND" x="10.16" y="28.956" size="1.778" layer="27" rot="R180" display="off"/>
@@ -1471,7 +1475,7 @@ This Sunstone Circuits 4 Layer .DRU has been set to cover our minimum requiremen
 <attribute name="NAME" x="19.0754" y="20.5994" size="0.508" layer="25" font="vector" ratio="18" align="bottom-center"/>
 </element>
 <element name="FB1" library="passives" package="0402_CAP" value="1.5k" x="3.81" y="18.288" smashed="yes" rot="R270">
-<attribute name="DIGIKEY" value="490-5216-1-ND" x="1.016" y="17.272" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="DIGIKEY" value="1276-6395-1-ND" x="1.016" y="17.272" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="NAME" x="3.7084" y="19.8628" size="0.508" layer="25" font="vector" ratio="18" rot="R270" align="bottom-center"/>
 </element>
 <element name="C22" library="passives" package="0402_CAP" value="100nF" x="11.43" y="24.638" smashed="yes" rot="R90">
@@ -1839,7 +1843,7 @@ This Sunstone Circuits 4 Layer .DRU has been set to cover our minimum requiremen
 <contactref element="J1" pad="3"/>
 <wire x1="10.16" y1="32.451" x2="10.16" y2="30.856" width="0.2032" layer="1"/>
 </signal>
-<signal name="BLUE_LED">
+<signal name="RED_LED">
 <contactref element="R1" pad="1"/>
 <contactref element="U6" pad="40"/>
 <wire x1="10.418" y1="13.509" x2="10.418" y2="12.323" width="0.2032" layer="1"/>
@@ -1857,7 +1861,7 @@ This Sunstone Circuits 4 Layer .DRU has been set to cover our minimum requiremen
 <wire x1="15.494" y1="10.795" x2="15.94993125" y2="11.25093125" width="0.2032" layer="1"/>
 <wire x1="15.94993125" y1="11.25093125" x2="15.94993125" y2="11.43" width="0.2032" layer="1"/>
 </signal>
-<signal name="GREEN_LED">
+<signal name="BLUE_LED">
 <contactref element="R2" pad="1"/>
 <contactref element="U6" pad="41"/>
 <via x="10.414" y="11.43" extent="1-16" drill="0.2032"/>
@@ -1875,7 +1879,7 @@ This Sunstone Circuits 4 Layer .DRU has been set to cover our minimum requiremen
 <wire x1="15.875" y1="12.192" x2="15.94993125" y2="12.192" width="0.2032" layer="1"/>
 <wire x1="14.732" y1="10.7696" x2="15.1892" y2="11.2268" width="0.2032" layer="16"/>
 </signal>
-<signal name="RED_LED">
+<signal name="GREEN_LED">
 <contactref element="R3" pad="1"/>
 <contactref element="U6" pad="42"/>
 <wire x1="11.176" y1="11.049" x2="11.176" y2="12.827" width="0.2032" layer="1"/>
@@ -2547,7 +2551,7 @@ This Sunstone Circuits 4 Layer .DRU has been set to cover our minimum requiremen
 <wire x1="9.0678" y1="25.527" x2="9.0678" y2="27.8638" width="0.2032" layer="16"/>
 <wire x1="9.0678" y1="27.8638" x2="8.4582" y2="28.2702" width="0.2032" layer="16"/>
 </signal>
-<signal name="NRF_RTS">
+<signal name="NRF_CTS">
 <contactref element="U6" pad="27"/>
 <contactref element="U5" pad="17"/>
 <via x="14.4684" y="12.4872" extent="1-16" drill="0.2032"/>
@@ -2581,7 +2585,7 @@ This Sunstone Circuits 4 Layer .DRU has been set to cover our minimum requiremen
 <wire x1="5.9182" y1="18.6182" x2="5.9182" y2="20.828" width="0.2032" layer="16"/>
 <wire x1="5.9182" y1="20.828" x2="6.5532" y2="21.463" width="0.2032" layer="16"/>
 </signal>
-<signal name="NRF_CTS">
+<signal name="NRF_RTS">
 <contactref element="U6" pad="28"/>
 <contactref element="U5" pad="18"/>
 <via x="14.224" y="11.811" extent="1-16" drill="0.2032"/>

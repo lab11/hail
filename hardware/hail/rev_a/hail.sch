@@ -4913,8 +4913,12 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <part name="S2" library="switches" deviceset="B3U" device="-1000P"/>
 <part name="A1" library="chips" deviceset="FRACTUS-2.4GHZ-FR05-S1-N-0-110" device=""/>
 <part name="B1" library="chips" deviceset="BAL-NRF01D3" device=""/>
-<part name="JP3" library="Particle" deviceset="M12" device="PTH-CST-L"/>
-<part name="JP4" library="Particle" deviceset="M12" device="PTH-CST-R"/>
+<part name="JP3" library="Particle" deviceset="M12" device="PTH-CST-L">
+<attribute name="DIGIKEY" value="S1011E-12-ND"/>
+</part>
+<part name="JP4" library="Particle" deviceset="M12" device="PTH-CST-R">
+<attribute name="DIGIKEY" value="S1011E-12-ND"/>
+</part>
 <part name="U1" library="chips" deviceset="FT231X" device="Q"/>
 <part name="GND1" library="supply1" deviceset="GND" device=""/>
 <part name="GND2" library="supply1" deviceset="GND" device=""/>
@@ -5072,7 +5076,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <attribute name="DIGIKEY" value="490-10777-1-ND"/>
 </part>
 <part name="FB1" library="passives" deviceset="FERRITE_BEAD" device="0402" value="1.5k">
-<attribute name="DIGIKEY" value="490-5216-1-ND"/>
+<attribute name="DIGIKEY" value="1276-6395-1-ND"/>
 </part>
 <part name="C22" library="passives" deviceset="CAPACITOR" device="0402_CAP" value="100nF">
 <attribute name="DIGIKEY" value="490-10777-1-ND"/>
@@ -5148,8 +5152,12 @@ Button</text>
 <attribute name="DIGIKEY" x="226.06" y="144.78" size="1.778" layer="96" rot="R90" display="off"/>
 </instance>
 <instance part="P+1" gate="VCC" x="187.96" y="162.56"/>
-<instance part="JP3" gate="G$1" x="226.06" y="91.44" rot="MR0"/>
-<instance part="JP4" gate="G$1" x="226.06" y="50.8" rot="MR0"/>
+<instance part="JP3" gate="G$1" x="226.06" y="91.44" rot="MR0">
+<attribute name="DIGIKEY" x="226.06" y="91.44" size="1.778" layer="96" rot="MR0" display="off"/>
+</instance>
+<instance part="JP4" gate="G$1" x="226.06" y="50.8" rot="MR0">
+<attribute name="DIGIKEY" x="226.06" y="50.8" size="1.778" layer="96" rot="MR0" display="off"/>
+</instance>
 <instance part="S1" gate="G$1" x="111.76" y="58.42"/>
 <instance part="S2" gate="G$1" x="111.76" y="27.94"/>
 <instance part="GND22" gate="1" x="121.92" y="53.34"/>
@@ -5446,7 +5454,7 @@ Button</text>
 <pinref part="U6" gate="G$1" pin="PA03"/>
 </segment>
 </net>
-<net name="BLUE_LED" class="0">
+<net name="RED_LED" class="0">
 <segment>
 <pinref part="R1" gate="G$1" pin="1"/>
 <wire x1="233.68" y1="139.7" x2="233.68" y2="129.54" width="0.1524" layer="91"/>
@@ -5459,7 +5467,7 @@ Button</text>
 <label x="129.54" y="127" size="1.27" layer="95" font="vector" xref="yes"/>
 </segment>
 </net>
-<net name="GREEN_LED" class="0">
+<net name="BLUE_LED" class="0">
 <segment>
 <pinref part="R2" gate="G$1" pin="1"/>
 <wire x1="218.44" y1="139.7" x2="218.44" y2="134.62" width="0.1524" layer="91"/>
@@ -5472,7 +5480,7 @@ Button</text>
 <label x="129.54" y="124.46" size="1.27" layer="95" font="vector" xref="yes"/>
 </segment>
 </net>
-<net name="RED_LED" class="0">
+<net name="GREEN_LED" class="0">
 <segment>
 <pinref part="R3" gate="G$1" pin="1"/>
 <wire x1="226.06" y1="139.7" x2="226.06" y2="132.08" width="0.1524" layer="91"/>
@@ -5883,7 +5891,7 @@ Button</text>
 <junction x="83.82" y="127"/>
 </segment>
 </net>
-<net name="NRF_RTS" class="0">
+<net name="NRF_CTS" class="0">
 <segment>
 <pinref part="U6" gate="G$1" pin="PB06"/>
 <wire x1="86.36" y1="114.3" x2="83.82" y2="114.3" width="0.1524" layer="91"/>
@@ -5893,7 +5901,7 @@ Button</text>
 <junction x="83.82" y="114.3"/>
 </segment>
 </net>
-<net name="NRF_CTS" class="0">
+<net name="NRF_RTS" class="0">
 <segment>
 <pinref part="U6" gate="G$1" pin="PB07"/>
 <wire x1="86.36" y1="111.76" x2="83.82" y2="111.76" width="0.1524" layer="91"/>
@@ -6249,14 +6257,14 @@ Button</text>
 <label x="58.42" y="78.74" size="1.27" layer="95" font="vector" rot="R90" xref="yes"/>
 </segment>
 </net>
-<net name="NRF_RTS" class="0">
+<net name="NRF_CTS" class="0">
 <segment>
 <label x="78.74" y="93.98" size="1.27" layer="95" font="vector" rot="R180" xref="yes"/>
 <pinref part="U5" gate="G$1" pin="P11"/>
 <wire x1="81.28" y1="93.98" x2="78.74" y2="93.98" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="NRF_CTS" class="0">
+<net name="NRF_RTS" class="0">
 <segment>
 <label x="78.74" y="91.44" size="1.27" layer="95" font="vector" rot="R180" xref="yes"/>
 <pinref part="U5" gate="G$1" pin="P12"/>
