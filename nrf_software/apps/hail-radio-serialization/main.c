@@ -20,6 +20,7 @@
  */
 
 #include <stdbool.h>
+#include <string.h>
 #include "nrf_sdm.h"
 #include "nrf_soc.h"
 #include "app_error.h"
@@ -35,6 +36,8 @@
 #include "led.h"
 //#define DEBUG_LEDS
 
+// hail platform ID
+#define PLATFORM_ID 0x13
 
 // make errors evident to anyone watching
 void app_error_handler(uint32_t error_code, uint32_t line_num, const uint8_t* p_file_name) {
@@ -56,6 +59,46 @@ void app_error_handler(uint32_t error_code, uint32_t line_num, const uint8_t* p_
         led_off(LED_0);
         for (i=0; i<250000; i++);
     }
+}
+
+// Configure the MAC address of the device based on the config values and
+// what is stored in the flash.
+bool ble_address_set () {
+    uint32_t err_code;
+
+    // Set the MAC address of the device
+    // Highest priority is address from flash if available
+    // Next is is the address supplied by user in ble_config
+    // Finally, Nordic assigned random value is used as last choice
+    ble_gap_addr_t gap_addr;
+
+    // get BLE address from Flash
+    uint8_t* _ble_address = (uint8_t*)BLEADDR_FLASH_LOCATION;
+    if (_ble_address[1] == 0xFF && _ble_address[0] == 0xFF) {
+        // No user-defined address stored in flash
+
+        // New address is a combination of Michigan OUI and Platform ID
+        uint8_t new_mac_addr[6] = {0x00, 0x00, PLATFORM_ID, 0xe5, 0x98, 0xc0};
+
+        // Set the new BLE address with the Michigan OUI, Platform ID, and
+        //  bottom two octets from the original gap address
+        // Get the current original address
+        sd_ble_gap_address_get(&gap_addr);
+        memcpy(gap_addr.addr+2, new_mac_addr+2, sizeof(gap_addr.addr)-2);
+    } else {
+        // User-defined address stored in flash
+
+        // Set the new BLE address with the user-defined address
+        memcpy(gap_addr.addr, _ble_address, 6);
+    }
+
+    gap_addr.addr_type = BLE_GAP_ADDR_TYPE_PUBLIC;
+    err_code = sd_ble_gap_address_set(BLE_GAP_ADDR_CYCLE_MODE_NONE, &gap_addr);
+    // not an error if it failed, we'll just try again later
+    //APP_ERROR_CHECK(err_code);
+
+    // did it succeed this time?
+    return (err_code == NRF_SUCCESS);
 }
 
 /**@brief Main function of the connectivity application. */
@@ -86,7 +129,10 @@ int main(void)
     led_off(LED_0);
 #endif
 
+
     /* Enter main loop. */
+    bool first_event_received = false;
+    bool address_set = false;
     for (;;)
     {
         /* Process SoftDevice events. */
@@ -99,6 +145,15 @@ int main(void)
         err_code = ser_conn_rx_process();
         APP_ERROR_CHECK(err_code);
 
+        /* Set BLE address
+         * This cannot be run until sd_ble_enable has been called, which is
+         * always the first tranmission to be sent. So this will just try
+         * setting the address repeatedly until it succeeds (which will occur
+         * 10 byte receptions in, after sd_ble_enable comes across the wire*/
+        if (first_event_received && !address_set) {
+            address_set = ble_address_set();
+        }
+
 #ifdef DEBUG_LEDS
         led_toggle(LED_0);
 #endif
@@ -106,6 +161,7 @@ int main(void)
         /* Sleep waiting for an application event. */
         err_code = sd_app_evt_wait();
         APP_ERROR_CHECK(err_code);
+        first_event_received = true;
     }
 }
 /** @} */
