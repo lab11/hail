@@ -308,7 +308,7 @@ all: $(OUTPUT_FILE_PATH) $(ADDITIONAL_DEPENDENCIES)
 src/jumpfunc.o: ../src/jumpfunc.s
 	$(CCBIN) -c -o "$@" "$<"
 
-$(OUTPUT_FILE_PATH): $(OBJS) $(USER_OBJS)
+hail_bootloader.bin: $(OBJS) $(USER_OBJS)
 	$(CCBIN) -o$(OUTPUT_FILE_PATH) $(OBJS) $(LIBS) -mthumb -Wl,-Map="$(BINARY_NAME).map" -Wl,--start-group -larm_cortexM4l_math -lm  -Wl,--end-group -L"../src/ASF/thirdparty/CMSIS/Lib/GCC"  -Wl,--gc-sections -mcpu=cortex-m4 -Wl,--entry=Reset_Handler -Wl,--cref -mthumb -T $(LFILE)
 	$(SIZE) $(BINARY_NAME).elf
 	$(OBJCOPY) -O binary $(BINARY_NAME).elf $(BINARY_NAME).bin
