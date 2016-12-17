@@ -299,6 +299,9 @@ endif
 
 LFILE=../src/bootloader.ld
 
+JLINK=JLinkExe
+JLINK_OPTIONS+=-device ATSAM4LC8C -if swd -speed 1200 -AutoConnect 1
+
 # All Target
 all: $(OUTPUT_FILE_PATH) $(ADDITIONAL_DEPENDENCIES)
 
@@ -310,8 +313,8 @@ $(OUTPUT_FILE_PATH): $(OBJS) $(USER_OBJS)
 	$(SIZE) $(BINARY_NAME).elf
 	$(OBJCOPY) -O binary $(BINARY_NAME).elf $(BINARY_NAME).bin
 
-prog: all
-	$(JLINK) prog.jlink || true
+flash-bootloader: $(BINARY_NAME).bin
+	$(JLINK) $(JLINK_OPTIONS) flash-bootloader.jlink
 
 calib: all
 	$(JLINK) calib.jlink || true
