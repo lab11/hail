@@ -23,9 +23,6 @@
 #include <string.h>
 
 #include <flashcalw.h>
-#include <spi.h>
-#include <tc.h>
-#include <freqm.h>
 
 #include "info.h"
 

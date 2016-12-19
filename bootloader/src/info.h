@@ -17,5 +17,5 @@
  * Copyright 2014, Michael Andersen <m.andersen@eecs.berkeley.edu>
  */
 
-#define BOOTLOADER_VERSION      "V2.0.0"
-#define BOOTLOADER_DATE         "8/13/2015"
+#define BOOTLOADER_VERSION      "V3.0.0"
+#define BOOTLOADER_DATE         "12/19/2016"

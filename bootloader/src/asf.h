@@ -52,39 +52,15 @@
  * running the ASF driver selector tool. Any changes will be discarded.
  */
 
-// From module: ACIFC - Analog Comparator Interface
-#include <acifc.h>
-
-// From module: ADCIFE - ADC Interface
-#include <adcife.h>
-
-// From module: AESA - Advanced Encryption Standard Module
-#include <aesa.h>
-
-// From module: AST - Asynchronous Timer
-#include <ast.h>
-
 // From module: CPU Reset Cause
 #include <sam4l_reset_cause.h>
-
-// From module: CRCCU - Cyclic Redundancy Check Calculation Unit
-#include <crccu.h>
 
 // From module: Common SAM compiler driver
 #include <compiler.h>
 #include <status_codes.h>
 
-// From module: DACC - Digital-to-Analog Converter
-#include <dacc.h>
-
-// From module: EIC - External Interrupt Controller
-#include <eic.h>
-
 // From module: FLASHCALW Controller Software Driver
 #include <flashcalw.h>
-
-// From module: GLOC - Glue Logic Controller
-#include <gloc.h>
 
 // From module: GPIO - General-Purpose Input/Output
 #include <gpio.h>
@@ -92,32 +68,11 @@
 // From module: Generic board support
 #include <board.h>
 
-// From module: HMATRIXB - HSB Bus Matrix
-#include <hmatrixb.h>
-
 // From module: IOPORT - General purpose I/O service
 #include <ioport.h>
 
 // From module: Interrupt management - SAM implementation
 #include <interrupt.h>
-
-// From module: LCDCA controller driver
-#include <lcdca.h>
-
-// From module: PARC - Parallel Capture (Polled Mode)
-#include <parc.h>
-
-// From module: PDCA - Peripheral DMA Controller
-#include <pdca.h>
-
-// From module: PEVC - Peripheral Event Controller Driver for SAM
-#include <events.h>
-
-// From module: PICOUART - Picopower UART
-#include <picouart.h>
-
-// From module: Part identification macros
-#include <parts.h>
 
 // From module: Power Management
 #include <bpm.h>
@@ -125,31 +80,6 @@
 // From module: SAM4L startup code
 #include <exceptions.h>
 #include <system_sam4l.h>
-
-// From module: SPI - Serial Peripheral Interface
-#include <spi.h>
-
-// From module: Sleep manager - SAM4L implementation
-#include <sam4l/sleepmgr.h>
-#include <sleepmgr.h>
-
-// From module: Standard serial I/O (stdio) - SAM implementation
-#include <stdio_serial.h>
-
-// From module: System Clock Control - SAM4L implementation
-#include <sysclk.h>
-
-// From module: TC - Timer Counter
-#include <tc.h>
-
-// From module: TWI - Two-Wire Master Interface
-#include <twim.h>
-
-// From module: TWIS - Two-Wire Slave Interface
-#include <twis.h>
-
-// From module: USART - Serial interface- SAM implementation for devices with only USART
-#include <serial.h>
 
 // From module: USART - Univ. Syn Async Rec/Trans
 #include <usart.h>
