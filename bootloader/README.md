@@ -12,13 +12,11 @@ Compiling
 ---------
 
 ```bash
-cd build
 make
 ```
 
-and
+and to flash:
 
 ```bash
-cd build
 make flash-bootloader
 ```
