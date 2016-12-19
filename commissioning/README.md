@@ -3,7 +3,8 @@ Commissioning
 
 This folder contains resources for setting up new Hail boards.
 
-# Initial software installation
+Initial software installation
+-----------------------------
 
 The `commission_new_hail.sh` script sets the FTDI device name, flashes the
 bootloader on the SAM4L, and loads the BLE serialization code onto the
@@ -22,3 +23,11 @@ To initialize a Hail board:
 Be sure to label the board with a sticker so that the user knows what the
 device's BLE address is.
 
+
+`ftx_prog`
+----------
+
+The `ftx_prog` executable comes from here:
+https://github.com/richardeoin/ftx-prog.
+It was built for linux amd64, so if the executable doesn't work for you,
+you will have to recompile it for your platform.
