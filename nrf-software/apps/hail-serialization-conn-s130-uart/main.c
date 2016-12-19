@@ -34,7 +34,7 @@
 
 #include "boards.h"
 #include "led.h"
-#define DEBUG_LEDS
+// #define DEBUG_LEDS
 
 // hail platform ID
 #define PLATFORM_ID 0x13
