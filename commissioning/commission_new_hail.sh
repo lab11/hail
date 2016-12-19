@@ -27,7 +27,7 @@ fi
 echo "done"
 
 echo "Flashing the bootloader using JTAG..."
-pushd ../bootloader/build
+pushd ../bootloader
 make flash-bootloader
 popd > /dev/null
 echo "done"
