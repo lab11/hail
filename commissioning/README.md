@@ -14,7 +14,7 @@ To initialize a Hail board:
 
  * Connect USB to the board
  * Connect a JTAG programmer to the SAM4L
- * Run `./commission_new_hail.sh c098e512XXXX` where the `XXXX` should be
+ * Run `./commission_new_hail.sh c098e513XXXX` where the `XXXX` should be
    replaced with a unique device ID
  * Connect a JTAG programmer to the nRF51822
  * Hit `any key` to continue the script
