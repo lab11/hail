@@ -143,9 +143,12 @@ all: $(OUTPUT_FILE_PATH) $(ADDITIONAL_DEPENDENCIES)
 build/src/jumpfunc.o: src/jumpfunc.s
 	$(CCBIN) -c -o "$@" "$<"
 
-build/hail_bootloader.bin: $(OBJS) $(USER_OBJS)
-	$(CCBIN) -o$(OUTPUT_FILE_PATH) $(OBJS) $(LIBS) -mthumb -Wl,-Map="build/$(BINARY_NAME).map" -Wl,--start-group -lm  -Wl,--end-group -L"../src/ASF/thirdparty/CMSIS/Lib/GCC"  -Wl,--gc-sections -mcpu=cortex-m4 -Wl,--entry=Reset_Handler -Wl,--cref -mthumb -T $(LFILE)
-	$(SIZE) build/$(BINARY_NAME).bin
+build/hail_bootloader.elf: $(OBJS) $(USER_OBJS)
+	$(CCBIN) -o$@ $(OBJS) $(LIBS) -mthumb -Wl,-Map="build/$(BINARY_NAME).map" -Wl,--start-group -lm  -Wl,--end-group -L"../src/ASF/thirdparty/CMSIS/Lib/GCC"  -Wl,--gc-sections -mcpu=cortex-m4 -Wl,--entry=Reset_Handler -Wl,--cref -mthumb -T $(LFILE)
+	$(SIZE) $@
+
+build/hail_bootloader.bin: build/hail_bootloader.elf
+	$(OBJCOPY) -Obinary $^ $@
 
 flash-bootloader: $(OUTPUT_FILE_PATH)
 	$(JLINK) $(JLINK_OPTIONS) flash-bootloader.jlink
