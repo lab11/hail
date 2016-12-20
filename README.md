@@ -46,7 +46,6 @@ Programming the nRF51822
 The nRF51822 BLE radio on Hail can be programmed over JTAG with various
 applications, which are located in [nrf-software](nrf-software). By default,
 the nRF51822 is commissioned with the
-[hail-radio-serialization](nrf-software/apps/hail-radio-serialization)
+[serialization](https://github.com/helena-project/tock-nrf-serialization)
 application which allows softdevice commands to be sent over a UART connection
 from the SAM4L.
-

@@ -34,11 +34,8 @@ echo "done"
 
 
 
-echo "Ensuring the submodule for the nRF is checked out"
-pushd ../nrf-software
-git submodule update --init nrf5x-base
-popd
-
+echo "Ensuring the submodule for the nRF serialization is checked out"
+git submodule update --init --recursive tock-nrf-serialization
 
 echo ""
 echo "Now attempting to flash the nRF51822."
@@ -46,7 +43,7 @@ echo "This requires moving the JTAG."
 echo "Move the tag connect header to the bottom of the board."
 read -n1 -r -p "Press any key to continue..." key
 
-pushd ../nrf-software/apps/hail-radio-serialization
-make flash ID=$idcolon
+pushd tock-nrf-serialization/nrf51822/apps/tock-nrf51822-serialization-sdk11-s130-uart-conn
+make hail flash ID=$idcolon
 popd
 echo "done"
