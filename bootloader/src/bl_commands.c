@@ -285,7 +285,7 @@ void bl_c_crcif(void)
     rv[2] = (uint8_t) (crc & 0xFF); crc >>=8;
     rv[3] = (uint8_t) (crc & 0xFF);
 
-    _escape_set(rv, 6, RES_CRCIF);
+    _escape_set(rv, 4, RES_CRCIF);
 }
 
 void bl_c_wuser(void)
