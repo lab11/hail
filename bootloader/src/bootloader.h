@@ -162,6 +162,9 @@
 #define RES_CRCXF       0x24
 #define RES_INFO        0x25
 
+#define ALLOWED_ATTRIBUTE_FLOOR   0xFC00
+#define ALLOWED_ATTRIBUTE_CEILING 0x10000
+
 #define ALLOWED_FLASH_FLOOR   65280
 #define ALLOWED_FLASH_CEILING 524287
 
@@ -207,6 +210,8 @@ void bl_c_id(void);
 void bl_c_wpage(void);
 void bl_c_epage(void);
 void bl_c_crcrx(void);
+void bl_c_sattr(void);
+void bl_c_gattr(void);
 void bl_c_rrange(void);
 void bl_c_crcif(void);
 void bl_c_unknown(void);
