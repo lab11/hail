@@ -142,6 +142,12 @@ void bl_cmd(uint8_t b) {
         case CMD_RRANGE:
             bl_c_rrange();
             break;
+        case CMD_SATTR:
+            bl_c_sattr();
+            break;
+        case CMD_GATTR:
+            bl_c_gattr();
+            break;
         case CMD_CRCIF:
             bl_c_crcif();
             break;
@@ -155,8 +161,6 @@ void bl_cmd(uint8_t b) {
         case CMD_XEBLOCK:
         case CMD_XWPAGE:
         case CMD_XRRANGE:
-        case CMD_SATTR:
-        case CMD_GATTR:
         case CMD_CRCEF:
         case CMD_XEPAGE:
         case CMD_XFINIT:

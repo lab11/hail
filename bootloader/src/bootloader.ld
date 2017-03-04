@@ -21,13 +21,14 @@
 
 OUTPUT_FORMAT("elf32-littlearm", "elf32-littlearm", "elf32-littlearm")
 OUTPUT_ARCH(arm)
- SEARCH_DIR(.) 
+ SEARCH_DIR(.)
 
 /* Memory Spaces Definitions, 64K flash, 64K ram */
 MEMORY
 {
-  rom (rx)  : ORIGIN = 0x00000000, LENGTH = 0x0000fe00
-  ram (rwx) : ORIGIN = 0x20000000, LENGTH = 0x00010000
+  rom (rx)        : ORIGIN = 0x00000000, LENGTH = 0x0000fc00
+  attributes (rx) : ORIGIN = 0x0000fc00, LENGTH = 0x00000400
+  ram (rwx)       : ORIGIN = 0x20000000, LENGTH = 0x00010000
 }
 
 __stack_size__ = DEFINED(__stack_size__) ? __stack_size__ : 0x1000;
@@ -126,6 +127,14 @@ SECTIONS
         . = ALIGN(8);
         _estack = .;
     } > ram
+
+    .fill :
+    {
+        FILL(0xFFFFFFFF);
+        . = ORIGIN(attributes) + LENGTH(attributes) - 1;
+        BYTE(0xFF)
+        ___ROM_AT = .;
+    } > attributes
 
     . = ALIGN(4);
     _end = . ;
