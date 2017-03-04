@@ -40,14 +40,14 @@ y = POSITION_START_Y
 # label_specs['x_count']  = 9
 
 label_specs = {}
-label_specs['offset_x'] = 18
-label_specs['gap_x']    = 0
+label_specs['offset_x'] = 31
+label_specs['gap_x']    = 7.6
 label_specs['width_x']  = 72
-label_specs['offset_y'] = 36
-label_specs['gap_y']    = 0
-label_specs['height_y'] = 36
-label_specs['y_count']  = 20
-label_specs['x_count']  = 8
+label_specs['offset_y'] = 25
+label_specs['gap_y']    = 7.1
+label_specs['height_y'] = 27
+label_specs['y_count']  = 22
+label_specs['x_count']  = 7
 
 def get_coordinates ():
 	global x, y
@@ -94,9 +94,9 @@ ltype = 'sc'
 # label_pdf = MAIN_LABEL_PDF
 label_svg = MAIN_LABEL_SVG
 label_pixels_x = 72
-label_pixels_y = 36
+label_pixels_y = 27
 label_id_pos_x = 36
-label_id_pos_y = 30
+label_id_pos_y = 22
 label_id_font  = 7.5
 label_id_letterspacing = -0.7
 # label_rotate = True
@@ -116,7 +116,7 @@ backgroundr = background.getroot()
 # 	# print(pos)
 # 	lblr.moveto(pos[0], pos[1], 1) # position correctly (hand tweaked)
 # 	# lblr.set_size(['{}pt'.format(label_pixels_x), '{}pt'.format(label_pixels_y)])
-labels.append(backgroundr)
+# labels.append(backgroundr)
 
 
 for nodeid in ids:
@@ -138,7 +138,7 @@ for nodeid in ids:
 	                     size=label_id_font,
 	                     font='Courier',
 	                     letterspacing=label_id_letterspacing,
-	                     color='white')
+	                     color='black')
 	fig.append([rawlabelr, txt])
 	# fig.append([rawlabelr])
 	# print(fig.to_str())
