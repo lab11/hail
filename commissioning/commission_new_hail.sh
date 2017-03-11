@@ -30,7 +30,9 @@ echo "Flashing the bootloader using JTAG..."
 JLinkExe -device ATSAM4LC8C -if swd -speed 1200 -AutoConnect 1 flash-bootloader.jlink
 echo "done"
 
-
+echo "Setting the correct board attribute..."
+tockloader set-attribute --jtag --board hail board hail
+echo "done"
 
 echo "Ensuring the submodule for the nRF serialization is checked out"
 git submodule update --init --recursive tock-nrf-serialization
