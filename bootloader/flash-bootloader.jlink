@@ -1,6 +1,0 @@
-r
-loadbin build/hail_bootloader.bin, 0x0000
-r
-g
-q
-
