@@ -27,9 +27,7 @@ fi
 echo "done"
 
 echo "Flashing the bootloader using JTAG..."
-pushd ../bootloader
-make flash-bootloader
-popd > /dev/null
+JLinkExe -device ATSAM4LC8C -if swd -speed 1200 -AutoConnect 1 flash-bootloader.jlink
 echo "done"
 
 
