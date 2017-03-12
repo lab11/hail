@@ -34,6 +34,20 @@ echo "Setting the correct board attribute..."
 tockloader set-attribute --jtag --board hail board hail
 echo "done"
 
+echo "Ensuring the submodule for Tock is checked out"
+git submodule update --init --recursive tockloader
+
+echo "Flashing the hail kernel"
+pushd tock/boards/hail
+tockloader flash target/sam4l/release/hail.bin --address 0x10000 --jtag --board hail
+popd
+
+echo "Flashing the hail app"
+pushd tock/userland/examples/tests/hail
+make
+tockloader install --jtag --board hail
+popd
+
 echo "Ensuring the submodule for the nRF serialization is checked out"
 git submodule update --init --recursive tock-nrf-serialization
 
