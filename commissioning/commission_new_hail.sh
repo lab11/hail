@@ -27,7 +27,7 @@ fi
 echo "done"
 
 echo "Flashing the bootloader using JTAG..."
-JLinkExe -device ATSAM4LC8C -if swd -speed 1200 -AutoConnect 1 flash-bootloader.jlink
+tockloader flash hail_bootloader.bin --address 0 --board hail --jtag
 echo "done"
 
 echo "Setting the correct board attribute..."
