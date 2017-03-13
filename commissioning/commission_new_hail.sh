@@ -6,7 +6,7 @@ if [[ $# -ne 1 ]]; then
 	echo "You must supply the Hail ID as the argument to this script."
 	echo "Example: $me c098e5130001"
 	echo ""
-	echo "Script also expects JTAG attached to the SAM4L to start."
+	echo "Script expects USB attached to start."
 	exit 1
 fi
 
@@ -25,6 +25,12 @@ if [[ $rc != 22 ]]; then
 	exit 2
 fi
 echo "done"
+
+echo ""
+echo "Finished configuring FTDI."
+echo "Unplug USB from the board and connect JTAG to the top of the board."
+read -n1 -r -p "Press any key to continue..." key
+echo ""
 
 echo "Flashing the bootloader using JTAG..."
 tockloader flash hail_bootloader.bin --address 0 --board hail --jtag
@@ -63,6 +69,7 @@ echo "Now attempting to flash the nRF51822."
 echo "This requires moving the JTAG."
 echo "Move the tag connect header to the bottom of the board."
 read -n1 -r -p "Press any key to continue..." key
+echo ""
 
 pushd tock-nrf-serialization/nrf51822/apps/tock-nrf51822-serialization-sdk11-s130-uart-conn
 make hail flash ID=$idcolon
