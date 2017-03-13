@@ -3446,6 +3446,9 @@ To use, set global attributes TITLE, AUTHOR and REV in your schematic.</descript
 </library>
 </libraries>
 <attributes>
+<attribute name="AUTHOR" value="Brad Campbell"/>
+<attribute name="REV" value="A"/>
+<attribute name="TITLE" value="Hail Debug Board"/>
 </attributes>
 <variantdefs>
 </variantdefs>
@@ -3507,7 +3510,7 @@ To use, set global attributes TITLE, AUTHOR and REV in your schematic.</descript
 <part name="H2" library="holes" deviceset="MOUNT-HOLE" device="3.2"/>
 <part name="H3" library="holes" deviceset="MOUNT-HOLE" device="3.2"/>
 <part name="H4" library="holes" deviceset="MOUNT-HOLE" device="3.2"/>
-<part name="JP1" library="pinhead" deviceset="PINHD-2X14" device=""/>
+<part name="J52" library="pinhead" deviceset="PINHD-2X14" device=""/>
 <part name="J50" library="headers" deviceset="SCREW-TERMINAL_7_0.100" device=""/>
 <part name="J51" library="headers" deviceset="SCREW-TERMINAL_7_0.100" device=""/>
 <part name="H5" library="holes" deviceset="MOUNT-HOLE" device="3.2"/>
@@ -3566,21 +3569,27 @@ To use, set global attributes TITLE, AUTHOR and REV in your schematic.</descript
 <instance part="J42" gate="G$1" x="177.8" y="162.56"/>
 <instance part="J44" gate="G$1" x="203.2" y="152.4"/>
 <instance part="J48" gate="A" x="124.46" y="99.06"/>
-<instance part="J46" gate="G$1" x="149.86" y="99.06" rot="MR0"/>
+<instance part="J46" gate="G$1" x="149.86" y="99.06" smashed="yes" rot="MR0">
+<attribute name="NAME" x="154.94" y="114.808" size="1.778" layer="95" rot="MR0"/>
+<attribute name="VALUE" x="160.02" y="114.3" size="1.778" layer="96" rot="MR270"/>
+</instance>
 <instance part="J49" gate="A" x="124.46" y="55.88"/>
-<instance part="J47" gate="G$1" x="149.86" y="53.34" rot="R180"/>
-<instance part="H1" gate="G$1" x="99.06" y="10.16"/>
-<instance part="H2" gate="G$1" x="99.06" y="15.24"/>
-<instance part="H3" gate="G$1" x="99.06" y="20.32"/>
-<instance part="H4" gate="G$1" x="99.06" y="25.4"/>
-<instance part="JP1" gate="A" x="139.7" y="149.86"/>
+<instance part="J47" gate="G$1" x="149.86" y="53.34" smashed="yes" rot="R180">
+<attribute name="NAME" x="154.94" y="37.592" size="1.778" layer="95" rot="R180"/>
+<attribute name="VALUE" x="160.02" y="35.56" size="1.778" layer="96" rot="R90"/>
+</instance>
+<instance part="H1" gate="G$1" x="228.6" y="25.4"/>
+<instance part="H2" gate="G$1" x="228.6" y="30.48"/>
+<instance part="H3" gate="G$1" x="228.6" y="35.56"/>
+<instance part="H4" gate="G$1" x="228.6" y="40.64"/>
+<instance part="J52" gate="A" x="139.7" y="149.86"/>
 <instance part="J50" gate="G$1" x="160.02" y="157.48" smashed="yes" rot="MR0">
 <attribute name="NAME" x="162.56" y="170.18" size="1.27" layer="95" rot="MR0"/>
 </instance>
 <instance part="J51" gate="G$1" x="160.02" y="139.7" smashed="yes" rot="MR0">
 <attribute name="NAME" x="162.56" y="152.4" size="1.27" layer="95" rot="MR0"/>
 </instance>
-<instance part="H5" gate="G$1" x="99.06" y="30.48"/>
+<instance part="H5" gate="G$1" x="228.6" y="45.72"/>
 <instance part="S1" gate="G$1" x="208.28" y="93.98"/>
 <instance part="LOGO1" gate="G$1" x="236.22" y="177.8"/>
 </instances>
@@ -3593,8 +3602,8 @@ To use, set global attributes TITLE, AUTHOR and REV in your schematic.</descript
 <wire x1="17.78" y1="134.62" x2="17.78" y2="132.08" width="0.1524" layer="91"/>
 <wire x1="17.78" y1="132.08" x2="137.16" y2="132.08" width="0.1524" layer="91"/>
 <label x="157.48" y="132.08" size="1.27" layer="95" xref="yes"/>
-<pinref part="JP1" gate="A" pin="27"/>
-<pinref part="JP1" gate="A" pin="28"/>
+<pinref part="J52" gate="A" pin="27"/>
+<pinref part="J52" gate="A" pin="28"/>
 <wire x1="144.78" y1="132.08" x2="137.16" y2="132.08" width="0.1524" layer="91"/>
 <junction x="137.16" y="132.08"/>
 <pinref part="J51" gate="G$1" pin="7"/>
@@ -3605,9 +3614,9 @@ To use, set global attributes TITLE, AUTHOR and REV in your schematic.</descript
 <net name="SENSORS_SDA" class="0">
 <segment>
 <label x="157.48" y="165.1" size="1.27" layer="95" xref="yes"/>
-<pinref part="JP1" gate="A" pin="1"/>
+<pinref part="J52" gate="A" pin="1"/>
 <wire x1="129.54" y1="165.1" x2="137.16" y2="165.1" width="0.1524" layer="91"/>
-<pinref part="JP1" gate="A" pin="2"/>
+<pinref part="J52" gate="A" pin="2"/>
 <wire x1="144.78" y1="165.1" x2="137.16" y2="165.1" width="0.1524" layer="91"/>
 <junction x="137.16" y="165.1"/>
 <pinref part="J50" gate="G$1" pin="1"/>
@@ -3626,9 +3635,9 @@ To use, set global attributes TITLE, AUTHOR and REV in your schematic.</descript
 <wire x1="101.6" y1="160.02" x2="132.08" y2="160.02" width="0.1524" layer="91"/>
 <label x="157.48" y="162.56" size="1.27" layer="95" xref="yes"/>
 <wire x1="132.08" y1="160.02" x2="132.08" y2="162.56" width="0.1524" layer="91"/>
-<pinref part="JP1" gate="A" pin="3"/>
+<pinref part="J52" gate="A" pin="3"/>
 <wire x1="132.08" y1="162.56" x2="137.16" y2="162.56" width="0.1524" layer="91"/>
-<pinref part="JP1" gate="A" pin="4"/>
+<pinref part="J52" gate="A" pin="4"/>
 <wire x1="144.78" y1="162.56" x2="137.16" y2="162.56" width="0.1524" layer="91"/>
 <junction x="137.16" y="162.56"/>
 <pinref part="J50" gate="G$1" pin="2"/>
@@ -3641,9 +3650,9 @@ To use, set global attributes TITLE, AUTHOR and REV in your schematic.</descript
 <pinref part="J3" gate="G$1" pin="P$1"/>
 <wire x1="93.98" y1="160.02" x2="93.98" y2="157.48" width="0.1524" layer="91"/>
 <label x="157.48" y="157.48" size="1.27" layer="95" xref="yes"/>
-<pinref part="JP1" gate="A" pin="7"/>
+<pinref part="J52" gate="A" pin="7"/>
 <wire x1="93.98" y1="157.48" x2="137.16" y2="157.48" width="0.1524" layer="91"/>
-<pinref part="JP1" gate="A" pin="8"/>
+<pinref part="J52" gate="A" pin="8"/>
 <wire x1="137.16" y1="157.48" x2="144.78" y2="157.48" width="0.1524" layer="91"/>
 <junction x="137.16" y="157.48"/>
 <pinref part="J50" gate="G$1" pin="4"/>
@@ -3656,9 +3665,9 @@ To use, set global attributes TITLE, AUTHOR and REV in your schematic.</descript
 <pinref part="J4" gate="G$1" pin="P$1"/>
 <wire x1="86.36" y1="157.48" x2="86.36" y2="154.94" width="0.1524" layer="91"/>
 <label x="157.48" y="154.94" size="1.27" layer="95" xref="yes"/>
-<pinref part="JP1" gate="A" pin="9"/>
+<pinref part="J52" gate="A" pin="9"/>
 <wire x1="86.36" y1="154.94" x2="137.16" y2="154.94" width="0.1524" layer="91"/>
-<pinref part="JP1" gate="A" pin="10"/>
+<pinref part="J52" gate="A" pin="10"/>
 <wire x1="144.78" y1="154.94" x2="137.16" y2="154.94" width="0.1524" layer="91"/>
 <junction x="137.16" y="154.94"/>
 <pinref part="J50" gate="G$1" pin="5"/>
@@ -3672,8 +3681,8 @@ To use, set global attributes TITLE, AUTHOR and REV in your schematic.</descript
 <wire x1="78.74" y1="154.94" x2="78.74" y2="152.4" width="0.1524" layer="91"/>
 <wire x1="78.74" y1="152.4" x2="137.16" y2="152.4" width="0.1524" layer="91"/>
 <label x="157.48" y="152.4" size="1.27" layer="95" xref="yes"/>
-<pinref part="JP1" gate="A" pin="11"/>
-<pinref part="JP1" gate="A" pin="12"/>
+<pinref part="J52" gate="A" pin="11"/>
+<pinref part="J52" gate="A" pin="12"/>
 <wire x1="137.16" y1="152.4" x2="144.78" y2="152.4" width="0.1524" layer="91"/>
 <junction x="137.16" y="152.4"/>
 <pinref part="J50" gate="G$1" pin="6"/>
@@ -3687,8 +3696,8 @@ To use, set global attributes TITLE, AUTHOR and REV in your schematic.</descript
 <wire x1="71.12" y1="152.4" x2="71.12" y2="149.86" width="0.1524" layer="91"/>
 <wire x1="71.12" y1="149.86" x2="137.16" y2="149.86" width="0.1524" layer="91"/>
 <label x="157.48" y="149.86" size="1.27" layer="95" xref="yes"/>
-<pinref part="JP1" gate="A" pin="13"/>
-<pinref part="JP1" gate="A" pin="14"/>
+<pinref part="J52" gate="A" pin="13"/>
+<pinref part="J52" gate="A" pin="14"/>
 <wire x1="144.78" y1="149.86" x2="137.16" y2="149.86" width="0.1524" layer="91"/>
 <junction x="137.16" y="149.86"/>
 <pinref part="J50" gate="G$1" pin="7"/>
@@ -3702,8 +3711,8 @@ To use, set global attributes TITLE, AUTHOR and REV in your schematic.</descript
 <wire x1="63.5" y1="149.86" x2="63.5" y2="147.32" width="0.1524" layer="91"/>
 <wire x1="63.5" y1="147.32" x2="137.16" y2="147.32" width="0.1524" layer="91"/>
 <label x="157.48" y="147.32" size="1.27" layer="95" xref="yes"/>
-<pinref part="JP1" gate="A" pin="15"/>
-<pinref part="JP1" gate="A" pin="16"/>
+<pinref part="J52" gate="A" pin="15"/>
+<pinref part="J52" gate="A" pin="16"/>
 <wire x1="137.16" y1="147.32" x2="144.78" y2="147.32" width="0.1524" layer="91"/>
 <junction x="137.16" y="147.32"/>
 <pinref part="J51" gate="G$1" pin="1"/>
@@ -3717,8 +3726,8 @@ To use, set global attributes TITLE, AUTHOR and REV in your schematic.</descript
 <wire x1="55.88" y1="147.32" x2="55.88" y2="144.78" width="0.1524" layer="91"/>
 <wire x1="55.88" y1="144.78" x2="137.16" y2="144.78" width="0.1524" layer="91"/>
 <label x="157.48" y="144.78" size="1.27" layer="95" xref="yes"/>
-<pinref part="JP1" gate="A" pin="17"/>
-<pinref part="JP1" gate="A" pin="18"/>
+<pinref part="J52" gate="A" pin="17"/>
+<pinref part="J52" gate="A" pin="18"/>
 <wire x1="144.78" y1="144.78" x2="137.16" y2="144.78" width="0.1524" layer="91"/>
 <junction x="137.16" y="144.78"/>
 <pinref part="J51" gate="G$1" pin="2"/>
@@ -3732,8 +3741,8 @@ To use, set global attributes TITLE, AUTHOR and REV in your schematic.</descript
 <wire x1="48.26" y1="144.78" x2="48.26" y2="142.24" width="0.1524" layer="91"/>
 <wire x1="48.26" y1="142.24" x2="137.16" y2="142.24" width="0.1524" layer="91"/>
 <label x="157.48" y="142.24" size="1.27" layer="95" xref="yes"/>
-<pinref part="JP1" gate="A" pin="19"/>
-<pinref part="JP1" gate="A" pin="20"/>
+<pinref part="J52" gate="A" pin="19"/>
+<pinref part="J52" gate="A" pin="20"/>
 <wire x1="137.16" y1="142.24" x2="144.78" y2="142.24" width="0.1524" layer="91"/>
 <junction x="137.16" y="142.24"/>
 <pinref part="J51" gate="G$1" pin="3"/>
@@ -3747,8 +3756,8 @@ To use, set global attributes TITLE, AUTHOR and REV in your schematic.</descript
 <wire x1="40.64" y1="142.24" x2="40.64" y2="139.7" width="0.1524" layer="91"/>
 <wire x1="40.64" y1="139.7" x2="137.16" y2="139.7" width="0.1524" layer="91"/>
 <label x="157.48" y="139.7" size="1.27" layer="95" xref="yes"/>
-<pinref part="JP1" gate="A" pin="21"/>
-<pinref part="JP1" gate="A" pin="22"/>
+<pinref part="J52" gate="A" pin="21"/>
+<pinref part="J52" gate="A" pin="22"/>
 <wire x1="137.16" y1="139.7" x2="144.78" y2="139.7" width="0.1524" layer="91"/>
 <junction x="137.16" y="139.7"/>
 <pinref part="J51" gate="G$1" pin="4"/>
@@ -3762,8 +3771,8 @@ To use, set global attributes TITLE, AUTHOR and REV in your schematic.</descript
 <wire x1="33.02" y1="139.7" x2="33.02" y2="137.16" width="0.1524" layer="91"/>
 <wire x1="33.02" y1="137.16" x2="137.16" y2="137.16" width="0.1524" layer="91"/>
 <label x="157.48" y="137.16" size="1.27" layer="95" xref="yes"/>
-<pinref part="JP1" gate="A" pin="23"/>
-<pinref part="JP1" gate="A" pin="24"/>
+<pinref part="J52" gate="A" pin="23"/>
+<pinref part="J52" gate="A" pin="24"/>
 <wire x1="144.78" y1="137.16" x2="137.16" y2="137.16" width="0.1524" layer="91"/>
 <junction x="137.16" y="137.16"/>
 <pinref part="J51" gate="G$1" pin="5"/>
@@ -3777,8 +3786,8 @@ To use, set global attributes TITLE, AUTHOR and REV in your schematic.</descript
 <wire x1="25.4" y1="137.16" x2="25.4" y2="134.62" width="0.1524" layer="91"/>
 <wire x1="25.4" y1="134.62" x2="137.16" y2="134.62" width="0.1524" layer="91"/>
 <label x="157.48" y="134.62" size="1.27" layer="95" xref="yes"/>
-<pinref part="JP1" gate="A" pin="25"/>
-<pinref part="JP1" gate="A" pin="26"/>
+<pinref part="J52" gate="A" pin="25"/>
+<pinref part="J52" gate="A" pin="26"/>
 <wire x1="137.16" y1="134.62" x2="144.78" y2="134.62" width="0.1524" layer="91"/>
 <junction x="137.16" y="134.62"/>
 <pinref part="J51" gate="G$1" pin="6"/>
@@ -4176,8 +4185,8 @@ To use, set global attributes TITLE, AUTHOR and REV in your schematic.</descript
 <pinref part="J44" gate="G$1" pin="SWDIO"/>
 </segment>
 <segment>
-<pinref part="JP1" gate="A" pin="5"/>
-<pinref part="JP1" gate="A" pin="6"/>
+<pinref part="J52" gate="A" pin="5"/>
+<pinref part="J52" gate="A" pin="6"/>
 <wire x1="137.16" y1="160.02" x2="144.78" y2="160.02" width="0.1524" layer="91"/>
 <wire x1="144.78" y1="160.02" x2="152.4" y2="160.02" width="0.1524" layer="91"/>
 <junction x="144.78" y="160.02"/>
