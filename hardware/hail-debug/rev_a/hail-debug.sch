@@ -3458,19 +3458,32 @@ To use, set global attributes TITLE, AUTHOR and REV in your schematic.</descript
 </classes>
 <parts>
 <part name="FRAME1" library="lab11-frames" deviceset="LETTER_L_UMICH" device=""/>
-<part name="J1" library="headers" deviceset="MILLMAX_0985-X-15-20-71-14-11-0" device=""/>
-<part name="J2" library="headers" deviceset="MILLMAX_0985-X-15-20-71-14-11-0" device=""/>
-<part name="J3" library="headers" deviceset="MILLMAX_0985-X-15-20-71-14-11-0" device=""/>
-<part name="J4" library="headers" deviceset="MILLMAX_0985-X-15-20-71-14-11-0" device=""/>
-<part name="J5" library="headers" deviceset="MILLMAX_0985-X-15-20-71-14-11-0" device=""/>
-<part name="J6" library="headers" deviceset="MILLMAX_0985-X-15-20-71-14-11-0" device=""/>
-<part name="J7" library="headers" deviceset="MILLMAX_0985-X-15-20-71-14-11-0" device=""/>
-<part name="J8" library="headers" deviceset="MILLMAX_0985-X-15-20-71-14-11-0" device=""/>
-<part name="J9" library="headers" deviceset="MILLMAX_0985-X-15-20-71-14-11-0" device=""/>
-<part name="J10" library="headers" deviceset="MILLMAX_0985-X-15-20-71-14-11-0" device=""/>
-<part name="J11" library="headers" deviceset="MILLMAX_0985-X-15-20-71-14-11-0" device=""/>
-<part name="J12" library="headers" deviceset="MILLMAX_0985-X-15-20-71-14-11-0" device=""/>
-<part name="J13" library="headers" deviceset="MILLMAX_0985-X-15-20-71-14-11-0" device=""/>
+<part name="J25" library="headers" deviceset="MILLMAX_0985-X-15-20-71-14-11-0" device=""/>
+<part name="J26" library="headers" deviceset="MILLMAX_0985-X-15-20-71-14-11-0" device=""/>
+<part name="J27" library="headers" deviceset="MILLMAX_0985-X-15-20-71-14-11-0" device=""/>
+<part name="J28" library="headers" deviceset="MILLMAX_0985-X-15-20-71-14-11-0" device=""/>
+<part name="J29" library="headers" deviceset="MILLMAX_0985-X-15-20-71-14-11-0" device=""/>
+<part name="J30" library="headers" deviceset="MILLMAX_0985-X-15-20-71-14-11-0" device=""/>
+<part name="J31" library="headers" deviceset="MILLMAX_0985-X-15-20-71-14-11-0" device=""/>
+<part name="J32" library="headers" deviceset="MILLMAX_0985-X-15-20-71-14-11-0" device=""/>
+<part name="J33" library="headers" deviceset="MILLMAX_0985-X-15-20-71-14-11-0" device=""/>
+<part name="J34" library="headers" deviceset="MILLMAX_0985-X-15-20-71-14-11-0" device=""/>
+<part name="J35" library="headers" deviceset="MILLMAX_0985-X-15-20-71-14-11-0" device=""/>
+<part name="J36" library="headers" deviceset="MILLMAX_0985-X-15-20-71-14-11-0" device=""/>
+<part name="J37" library="headers" deviceset="MILLMAX_0985-X-15-20-71-14-11-0" device=""/>
+<part name="J1" library="headers" deviceset="MILLMAX_0908-X-15-20-75-14-11-0" device=""/>
+<part name="J2" library="headers" deviceset="MILLMAX_0908-X-15-20-75-14-11-0" device=""/>
+<part name="J3" library="headers" deviceset="MILLMAX_0908-X-15-20-75-14-11-0" device=""/>
+<part name="J4" library="headers" deviceset="MILLMAX_0908-X-15-20-75-14-11-0" device=""/>
+<part name="J5" library="headers" deviceset="MILLMAX_0908-X-15-20-75-14-11-0" device=""/>
+<part name="J6" library="headers" deviceset="MILLMAX_0908-X-15-20-75-14-11-0" device=""/>
+<part name="J7" library="headers" deviceset="MILLMAX_0908-X-15-20-75-14-11-0" device=""/>
+<part name="J8" library="headers" deviceset="MILLMAX_0908-X-15-20-75-14-11-0" device=""/>
+<part name="J9" library="headers" deviceset="MILLMAX_0908-X-15-20-75-14-11-0" device=""/>
+<part name="J10" library="headers" deviceset="MILLMAX_0908-X-15-20-75-14-11-0" device=""/>
+<part name="J11" library="headers" deviceset="MILLMAX_0908-X-15-20-75-14-11-0" device=""/>
+<part name="J12" library="headers" deviceset="MILLMAX_0908-X-15-20-75-14-11-0" device=""/>
+<part name="J13" library="headers" deviceset="MILLMAX_0908-X-15-20-75-14-11-0" device=""/>
 <part name="J14" library="headers" deviceset="MILLMAX_0908-X-15-20-75-14-11-0" device=""/>
 <part name="J15" library="headers" deviceset="MILLMAX_0908-X-15-20-75-14-11-0" device=""/>
 <part name="J16" library="headers" deviceset="MILLMAX_0908-X-15-20-75-14-11-0" device=""/>
@@ -3482,37 +3495,30 @@ To use, set global attributes TITLE, AUTHOR and REV in your schematic.</descript
 <part name="J22" library="headers" deviceset="MILLMAX_0908-X-15-20-75-14-11-0" device=""/>
 <part name="J23" library="headers" deviceset="MILLMAX_0908-X-15-20-75-14-11-0" device=""/>
 <part name="J24" library="headers" deviceset="MILLMAX_0908-X-15-20-75-14-11-0" device=""/>
-<part name="J25" library="headers" deviceset="MILLMAX_0908-X-15-20-75-14-11-0" device=""/>
-<part name="J26" library="headers" deviceset="MILLMAX_0908-X-15-20-75-14-11-0" device=""/>
-<part name="J27" library="headers" deviceset="MILLMAX_0908-X-15-20-75-14-11-0" device=""/>
-<part name="J28" library="headers" deviceset="MILLMAX_0908-X-15-20-75-14-11-0" device=""/>
-<part name="J29" library="headers" deviceset="MILLMAX_0908-X-15-20-75-14-11-0" device=""/>
-<part name="J30" library="headers" deviceset="MILLMAX_0908-X-15-20-75-14-11-0" device=""/>
-<part name="J31" library="headers" deviceset="MILLMAX_0908-X-15-20-75-14-11-0" device=""/>
-<part name="J32" library="headers" deviceset="MILLMAX_0908-X-15-20-75-14-11-0" device=""/>
-<part name="J33" library="headers" deviceset="MILLMAX_0908-X-15-20-75-14-11-0" device=""/>
-<part name="J34" library="headers" deviceset="MILLMAX_0908-X-15-20-75-14-11-0" device=""/>
-<part name="J35" library="headers" deviceset="MILLMAX_0908-X-15-20-75-14-11-0" device=""/>
-<part name="J36" library="headers" deviceset="MILLMAX_0908-X-15-20-75-14-11-0" device=""/>
-<part name="J37" library="headers" deviceset="MILLMAX_0908-X-15-20-75-14-11-0" device=""/>
 <part name="J38" library="headers" deviceset="MILLMAX_0985-X-15-20-71-14-11-0" device=""/>
 <part name="J39" library="headers" deviceset="MILLMAX_0985-X-15-20-71-14-11-0" device=""/>
 <part name="J40" library="headers" deviceset="MILLMAX_0985-X-15-20-71-14-11-0" device=""/>
 <part name="J41" library="headers" deviceset="MILLMAX_0985-X-15-20-71-14-11-0" device=""/>
-<part name="J43" library="headers" deviceset="MILLMAX_0985-X-15-20-71-14-11-0" device=""/>
 <part name="J42" library="headers" deviceset="MILLMAX_0985-X-15-20-71-14-11-0" device=""/>
-<part name="J44" library="connector" deviceset="TC2030-JLINK" device="-L"/>
-<part name="J48" library="pinhead" deviceset="PINHD-2X12" device=""/>
-<part name="J46" library="headers" deviceset="SCREW_TERMINAL_12_0.100" device=""/>
-<part name="J49" library="pinhead" deviceset="PINHD-2X12" device=""/>
-<part name="J47" library="headers" deviceset="SCREW_TERMINAL_12_0.100" device=""/>
+<part name="J43" library="headers" deviceset="MILLMAX_0985-X-15-20-71-14-11-0" device=""/>
+<part name="J51" library="connector" deviceset="TC2030-JLINK" device="-L"/>
+<part name="J44" library="pinhead" deviceset="PINHD-2X12" device="">
+<attribute name="DIGIKEY" value="S2011EC-12-ND"/>
+</part>
+<part name="J49" library="headers" deviceset="SCREW_TERMINAL_12_0.100" device=""/>
+<part name="J45" library="pinhead" deviceset="PINHD-2X12" device="">
+<attribute name="DIGIKEY" value="S2011EC-12-ND"/>
+</part>
+<part name="J50" library="headers" deviceset="SCREW_TERMINAL_12_0.100" device=""/>
 <part name="H1" library="holes" deviceset="MOUNT-HOLE" device="3.2"/>
 <part name="H2" library="holes" deviceset="MOUNT-HOLE" device="3.2"/>
 <part name="H3" library="holes" deviceset="MOUNT-HOLE" device="3.2"/>
 <part name="H4" library="holes" deviceset="MOUNT-HOLE" device="3.2"/>
-<part name="J52" library="pinhead" deviceset="PINHD-2X14" device=""/>
-<part name="J50" library="headers" deviceset="SCREW-TERMINAL_7_0.100" device=""/>
-<part name="J51" library="headers" deviceset="SCREW-TERMINAL_7_0.100" device=""/>
+<part name="J46" library="pinhead" deviceset="PINHD-2X14" device="">
+<attribute name="DIGIKEY" value="S2011EC-14-ND"/>
+</part>
+<part name="J47" library="headers" deviceset="SCREW-TERMINAL_7_0.100" device=""/>
+<part name="J48" library="headers" deviceset="SCREW-TERMINAL_7_0.100" device=""/>
 <part name="H5" library="holes" deviceset="MOUNT-HOLE" device="3.2"/>
 <part name="S1" library="switches" deviceset="PTS645SM43SMTR92" device=""/>
 <part name="LOGO1" library="logos" deviceset="UMICH_SOLID" device="_SMALL+"/>
@@ -3524,57 +3530,61 @@ To use, set global attributes TITLE, AUTHOR and REV in your schematic.</descript
 <instances>
 <instance part="FRAME1" gate="G$1" x="0" y="0"/>
 <instance part="FRAME1" gate="G$2" x="152.4" y="0"/>
-<instance part="J1" gate="G$1" x="109.22" y="167.64"/>
-<instance part="J2" gate="G$1" x="101.6" y="165.1"/>
-<instance part="J3" gate="G$1" x="93.98" y="162.56"/>
-<instance part="J4" gate="G$1" x="86.36" y="160.02"/>
-<instance part="J5" gate="G$1" x="78.74" y="157.48"/>
-<instance part="J6" gate="G$1" x="71.12" y="154.94"/>
-<instance part="J7" gate="G$1" x="63.5" y="152.4"/>
-<instance part="J8" gate="G$1" x="55.88" y="149.86"/>
-<instance part="J9" gate="G$1" x="48.26" y="147.32"/>
-<instance part="J10" gate="G$1" x="40.64" y="144.78"/>
-<instance part="J11" gate="G$1" x="33.02" y="142.24"/>
-<instance part="J12" gate="G$1" x="25.4" y="139.7"/>
-<instance part="J13" gate="G$1" x="17.78" y="137.16"/>
-<instance part="J14" gate="G$1" x="109.22" y="116.84"/>
-<instance part="J15" gate="G$1" x="101.6" y="114.3"/>
-<instance part="J16" gate="G$1" x="93.98" y="111.76"/>
-<instance part="J17" gate="G$1" x="86.36" y="109.22"/>
-<instance part="J18" gate="G$1" x="78.74" y="106.68"/>
-<instance part="J19" gate="G$1" x="71.12" y="104.14"/>
-<instance part="J20" gate="G$1" x="63.5" y="101.6"/>
-<instance part="J21" gate="G$1" x="55.88" y="99.06"/>
-<instance part="J22" gate="G$1" x="48.26" y="96.52"/>
-<instance part="J23" gate="G$1" x="40.64" y="93.98"/>
-<instance part="J24" gate="G$1" x="33.02" y="91.44"/>
-<instance part="J25" gate="G$1" x="25.4" y="88.9"/>
-<instance part="J26" gate="G$1" x="109.22" y="73.66"/>
-<instance part="J27" gate="G$1" x="101.6" y="71.12"/>
-<instance part="J28" gate="G$1" x="93.98" y="68.58"/>
-<instance part="J29" gate="G$1" x="86.36" y="66.04"/>
-<instance part="J30" gate="G$1" x="78.74" y="63.5"/>
-<instance part="J31" gate="G$1" x="71.12" y="60.96"/>
-<instance part="J32" gate="G$1" x="63.5" y="58.42"/>
-<instance part="J33" gate="G$1" x="55.88" y="55.88"/>
-<instance part="J34" gate="G$1" x="48.26" y="53.34"/>
-<instance part="J35" gate="G$1" x="40.64" y="50.8"/>
-<instance part="J36" gate="G$1" x="33.02" y="48.26"/>
-<instance part="J37" gate="G$1" x="25.4" y="45.72"/>
+<instance part="J25" gate="G$1" x="109.22" y="167.64"/>
+<instance part="J26" gate="G$1" x="101.6" y="165.1"/>
+<instance part="J27" gate="G$1" x="93.98" y="162.56"/>
+<instance part="J28" gate="G$1" x="86.36" y="160.02"/>
+<instance part="J29" gate="G$1" x="78.74" y="157.48"/>
+<instance part="J30" gate="G$1" x="71.12" y="154.94"/>
+<instance part="J31" gate="G$1" x="63.5" y="152.4"/>
+<instance part="J32" gate="G$1" x="55.88" y="149.86"/>
+<instance part="J33" gate="G$1" x="48.26" y="147.32"/>
+<instance part="J34" gate="G$1" x="40.64" y="144.78"/>
+<instance part="J35" gate="G$1" x="33.02" y="142.24"/>
+<instance part="J36" gate="G$1" x="25.4" y="139.7"/>
+<instance part="J37" gate="G$1" x="17.78" y="137.16"/>
+<instance part="J1" gate="G$1" x="109.22" y="116.84"/>
+<instance part="J2" gate="G$1" x="101.6" y="114.3"/>
+<instance part="J3" gate="G$1" x="93.98" y="111.76"/>
+<instance part="J4" gate="G$1" x="86.36" y="109.22"/>
+<instance part="J5" gate="G$1" x="78.74" y="106.68"/>
+<instance part="J6" gate="G$1" x="71.12" y="104.14"/>
+<instance part="J7" gate="G$1" x="63.5" y="101.6"/>
+<instance part="J8" gate="G$1" x="55.88" y="99.06"/>
+<instance part="J9" gate="G$1" x="48.26" y="96.52"/>
+<instance part="J10" gate="G$1" x="40.64" y="93.98"/>
+<instance part="J11" gate="G$1" x="33.02" y="91.44"/>
+<instance part="J12" gate="G$1" x="25.4" y="88.9"/>
+<instance part="J13" gate="G$1" x="109.22" y="73.66"/>
+<instance part="J14" gate="G$1" x="101.6" y="71.12"/>
+<instance part="J15" gate="G$1" x="93.98" y="68.58"/>
+<instance part="J16" gate="G$1" x="86.36" y="66.04"/>
+<instance part="J17" gate="G$1" x="78.74" y="63.5"/>
+<instance part="J18" gate="G$1" x="71.12" y="60.96"/>
+<instance part="J19" gate="G$1" x="63.5" y="58.42"/>
+<instance part="J20" gate="G$1" x="55.88" y="55.88"/>
+<instance part="J21" gate="G$1" x="48.26" y="53.34"/>
+<instance part="J22" gate="G$1" x="40.64" y="50.8"/>
+<instance part="J23" gate="G$1" x="33.02" y="48.26"/>
+<instance part="J24" gate="G$1" x="25.4" y="45.72"/>
 <instance part="J38" gate="G$1" x="185.42" y="162.56"/>
 <instance part="J39" gate="G$1" x="218.44" y="162.56"/>
 <instance part="J40" gate="G$1" x="241.3" y="162.56"/>
 <instance part="J41" gate="G$1" x="226.06" y="162.56"/>
-<instance part="J43" gate="G$1" x="233.68" y="162.56"/>
-<instance part="J42" gate="G$1" x="177.8" y="162.56"/>
-<instance part="J44" gate="G$1" x="203.2" y="152.4"/>
-<instance part="J48" gate="A" x="124.46" y="99.06"/>
-<instance part="J46" gate="G$1" x="149.86" y="99.06" smashed="yes" rot="MR0">
+<instance part="J42" gate="G$1" x="233.68" y="162.56"/>
+<instance part="J43" gate="G$1" x="177.8" y="162.56"/>
+<instance part="J51" gate="G$1" x="203.2" y="152.4"/>
+<instance part="J44" gate="A" x="124.46" y="99.06">
+<attribute name="DIGIKEY" x="124.46" y="99.06" size="1.778" layer="96" display="off"/>
+</instance>
+<instance part="J49" gate="G$1" x="149.86" y="99.06" smashed="yes" rot="MR0">
 <attribute name="NAME" x="154.94" y="114.808" size="1.778" layer="95" rot="MR0"/>
 <attribute name="VALUE" x="160.02" y="114.3" size="1.778" layer="96" rot="MR270"/>
 </instance>
-<instance part="J49" gate="A" x="124.46" y="55.88"/>
-<instance part="J47" gate="G$1" x="149.86" y="53.34" smashed="yes" rot="R180">
+<instance part="J45" gate="A" x="124.46" y="55.88">
+<attribute name="DIGIKEY" x="124.46" y="55.88" size="1.778" layer="96" display="off"/>
+</instance>
+<instance part="J50" gate="G$1" x="149.86" y="53.34" smashed="yes" rot="R180">
 <attribute name="NAME" x="154.94" y="37.592" size="1.778" layer="95" rot="R180"/>
 <attribute name="VALUE" x="160.02" y="35.56" size="1.778" layer="96" rot="R90"/>
 </instance>
@@ -3582,11 +3592,13 @@ To use, set global attributes TITLE, AUTHOR and REV in your schematic.</descript
 <instance part="H2" gate="G$1" x="228.6" y="30.48"/>
 <instance part="H3" gate="G$1" x="228.6" y="35.56"/>
 <instance part="H4" gate="G$1" x="228.6" y="40.64"/>
-<instance part="J52" gate="A" x="139.7" y="149.86"/>
-<instance part="J50" gate="G$1" x="160.02" y="157.48" smashed="yes" rot="MR0">
+<instance part="J46" gate="A" x="139.7" y="149.86">
+<attribute name="DIGIKEY" x="139.7" y="149.86" size="1.778" layer="96" display="off"/>
+</instance>
+<instance part="J47" gate="G$1" x="160.02" y="157.48" smashed="yes" rot="MR0">
 <attribute name="NAME" x="162.56" y="170.18" size="1.27" layer="95" rot="MR0"/>
 </instance>
-<instance part="J51" gate="G$1" x="160.02" y="139.7" smashed="yes" rot="MR0">
+<instance part="J48" gate="G$1" x="160.02" y="139.7" smashed="yes" rot="MR0">
 <attribute name="NAME" x="162.56" y="152.4" size="1.27" layer="95" rot="MR0"/>
 </instance>
 <instance part="H5" gate="G$1" x="228.6" y="45.72"/>
@@ -3598,15 +3610,15 @@ To use, set global attributes TITLE, AUTHOR and REV in your schematic.</descript
 <nets>
 <net name="!LIGHT_INT" class="0">
 <segment>
-<pinref part="J13" gate="G$1" pin="P$1"/>
+<pinref part="J37" gate="G$1" pin="P$1"/>
 <wire x1="17.78" y1="134.62" x2="17.78" y2="132.08" width="0.1524" layer="91"/>
 <wire x1="17.78" y1="132.08" x2="137.16" y2="132.08" width="0.1524" layer="91"/>
 <label x="157.48" y="132.08" size="1.27" layer="95" xref="yes"/>
-<pinref part="J52" gate="A" pin="27"/>
-<pinref part="J52" gate="A" pin="28"/>
+<pinref part="J46" gate="A" pin="27"/>
+<pinref part="J46" gate="A" pin="28"/>
 <wire x1="144.78" y1="132.08" x2="137.16" y2="132.08" width="0.1524" layer="91"/>
 <junction x="137.16" y="132.08"/>
-<pinref part="J51" gate="G$1" pin="7"/>
+<pinref part="J48" gate="G$1" pin="7"/>
 <wire x1="144.78" y1="132.08" x2="152.4" y2="132.08" width="0.1524" layer="91"/>
 <junction x="144.78" y="132.08"/>
 </segment>
@@ -3614,15 +3626,15 @@ To use, set global attributes TITLE, AUTHOR and REV in your schematic.</descript
 <net name="SENSORS_SDA" class="0">
 <segment>
 <label x="157.48" y="165.1" size="1.27" layer="95" xref="yes"/>
-<pinref part="J52" gate="A" pin="1"/>
+<pinref part="J46" gate="A" pin="1"/>
 <wire x1="129.54" y1="165.1" x2="137.16" y2="165.1" width="0.1524" layer="91"/>
-<pinref part="J52" gate="A" pin="2"/>
+<pinref part="J46" gate="A" pin="2"/>
 <wire x1="144.78" y1="165.1" x2="137.16" y2="165.1" width="0.1524" layer="91"/>
 <junction x="137.16" y="165.1"/>
-<pinref part="J50" gate="G$1" pin="1"/>
+<pinref part="J47" gate="G$1" pin="1"/>
 <wire x1="144.78" y1="165.1" x2="152.4" y2="165.1" width="0.1524" layer="91"/>
 <junction x="144.78" y="165.1"/>
-<pinref part="J1" gate="G$1" pin="P$1"/>
+<pinref part="J25" gate="G$1" pin="P$1"/>
 <wire x1="109.22" y1="165.1" x2="109.22" y2="162.56" width="0.1524" layer="91"/>
 <wire x1="109.22" y1="162.56" x2="129.54" y2="162.56" width="0.1524" layer="91"/>
 <wire x1="129.54" y1="162.56" x2="129.54" y2="165.1" width="0.1524" layer="91"/>
@@ -3630,202 +3642,202 @@ To use, set global attributes TITLE, AUTHOR and REV in your schematic.</descript
 </net>
 <net name="SENSORS_SCL" class="0">
 <segment>
-<pinref part="J2" gate="G$1" pin="P$1"/>
+<pinref part="J26" gate="G$1" pin="P$1"/>
 <wire x1="101.6" y1="162.56" x2="101.6" y2="160.02" width="0.1524" layer="91"/>
 <wire x1="101.6" y1="160.02" x2="132.08" y2="160.02" width="0.1524" layer="91"/>
 <label x="157.48" y="162.56" size="1.27" layer="95" xref="yes"/>
 <wire x1="132.08" y1="160.02" x2="132.08" y2="162.56" width="0.1524" layer="91"/>
-<pinref part="J52" gate="A" pin="3"/>
+<pinref part="J46" gate="A" pin="3"/>
 <wire x1="132.08" y1="162.56" x2="137.16" y2="162.56" width="0.1524" layer="91"/>
-<pinref part="J52" gate="A" pin="4"/>
+<pinref part="J46" gate="A" pin="4"/>
 <wire x1="144.78" y1="162.56" x2="137.16" y2="162.56" width="0.1524" layer="91"/>
 <junction x="137.16" y="162.56"/>
-<pinref part="J50" gate="G$1" pin="2"/>
+<pinref part="J47" gate="G$1" pin="2"/>
 <wire x1="152.4" y1="162.56" x2="144.78" y2="162.56" width="0.1524" layer="91"/>
 <junction x="144.78" y="162.56"/>
 </segment>
 </net>
 <net name="NRF_CTS" class="0">
 <segment>
-<pinref part="J3" gate="G$1" pin="P$1"/>
+<pinref part="J27" gate="G$1" pin="P$1"/>
 <wire x1="93.98" y1="160.02" x2="93.98" y2="157.48" width="0.1524" layer="91"/>
 <label x="157.48" y="157.48" size="1.27" layer="95" xref="yes"/>
-<pinref part="J52" gate="A" pin="7"/>
+<pinref part="J46" gate="A" pin="7"/>
 <wire x1="93.98" y1="157.48" x2="137.16" y2="157.48" width="0.1524" layer="91"/>
-<pinref part="J52" gate="A" pin="8"/>
+<pinref part="J46" gate="A" pin="8"/>
 <wire x1="137.16" y1="157.48" x2="144.78" y2="157.48" width="0.1524" layer="91"/>
 <junction x="137.16" y="157.48"/>
-<pinref part="J50" gate="G$1" pin="4"/>
+<pinref part="J47" gate="G$1" pin="4"/>
 <wire x1="144.78" y1="157.48" x2="152.4" y2="157.48" width="0.1524" layer="91"/>
 <junction x="144.78" y="157.48"/>
 </segment>
 </net>
 <net name="NRF_RTS" class="0">
 <segment>
-<pinref part="J4" gate="G$1" pin="P$1"/>
+<pinref part="J28" gate="G$1" pin="P$1"/>
 <wire x1="86.36" y1="157.48" x2="86.36" y2="154.94" width="0.1524" layer="91"/>
 <label x="157.48" y="154.94" size="1.27" layer="95" xref="yes"/>
-<pinref part="J52" gate="A" pin="9"/>
+<pinref part="J46" gate="A" pin="9"/>
 <wire x1="86.36" y1="154.94" x2="137.16" y2="154.94" width="0.1524" layer="91"/>
-<pinref part="J52" gate="A" pin="10"/>
+<pinref part="J46" gate="A" pin="10"/>
 <wire x1="144.78" y1="154.94" x2="137.16" y2="154.94" width="0.1524" layer="91"/>
 <junction x="137.16" y="154.94"/>
-<pinref part="J50" gate="G$1" pin="5"/>
+<pinref part="J47" gate="G$1" pin="5"/>
 <wire x1="152.4" y1="154.94" x2="144.78" y2="154.94" width="0.1524" layer="91"/>
 <junction x="144.78" y="154.94"/>
 </segment>
 </net>
 <net name="NRF_INT" class="0">
 <segment>
-<pinref part="J5" gate="G$1" pin="P$1"/>
+<pinref part="J29" gate="G$1" pin="P$1"/>
 <wire x1="78.74" y1="154.94" x2="78.74" y2="152.4" width="0.1524" layer="91"/>
 <wire x1="78.74" y1="152.4" x2="137.16" y2="152.4" width="0.1524" layer="91"/>
 <label x="157.48" y="152.4" size="1.27" layer="95" xref="yes"/>
-<pinref part="J52" gate="A" pin="11"/>
-<pinref part="J52" gate="A" pin="12"/>
+<pinref part="J46" gate="A" pin="11"/>
+<pinref part="J46" gate="A" pin="12"/>
 <wire x1="137.16" y1="152.4" x2="144.78" y2="152.4" width="0.1524" layer="91"/>
 <junction x="137.16" y="152.4"/>
-<pinref part="J50" gate="G$1" pin="6"/>
+<pinref part="J47" gate="G$1" pin="6"/>
 <wire x1="144.78" y1="152.4" x2="152.4" y2="152.4" width="0.1524" layer="91"/>
 <junction x="144.78" y="152.4"/>
 </segment>
 </net>
 <net name="NRF_OUT" class="0">
 <segment>
-<pinref part="J6" gate="G$1" pin="P$1"/>
+<pinref part="J30" gate="G$1" pin="P$1"/>
 <wire x1="71.12" y1="152.4" x2="71.12" y2="149.86" width="0.1524" layer="91"/>
 <wire x1="71.12" y1="149.86" x2="137.16" y2="149.86" width="0.1524" layer="91"/>
 <label x="157.48" y="149.86" size="1.27" layer="95" xref="yes"/>
-<pinref part="J52" gate="A" pin="13"/>
-<pinref part="J52" gate="A" pin="14"/>
+<pinref part="J46" gate="A" pin="13"/>
+<pinref part="J46" gate="A" pin="14"/>
 <wire x1="144.78" y1="149.86" x2="137.16" y2="149.86" width="0.1524" layer="91"/>
 <junction x="137.16" y="149.86"/>
-<pinref part="J50" gate="G$1" pin="7"/>
+<pinref part="J47" gate="G$1" pin="7"/>
 <wire x1="144.78" y1="149.86" x2="152.4" y2="149.86" width="0.1524" layer="91"/>
 <junction x="144.78" y="149.86"/>
 </segment>
 </net>
 <net name="NRF_IN" class="0">
 <segment>
-<pinref part="J7" gate="G$1" pin="P$1"/>
+<pinref part="J31" gate="G$1" pin="P$1"/>
 <wire x1="63.5" y1="149.86" x2="63.5" y2="147.32" width="0.1524" layer="91"/>
 <wire x1="63.5" y1="147.32" x2="137.16" y2="147.32" width="0.1524" layer="91"/>
 <label x="157.48" y="147.32" size="1.27" layer="95" xref="yes"/>
-<pinref part="J52" gate="A" pin="15"/>
-<pinref part="J52" gate="A" pin="16"/>
+<pinref part="J46" gate="A" pin="15"/>
+<pinref part="J46" gate="A" pin="16"/>
 <wire x1="137.16" y1="147.32" x2="144.78" y2="147.32" width="0.1524" layer="91"/>
 <junction x="137.16" y="147.32"/>
-<pinref part="J51" gate="G$1" pin="1"/>
+<pinref part="J48" gate="G$1" pin="1"/>
 <wire x1="144.78" y1="147.32" x2="152.4" y2="147.32" width="0.1524" layer="91"/>
 <junction x="144.78" y="147.32"/>
 </segment>
 </net>
 <net name="!FTDI_RTS" class="0">
 <segment>
-<pinref part="J8" gate="G$1" pin="P$1"/>
+<pinref part="J32" gate="G$1" pin="P$1"/>
 <wire x1="55.88" y1="147.32" x2="55.88" y2="144.78" width="0.1524" layer="91"/>
 <wire x1="55.88" y1="144.78" x2="137.16" y2="144.78" width="0.1524" layer="91"/>
 <label x="157.48" y="144.78" size="1.27" layer="95" xref="yes"/>
-<pinref part="J52" gate="A" pin="17"/>
-<pinref part="J52" gate="A" pin="18"/>
+<pinref part="J46" gate="A" pin="17"/>
+<pinref part="J46" gate="A" pin="18"/>
 <wire x1="144.78" y1="144.78" x2="137.16" y2="144.78" width="0.1524" layer="91"/>
 <junction x="137.16" y="144.78"/>
-<pinref part="J51" gate="G$1" pin="2"/>
+<pinref part="J48" gate="G$1" pin="2"/>
 <wire x1="152.4" y1="144.78" x2="144.78" y2="144.78" width="0.1524" layer="91"/>
 <junction x="144.78" y="144.78"/>
 </segment>
 </net>
 <net name="FTDI_IN" class="0">
 <segment>
-<pinref part="J9" gate="G$1" pin="P$1"/>
+<pinref part="J33" gate="G$1" pin="P$1"/>
 <wire x1="48.26" y1="144.78" x2="48.26" y2="142.24" width="0.1524" layer="91"/>
 <wire x1="48.26" y1="142.24" x2="137.16" y2="142.24" width="0.1524" layer="91"/>
 <label x="157.48" y="142.24" size="1.27" layer="95" xref="yes"/>
-<pinref part="J52" gate="A" pin="19"/>
-<pinref part="J52" gate="A" pin="20"/>
+<pinref part="J46" gate="A" pin="19"/>
+<pinref part="J46" gate="A" pin="20"/>
 <wire x1="137.16" y1="142.24" x2="144.78" y2="142.24" width="0.1524" layer="91"/>
 <junction x="137.16" y="142.24"/>
-<pinref part="J51" gate="G$1" pin="3"/>
+<pinref part="J48" gate="G$1" pin="3"/>
 <wire x1="144.78" y1="142.24" x2="152.4" y2="142.24" width="0.1524" layer="91"/>
 <junction x="144.78" y="142.24"/>
 </segment>
 </net>
 <net name="FTDI_OUT" class="0">
 <segment>
-<pinref part="J10" gate="G$1" pin="P$1"/>
+<pinref part="J34" gate="G$1" pin="P$1"/>
 <wire x1="40.64" y1="142.24" x2="40.64" y2="139.7" width="0.1524" layer="91"/>
 <wire x1="40.64" y1="139.7" x2="137.16" y2="139.7" width="0.1524" layer="91"/>
 <label x="157.48" y="139.7" size="1.27" layer="95" xref="yes"/>
-<pinref part="J52" gate="A" pin="21"/>
-<pinref part="J52" gate="A" pin="22"/>
+<pinref part="J46" gate="A" pin="21"/>
+<pinref part="J46" gate="A" pin="22"/>
 <wire x1="137.16" y1="139.7" x2="144.78" y2="139.7" width="0.1524" layer="91"/>
 <junction x="137.16" y="139.7"/>
-<pinref part="J51" gate="G$1" pin="4"/>
+<pinref part="J48" gate="G$1" pin="4"/>
 <wire x1="152.4" y1="139.7" x2="144.78" y2="139.7" width="0.1524" layer="91"/>
 <junction x="144.78" y="139.7"/>
 </segment>
 </net>
 <net name="ACC_INT1" class="0">
 <segment>
-<pinref part="J11" gate="G$1" pin="P$1"/>
+<pinref part="J35" gate="G$1" pin="P$1"/>
 <wire x1="33.02" y1="139.7" x2="33.02" y2="137.16" width="0.1524" layer="91"/>
 <wire x1="33.02" y1="137.16" x2="137.16" y2="137.16" width="0.1524" layer="91"/>
 <label x="157.48" y="137.16" size="1.27" layer="95" xref="yes"/>
-<pinref part="J52" gate="A" pin="23"/>
-<pinref part="J52" gate="A" pin="24"/>
+<pinref part="J46" gate="A" pin="23"/>
+<pinref part="J46" gate="A" pin="24"/>
 <wire x1="144.78" y1="137.16" x2="137.16" y2="137.16" width="0.1524" layer="91"/>
 <junction x="137.16" y="137.16"/>
-<pinref part="J51" gate="G$1" pin="5"/>
+<pinref part="J48" gate="G$1" pin="5"/>
 <wire x1="144.78" y1="137.16" x2="152.4" y2="137.16" width="0.1524" layer="91"/>
 <junction x="144.78" y="137.16"/>
 </segment>
 </net>
 <net name="ACC_INT2" class="0">
 <segment>
-<pinref part="J12" gate="G$1" pin="P$1"/>
+<pinref part="J36" gate="G$1" pin="P$1"/>
 <wire x1="25.4" y1="137.16" x2="25.4" y2="134.62" width="0.1524" layer="91"/>
 <wire x1="25.4" y1="134.62" x2="137.16" y2="134.62" width="0.1524" layer="91"/>
 <label x="157.48" y="134.62" size="1.27" layer="95" xref="yes"/>
-<pinref part="J52" gate="A" pin="25"/>
-<pinref part="J52" gate="A" pin="26"/>
+<pinref part="J46" gate="A" pin="25"/>
+<pinref part="J46" gate="A" pin="26"/>
 <wire x1="137.16" y1="134.62" x2="144.78" y2="134.62" width="0.1524" layer="91"/>
 <junction x="137.16" y="134.62"/>
-<pinref part="J51" gate="G$1" pin="6"/>
+<pinref part="J48" gate="G$1" pin="6"/>
 <wire x1="152.4" y1="134.62" x2="144.78" y2="134.62" width="0.1524" layer="91"/>
 <junction x="144.78" y="134.62"/>
 </segment>
 </net>
 <net name="GND" class="0">
 <segment>
-<pinref part="J15" gate="G$1" pin="P$1"/>
+<pinref part="J2" gate="G$1" pin="P$1"/>
 <wire x1="101.6" y1="111.76" x2="101.6" y2="109.22" width="0.1524" layer="91"/>
 <label x="149.86" y="109.22" size="1.27" layer="95" xref="yes"/>
-<pinref part="J48" gate="A" pin="3"/>
+<pinref part="J44" gate="A" pin="3"/>
 <wire x1="101.6" y1="109.22" x2="121.92" y2="109.22" width="0.1524" layer="91"/>
-<pinref part="J46" gate="G$1" pin="2"/>
-<pinref part="J48" gate="A" pin="4"/>
+<pinref part="J49" gate="G$1" pin="2"/>
+<pinref part="J44" gate="A" pin="4"/>
 <wire x1="144.78" y1="109.22" x2="129.54" y2="109.22" width="0.1524" layer="91"/>
 <wire x1="121.92" y1="109.22" x2="129.54" y2="109.22" width="0.1524" layer="91"/>
 <junction x="121.92" y="109.22"/>
 <junction x="129.54" y="109.22"/>
 </segment>
 <segment>
-<pinref part="J29" gate="G$1" pin="P$1"/>
+<pinref part="J16" gate="G$1" pin="P$1"/>
 <wire x1="86.36" y1="63.5" x2="86.36" y2="60.96" width="0.1524" layer="91"/>
 <wire x1="86.36" y1="60.96" x2="121.92" y2="60.96" width="0.1524" layer="91"/>
 <label x="149.86" y="60.96" size="1.27" layer="95" xref="yes"/>
-<pinref part="J49" gate="A" pin="7"/>
-<pinref part="J49" gate="A" pin="8"/>
+<pinref part="J45" gate="A" pin="7"/>
+<pinref part="J45" gate="A" pin="8"/>
 <wire x1="129.54" y1="60.96" x2="121.92" y2="60.96" width="0.1524" layer="91"/>
 <junction x="121.92" y="60.96"/>
-<pinref part="J47" gate="G$1" pin="9"/>
+<pinref part="J50" gate="G$1" pin="9"/>
 <wire x1="144.78" y1="60.96" x2="129.54" y2="60.96" width="0.1524" layer="91"/>
 <junction x="129.54" y="60.96"/>
 </segment>
 <segment>
-<pinref part="J42" gate="G$1" pin="P$1"/>
+<pinref part="J43" gate="G$1" pin="P$1"/>
 <wire x1="177.8" y1="147.32" x2="177.8" y2="160.02" width="0.1524" layer="91"/>
-<pinref part="J44" gate="G$1" pin="GND"/>
+<pinref part="J51" gate="G$1" pin="GND"/>
 <wire x1="177.8" y1="147.32" x2="190.5" y2="147.32" width="0.1524" layer="91"/>
 </segment>
 <segment>
@@ -3836,43 +3848,43 @@ To use, set global attributes TITLE, AUTHOR and REV in your schematic.</descript
 </net>
 <net name="VIN" class="0">
 <segment>
-<pinref part="J14" gate="G$1" pin="P$1"/>
+<pinref part="J1" gate="G$1" pin="P$1"/>
 <wire x1="109.22" y1="114.3" x2="109.22" y2="111.76" width="0.1524" layer="91"/>
 <label x="149.86" y="111.76" size="1.27" layer="95" xref="yes"/>
-<pinref part="J48" gate="A" pin="1"/>
+<pinref part="J44" gate="A" pin="1"/>
 <wire x1="109.22" y1="111.76" x2="121.92" y2="111.76" width="0.1524" layer="91"/>
-<pinref part="J48" gate="A" pin="2"/>
+<pinref part="J44" gate="A" pin="2"/>
 <wire x1="121.92" y1="111.76" x2="129.54" y2="111.76" width="0.1524" layer="91"/>
 <junction x="121.92" y="111.76"/>
-<pinref part="J46" gate="G$1" pin="1"/>
+<pinref part="J49" gate="G$1" pin="1"/>
 <wire x1="129.54" y1="111.76" x2="144.78" y2="111.76" width="0.1524" layer="91"/>
 <junction x="129.54" y="111.76"/>
 </segment>
 </net>
 <net name="A0" class="0">
 <segment>
-<pinref part="J25" gate="G$1" pin="P$1"/>
+<pinref part="J12" gate="G$1" pin="P$1"/>
 <wire x1="25.4" y1="86.36" x2="25.4" y2="83.82" width="0.1524" layer="91"/>
 <wire x1="25.4" y1="83.82" x2="121.92" y2="83.82" width="0.1524" layer="91"/>
 <label x="149.86" y="83.82" size="1.27" layer="95" xref="yes"/>
-<pinref part="J48" gate="A" pin="23"/>
-<pinref part="J48" gate="A" pin="24"/>
+<pinref part="J44" gate="A" pin="23"/>
+<pinref part="J44" gate="A" pin="24"/>
 <wire x1="121.92" y1="83.82" x2="129.54" y2="83.82" width="0.1524" layer="91"/>
 <junction x="121.92" y="83.82"/>
-<pinref part="J46" gate="G$1" pin="12"/>
+<pinref part="J49" gate="G$1" pin="12"/>
 <wire x1="129.54" y1="83.82" x2="144.78" y2="83.82" width="0.1524" layer="91"/>
 <junction x="129.54" y="83.82"/>
 </segment>
 </net>
 <net name="TX" class="0">
 <segment>
-<pinref part="J16" gate="G$1" pin="P$1"/>
+<pinref part="J3" gate="G$1" pin="P$1"/>
 <wire x1="93.98" y1="109.22" x2="93.98" y2="106.68" width="0.1524" layer="91"/>
 <wire x1="93.98" y1="106.68" x2="121.92" y2="106.68" width="0.1524" layer="91"/>
 <label x="149.86" y="106.68" size="1.27" layer="95" xref="yes"/>
-<pinref part="J48" gate="A" pin="5"/>
-<pinref part="J48" gate="A" pin="6"/>
-<pinref part="J46" gate="G$1" pin="3"/>
+<pinref part="J44" gate="A" pin="5"/>
+<pinref part="J44" gate="A" pin="6"/>
+<pinref part="J49" gate="G$1" pin="3"/>
 <wire x1="129.54" y1="106.68" x2="144.78" y2="106.68" width="0.1524" layer="91"/>
 <wire x1="121.92" y1="106.68" x2="129.54" y2="106.68" width="0.1524" layer="91"/>
 <junction x="121.92" y="106.68"/>
@@ -3881,13 +3893,13 @@ To use, set global attributes TITLE, AUTHOR and REV in your schematic.</descript
 </net>
 <net name="RX" class="0">
 <segment>
-<pinref part="J17" gate="G$1" pin="P$1"/>
+<pinref part="J4" gate="G$1" pin="P$1"/>
 <wire x1="86.36" y1="106.68" x2="86.36" y2="104.14" width="0.1524" layer="91"/>
 <wire x1="86.36" y1="104.14" x2="121.92" y2="104.14" width="0.1524" layer="91"/>
 <label x="149.86" y="104.14" size="1.27" layer="95" xref="yes"/>
-<pinref part="J48" gate="A" pin="7"/>
-<pinref part="J46" gate="G$1" pin="4"/>
-<pinref part="J48" gate="A" pin="8"/>
+<pinref part="J44" gate="A" pin="7"/>
+<pinref part="J49" gate="G$1" pin="4"/>
+<pinref part="J44" gate="A" pin="8"/>
 <wire x1="144.78" y1="104.14" x2="129.54" y2="104.14" width="0.1524" layer="91"/>
 <wire x1="121.92" y1="104.14" x2="129.54" y2="104.14" width="0.1524" layer="91"/>
 <junction x="121.92" y="104.14"/>
@@ -3896,13 +3908,13 @@ To use, set global attributes TITLE, AUTHOR and REV in your schematic.</descript
 </net>
 <net name="WKP" class="0">
 <segment>
-<pinref part="J18" gate="G$1" pin="P$1"/>
+<pinref part="J5" gate="G$1" pin="P$1"/>
 <wire x1="78.74" y1="104.14" x2="78.74" y2="101.6" width="0.1524" layer="91"/>
 <wire x1="78.74" y1="101.6" x2="121.92" y2="101.6" width="0.1524" layer="91"/>
 <label x="149.86" y="101.6" size="1.27" layer="95" xref="yes"/>
-<pinref part="J48" gate="A" pin="9"/>
-<pinref part="J48" gate="A" pin="10"/>
-<pinref part="J46" gate="G$1" pin="5"/>
+<pinref part="J44" gate="A" pin="9"/>
+<pinref part="J44" gate="A" pin="10"/>
+<pinref part="J49" gate="G$1" pin="5"/>
 <wire x1="129.54" y1="101.6" x2="144.78" y2="101.6" width="0.1524" layer="91"/>
 <wire x1="121.92" y1="101.6" x2="129.54" y2="101.6" width="0.1524" layer="91"/>
 <junction x="121.92" y="101.6"/>
@@ -3911,13 +3923,13 @@ To use, set global attributes TITLE, AUTHOR and REV in your schematic.</descript
 </net>
 <net name="DAC" class="0">
 <segment>
-<pinref part="J19" gate="G$1" pin="P$1"/>
+<pinref part="J6" gate="G$1" pin="P$1"/>
 <wire x1="71.12" y1="101.6" x2="71.12" y2="99.06" width="0.1524" layer="91"/>
 <wire x1="71.12" y1="99.06" x2="121.92" y2="99.06" width="0.1524" layer="91"/>
 <label x="149.86" y="99.06" size="1.27" layer="95" xref="yes"/>
-<pinref part="J48" gate="A" pin="11"/>
-<pinref part="J46" gate="G$1" pin="6"/>
-<pinref part="J48" gate="A" pin="12"/>
+<pinref part="J44" gate="A" pin="11"/>
+<pinref part="J49" gate="G$1" pin="6"/>
+<pinref part="J44" gate="A" pin="12"/>
 <wire x1="144.78" y1="99.06" x2="129.54" y2="99.06" width="0.1524" layer="91"/>
 <wire x1="121.92" y1="99.06" x2="129.54" y2="99.06" width="0.1524" layer="91"/>
 <junction x="121.92" y="99.06"/>
@@ -3926,13 +3938,13 @@ To use, set global attributes TITLE, AUTHOR and REV in your schematic.</descript
 </net>
 <net name="A5" class="0">
 <segment>
-<pinref part="J20" gate="G$1" pin="P$1"/>
+<pinref part="J7" gate="G$1" pin="P$1"/>
 <wire x1="63.5" y1="99.06" x2="63.5" y2="96.52" width="0.1524" layer="91"/>
 <wire x1="63.5" y1="96.52" x2="121.92" y2="96.52" width="0.1524" layer="91"/>
 <label x="149.86" y="96.52" size="1.27" layer="95" xref="yes"/>
-<pinref part="J48" gate="A" pin="13"/>
-<pinref part="J48" gate="A" pin="14"/>
-<pinref part="J46" gate="G$1" pin="7"/>
+<pinref part="J44" gate="A" pin="13"/>
+<pinref part="J44" gate="A" pin="14"/>
+<pinref part="J49" gate="G$1" pin="7"/>
 <wire x1="129.54" y1="96.52" x2="144.78" y2="96.52" width="0.1524" layer="91"/>
 <wire x1="121.92" y1="96.52" x2="129.54" y2="96.52" width="0.1524" layer="91"/>
 <junction x="121.92" y="96.52"/>
@@ -3941,13 +3953,13 @@ To use, set global attributes TITLE, AUTHOR and REV in your schematic.</descript
 </net>
 <net name="A4" class="0">
 <segment>
-<pinref part="J21" gate="G$1" pin="P$1"/>
+<pinref part="J8" gate="G$1" pin="P$1"/>
 <wire x1="55.88" y1="96.52" x2="55.88" y2="93.98" width="0.1524" layer="91"/>
 <wire x1="55.88" y1="93.98" x2="121.92" y2="93.98" width="0.1524" layer="91"/>
 <label x="149.86" y="93.98" size="1.27" layer="95" xref="yes"/>
-<pinref part="J48" gate="A" pin="15"/>
-<pinref part="J46" gate="G$1" pin="8"/>
-<pinref part="J48" gate="A" pin="16"/>
+<pinref part="J44" gate="A" pin="15"/>
+<pinref part="J49" gate="G$1" pin="8"/>
+<pinref part="J44" gate="A" pin="16"/>
 <wire x1="144.78" y1="93.98" x2="129.54" y2="93.98" width="0.1524" layer="91"/>
 <wire x1="121.92" y1="93.98" x2="129.54" y2="93.98" width="0.1524" layer="91"/>
 <junction x="121.92" y="93.98"/>
@@ -3956,13 +3968,13 @@ To use, set global attributes TITLE, AUTHOR and REV in your schematic.</descript
 </net>
 <net name="A3" class="0">
 <segment>
-<pinref part="J22" gate="G$1" pin="P$1"/>
+<pinref part="J9" gate="G$1" pin="P$1"/>
 <wire x1="48.26" y1="93.98" x2="48.26" y2="91.44" width="0.1524" layer="91"/>
 <wire x1="48.26" y1="91.44" x2="121.92" y2="91.44" width="0.1524" layer="91"/>
 <label x="149.86" y="91.44" size="1.27" layer="95" xref="yes"/>
-<pinref part="J48" gate="A" pin="17"/>
-<pinref part="J48" gate="A" pin="18"/>
-<pinref part="J46" gate="G$1" pin="9"/>
+<pinref part="J44" gate="A" pin="17"/>
+<pinref part="J44" gate="A" pin="18"/>
+<pinref part="J49" gate="G$1" pin="9"/>
 <wire x1="129.54" y1="91.44" x2="144.78" y2="91.44" width="0.1524" layer="91"/>
 <wire x1="121.92" y1="91.44" x2="129.54" y2="91.44" width="0.1524" layer="91"/>
 <junction x="121.92" y="91.44"/>
@@ -3971,13 +3983,13 @@ To use, set global attributes TITLE, AUTHOR and REV in your schematic.</descript
 </net>
 <net name="A2" class="0">
 <segment>
-<pinref part="J23" gate="G$1" pin="P$1"/>
+<pinref part="J10" gate="G$1" pin="P$1"/>
 <wire x1="40.64" y1="91.44" x2="40.64" y2="88.9" width="0.1524" layer="91"/>
 <wire x1="40.64" y1="88.9" x2="121.92" y2="88.9" width="0.1524" layer="91"/>
 <label x="149.86" y="88.9" size="1.27" layer="95" xref="yes"/>
-<pinref part="J48" gate="A" pin="19"/>
-<pinref part="J46" gate="G$1" pin="10"/>
-<pinref part="J48" gate="A" pin="20"/>
+<pinref part="J44" gate="A" pin="19"/>
+<pinref part="J49" gate="G$1" pin="10"/>
+<pinref part="J44" gate="A" pin="20"/>
 <wire x1="144.78" y1="88.9" x2="129.54" y2="88.9" width="0.1524" layer="91"/>
 <wire x1="121.92" y1="88.9" x2="129.54" y2="88.9" width="0.1524" layer="91"/>
 <junction x="121.92" y="88.9"/>
@@ -3986,13 +3998,13 @@ To use, set global attributes TITLE, AUTHOR and REV in your schematic.</descript
 </net>
 <net name="A1" class="0">
 <segment>
-<pinref part="J24" gate="G$1" pin="P$1"/>
+<pinref part="J11" gate="G$1" pin="P$1"/>
 <wire x1="33.02" y1="88.9" x2="33.02" y2="86.36" width="0.1524" layer="91"/>
 <wire x1="33.02" y1="86.36" x2="121.92" y2="86.36" width="0.1524" layer="91"/>
 <label x="149.86" y="86.36" size="1.27" layer="95" xref="yes"/>
-<pinref part="J48" gate="A" pin="21"/>
-<pinref part="J48" gate="A" pin="22"/>
-<pinref part="J46" gate="G$1" pin="11"/>
+<pinref part="J44" gate="A" pin="21"/>
+<pinref part="J44" gate="A" pin="22"/>
+<pinref part="J49" gate="G$1" pin="11"/>
 <wire x1="129.54" y1="86.36" x2="144.78" y2="86.36" width="0.1524" layer="91"/>
 <wire x1="121.92" y1="86.36" x2="129.54" y2="86.36" width="0.1524" layer="91"/>
 <junction x="121.92" y="86.36"/>
@@ -4001,30 +4013,30 @@ To use, set global attributes TITLE, AUTHOR and REV in your schematic.</descript
 </net>
 <net name="3V3" class="0">
 <segment>
-<pinref part="J26" gate="G$1" pin="P$1"/>
+<pinref part="J13" gate="G$1" pin="P$1"/>
 <wire x1="109.22" y1="71.12" x2="109.22" y2="68.58" width="0.1524" layer="91"/>
 <label x="149.86" y="68.58" size="1.27" layer="95" xref="yes"/>
-<pinref part="J49" gate="A" pin="1"/>
+<pinref part="J45" gate="A" pin="1"/>
 <wire x1="109.22" y1="68.58" x2="121.92" y2="68.58" width="0.1524" layer="91"/>
-<pinref part="J49" gate="A" pin="2"/>
+<pinref part="J45" gate="A" pin="2"/>
 <wire x1="121.92" y1="68.58" x2="129.54" y2="68.58" width="0.1524" layer="91"/>
 <junction x="121.92" y="68.58"/>
-<pinref part="J47" gate="G$1" pin="12"/>
+<pinref part="J50" gate="G$1" pin="12"/>
 <wire x1="129.54" y1="68.58" x2="144.78" y2="68.58" width="0.1524" layer="91"/>
 <junction x="129.54" y="68.58"/>
 </segment>
 </net>
 <net name="RST" class="0">
 <segment>
-<pinref part="J27" gate="G$1" pin="P$1"/>
+<pinref part="J14" gate="G$1" pin="P$1"/>
 <wire x1="101.6" y1="68.58" x2="101.6" y2="66.04" width="0.1524" layer="91"/>
 <label x="149.86" y="66.04" size="1.27" layer="95" xref="yes"/>
-<pinref part="J49" gate="A" pin="3"/>
+<pinref part="J45" gate="A" pin="3"/>
 <wire x1="121.92" y1="66.04" x2="101.6" y2="66.04" width="0.1524" layer="91"/>
-<pinref part="J49" gate="A" pin="4"/>
+<pinref part="J45" gate="A" pin="4"/>
 <wire x1="129.54" y1="66.04" x2="121.92" y2="66.04" width="0.1524" layer="91"/>
 <junction x="121.92" y="66.04"/>
-<pinref part="J47" gate="G$1" pin="11"/>
+<pinref part="J50" gate="G$1" pin="11"/>
 <wire x1="144.78" y1="66.04" x2="129.54" y2="66.04" width="0.1524" layer="91"/>
 <junction x="129.54" y="66.04"/>
 </segment>
@@ -4036,135 +4048,135 @@ To use, set global attributes TITLE, AUTHOR and REV in your schematic.</descript
 </net>
 <net name="VBAT" class="0">
 <segment>
-<pinref part="J28" gate="G$1" pin="P$1"/>
+<pinref part="J15" gate="G$1" pin="P$1"/>
 <wire x1="93.98" y1="66.04" x2="93.98" y2="63.5" width="0.1524" layer="91"/>
 <wire x1="93.98" y1="63.5" x2="121.92" y2="63.5" width="0.1524" layer="91"/>
 <label x="149.86" y="63.5" size="1.27" layer="95" xref="yes"/>
-<pinref part="J49" gate="A" pin="5"/>
-<pinref part="J49" gate="A" pin="6"/>
+<pinref part="J45" gate="A" pin="5"/>
+<pinref part="J45" gate="A" pin="6"/>
 <wire x1="121.92" y1="63.5" x2="129.54" y2="63.5" width="0.1524" layer="91"/>
 <junction x="121.92" y="63.5"/>
-<pinref part="J47" gate="G$1" pin="10"/>
+<pinref part="J50" gate="G$1" pin="10"/>
 <wire x1="129.54" y1="63.5" x2="144.78" y2="63.5" width="0.1524" layer="91"/>
 <junction x="129.54" y="63.5"/>
 </segment>
 </net>
 <net name="D7" class="0">
 <segment>
-<pinref part="J30" gate="G$1" pin="P$1"/>
+<pinref part="J17" gate="G$1" pin="P$1"/>
 <wire x1="78.74" y1="60.96" x2="78.74" y2="58.42" width="0.1524" layer="91"/>
 <wire x1="78.74" y1="58.42" x2="121.92" y2="58.42" width="0.1524" layer="91"/>
 <label x="149.86" y="58.42" size="1.27" layer="95" xref="yes"/>
-<pinref part="J49" gate="A" pin="9"/>
-<pinref part="J49" gate="A" pin="10"/>
+<pinref part="J45" gate="A" pin="9"/>
+<pinref part="J45" gate="A" pin="10"/>
 <wire x1="121.92" y1="58.42" x2="129.54" y2="58.42" width="0.1524" layer="91"/>
 <junction x="121.92" y="58.42"/>
-<pinref part="J47" gate="G$1" pin="8"/>
+<pinref part="J50" gate="G$1" pin="8"/>
 <wire x1="129.54" y1="58.42" x2="144.78" y2="58.42" width="0.1524" layer="91"/>
 <junction x="129.54" y="58.42"/>
 </segment>
 </net>
 <net name="D6" class="0">
 <segment>
-<pinref part="J31" gate="G$1" pin="P$1"/>
+<pinref part="J18" gate="G$1" pin="P$1"/>
 <wire x1="71.12" y1="58.42" x2="71.12" y2="55.88" width="0.1524" layer="91"/>
 <wire x1="71.12" y1="55.88" x2="121.92" y2="55.88" width="0.1524" layer="91"/>
 <label x="149.86" y="55.88" size="1.27" layer="95" xref="yes"/>
-<pinref part="J49" gate="A" pin="12"/>
-<pinref part="J49" gate="A" pin="11"/>
+<pinref part="J45" gate="A" pin="12"/>
+<pinref part="J45" gate="A" pin="11"/>
 <wire x1="129.54" y1="55.88" x2="121.92" y2="55.88" width="0.1524" layer="91"/>
 <junction x="121.92" y="55.88"/>
-<pinref part="J47" gate="G$1" pin="7"/>
+<pinref part="J50" gate="G$1" pin="7"/>
 <wire x1="129.54" y1="55.88" x2="144.78" y2="55.88" width="0.1524" layer="91"/>
 <junction x="129.54" y="55.88"/>
 </segment>
 </net>
 <net name="D5" class="0">
 <segment>
-<pinref part="J32" gate="G$1" pin="P$1"/>
+<pinref part="J19" gate="G$1" pin="P$1"/>
 <wire x1="63.5" y1="55.88" x2="63.5" y2="53.34" width="0.1524" layer="91"/>
 <wire x1="63.5" y1="53.34" x2="121.92" y2="53.34" width="0.1524" layer="91"/>
 <label x="149.86" y="53.34" size="1.27" layer="95" xref="yes"/>
-<pinref part="J49" gate="A" pin="13"/>
-<pinref part="J49" gate="A" pin="14"/>
+<pinref part="J45" gate="A" pin="13"/>
+<pinref part="J45" gate="A" pin="14"/>
 <wire x1="121.92" y1="53.34" x2="129.54" y2="53.34" width="0.1524" layer="91"/>
 <junction x="121.92" y="53.34"/>
-<pinref part="J47" gate="G$1" pin="6"/>
+<pinref part="J50" gate="G$1" pin="6"/>
 <wire x1="129.54" y1="53.34" x2="144.78" y2="53.34" width="0.1524" layer="91"/>
 <junction x="129.54" y="53.34"/>
 </segment>
 </net>
 <net name="D4" class="0">
 <segment>
-<pinref part="J33" gate="G$1" pin="P$1"/>
+<pinref part="J20" gate="G$1" pin="P$1"/>
 <wire x1="55.88" y1="53.34" x2="55.88" y2="50.8" width="0.1524" layer="91"/>
 <wire x1="55.88" y1="50.8" x2="121.92" y2="50.8" width="0.1524" layer="91"/>
 <label x="149.86" y="50.8" size="1.27" layer="95" xref="yes"/>
-<pinref part="J49" gate="A" pin="15"/>
-<pinref part="J49" gate="A" pin="16"/>
+<pinref part="J45" gate="A" pin="15"/>
+<pinref part="J45" gate="A" pin="16"/>
 <wire x1="129.54" y1="50.8" x2="121.92" y2="50.8" width="0.1524" layer="91"/>
 <junction x="121.92" y="50.8"/>
-<pinref part="J47" gate="G$1" pin="5"/>
+<pinref part="J50" gate="G$1" pin="5"/>
 <wire x1="144.78" y1="50.8" x2="129.54" y2="50.8" width="0.1524" layer="91"/>
 <junction x="129.54" y="50.8"/>
 </segment>
 </net>
 <net name="D3" class="0">
 <segment>
-<pinref part="J34" gate="G$1" pin="P$1"/>
+<pinref part="J21" gate="G$1" pin="P$1"/>
 <wire x1="48.26" y1="50.8" x2="48.26" y2="48.26" width="0.1524" layer="91"/>
 <wire x1="48.26" y1="48.26" x2="121.92" y2="48.26" width="0.1524" layer="91"/>
 <label x="149.86" y="48.26" size="1.27" layer="95" xref="yes"/>
-<pinref part="J49" gate="A" pin="17"/>
-<pinref part="J49" gate="A" pin="18"/>
+<pinref part="J45" gate="A" pin="17"/>
+<pinref part="J45" gate="A" pin="18"/>
 <wire x1="121.92" y1="48.26" x2="129.54" y2="48.26" width="0.1524" layer="91"/>
 <junction x="121.92" y="48.26"/>
-<pinref part="J47" gate="G$1" pin="4"/>
+<pinref part="J50" gate="G$1" pin="4"/>
 <wire x1="129.54" y1="48.26" x2="144.78" y2="48.26" width="0.1524" layer="91"/>
 <junction x="129.54" y="48.26"/>
 </segment>
 </net>
 <net name="D2" class="0">
 <segment>
-<pinref part="J35" gate="G$1" pin="P$1"/>
+<pinref part="J22" gate="G$1" pin="P$1"/>
 <wire x1="40.64" y1="48.26" x2="40.64" y2="45.72" width="0.1524" layer="91"/>
 <wire x1="40.64" y1="45.72" x2="121.92" y2="45.72" width="0.1524" layer="91"/>
 <label x="149.86" y="45.72" size="1.27" layer="95" xref="yes"/>
-<pinref part="J49" gate="A" pin="19"/>
-<pinref part="J49" gate="A" pin="20"/>
+<pinref part="J45" gate="A" pin="19"/>
+<pinref part="J45" gate="A" pin="20"/>
 <wire x1="121.92" y1="45.72" x2="129.54" y2="45.72" width="0.1524" layer="91"/>
 <junction x="121.92" y="45.72"/>
-<pinref part="J47" gate="G$1" pin="3"/>
+<pinref part="J50" gate="G$1" pin="3"/>
 <wire x1="144.78" y1="45.72" x2="129.54" y2="45.72" width="0.1524" layer="91"/>
 <junction x="129.54" y="45.72"/>
 </segment>
 </net>
 <net name="D1" class="0">
 <segment>
-<pinref part="J36" gate="G$1" pin="P$1"/>
+<pinref part="J23" gate="G$1" pin="P$1"/>
 <wire x1="33.02" y1="45.72" x2="33.02" y2="43.18" width="0.1524" layer="91"/>
 <wire x1="33.02" y1="43.18" x2="121.92" y2="43.18" width="0.1524" layer="91"/>
 <label x="149.86" y="43.18" size="1.27" layer="95" xref="yes"/>
-<pinref part="J49" gate="A" pin="21"/>
-<pinref part="J49" gate="A" pin="22"/>
+<pinref part="J45" gate="A" pin="21"/>
+<pinref part="J45" gate="A" pin="22"/>
 <wire x1="121.92" y1="43.18" x2="129.54" y2="43.18" width="0.1524" layer="91"/>
 <junction x="121.92" y="43.18"/>
-<pinref part="J47" gate="G$1" pin="2"/>
+<pinref part="J50" gate="G$1" pin="2"/>
 <wire x1="129.54" y1="43.18" x2="144.78" y2="43.18" width="0.1524" layer="91"/>
 <junction x="129.54" y="43.18"/>
 </segment>
 </net>
 <net name="D0" class="0">
 <segment>
-<pinref part="J37" gate="G$1" pin="P$1"/>
+<pinref part="J24" gate="G$1" pin="P$1"/>
 <wire x1="25.4" y1="43.18" x2="25.4" y2="40.64" width="0.1524" layer="91"/>
 <wire x1="25.4" y1="40.64" x2="121.92" y2="40.64" width="0.1524" layer="91"/>
 <label x="149.86" y="40.64" size="1.27" layer="95" xref="yes"/>
-<pinref part="J49" gate="A" pin="23"/>
-<pinref part="J49" gate="A" pin="24"/>
+<pinref part="J45" gate="A" pin="23"/>
+<pinref part="J45" gate="A" pin="24"/>
 <wire x1="121.92" y1="40.64" x2="129.54" y2="40.64" width="0.1524" layer="91"/>
 <junction x="121.92" y="40.64"/>
-<pinref part="J47" gate="G$1" pin="1"/>
+<pinref part="J50" gate="G$1" pin="1"/>
 <wire x1="129.54" y1="40.64" x2="144.78" y2="40.64" width="0.1524" layer="91"/>
 <junction x="129.54" y="40.64"/>
 </segment>
@@ -4174,7 +4186,7 @@ To use, set global attributes TITLE, AUTHOR and REV in your schematic.</descript
 <pinref part="J38" gate="G$1" pin="P$1"/>
 <wire x1="185.42" y1="160.02" x2="185.42" y2="157.48" width="0.1524" layer="91"/>
 <wire x1="185.42" y1="157.48" x2="190.5" y2="157.48" width="0.1524" layer="91"/>
-<pinref part="J44" gate="G$1" pin="VCC"/>
+<pinref part="J51" gate="G$1" pin="VCC"/>
 </segment>
 </net>
 <net name="NRF_SWDIO" class="0">
@@ -4182,29 +4194,29 @@ To use, set global attributes TITLE, AUTHOR and REV in your schematic.</descript
 <pinref part="J39" gate="G$1" pin="P$1"/>
 <wire x1="215.9" y1="157.48" x2="218.44" y2="157.48" width="0.1524" layer="91"/>
 <wire x1="218.44" y1="157.48" x2="218.44" y2="160.02" width="0.1524" layer="91"/>
-<pinref part="J44" gate="G$1" pin="SWDIO"/>
+<pinref part="J51" gate="G$1" pin="SWDIO"/>
 </segment>
 <segment>
-<pinref part="J52" gate="A" pin="5"/>
-<pinref part="J52" gate="A" pin="6"/>
+<pinref part="J46" gate="A" pin="5"/>
+<pinref part="J46" gate="A" pin="6"/>
 <wire x1="137.16" y1="160.02" x2="144.78" y2="160.02" width="0.1524" layer="91"/>
 <wire x1="144.78" y1="160.02" x2="152.4" y2="160.02" width="0.1524" layer="91"/>
 <junction x="144.78" y="160.02"/>
 <label x="157.48" y="160.02" size="1.27" layer="95" xref="yes"/>
-<pinref part="J50" gate="G$1" pin="3"/>
+<pinref part="J47" gate="G$1" pin="3"/>
 </segment>
 </net>
 <net name="NRF_SWDCLK" class="0">
 <segment>
 <pinref part="J41" gate="G$1" pin="P$1"/>
 <wire x1="226.06" y1="154.94" x2="226.06" y2="160.02" width="0.1524" layer="91"/>
-<pinref part="J44" gate="G$1" pin="SWDCLK"/>
+<pinref part="J51" gate="G$1" pin="SWDCLK"/>
 <wire x1="215.9" y1="154.94" x2="226.06" y2="154.94" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="NRF_SWO" class="0">
 <segment>
-<pinref part="J43" gate="G$1" pin="P$1"/>
+<pinref part="J42" gate="G$1" pin="P$1"/>
 <wire x1="215.9" y1="149.86" x2="233.68" y2="149.86" width="0.1524" layer="91"/>
 <wire x1="233.68" y1="149.86" x2="233.68" y2="160.02" width="0.1524" layer="91"/>
 </segment>
@@ -4213,7 +4225,7 @@ To use, set global attributes TITLE, AUTHOR and REV in your schematic.</descript
 <segment>
 <pinref part="J40" gate="G$1" pin="P$1"/>
 <wire x1="241.3" y1="147.32" x2="241.3" y2="160.02" width="0.1524" layer="91"/>
-<pinref part="J44" gate="G$1" pin="!RESET"/>
+<pinref part="J51" gate="G$1" pin="!RESET"/>
 <wire x1="215.9" y1="147.32" x2="241.3" y2="147.32" width="0.1524" layer="91"/>
 </segment>
 </net>
