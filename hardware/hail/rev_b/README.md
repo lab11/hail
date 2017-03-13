@@ -10,5 +10,6 @@ as `.txt` and `.csv` files for convenience.
 # Rev B changes
 
  * Add 1 kOhm resistor between DTR output and Reset net
- * Added Hail logo to bottom side
+ * Removed University of Michigan logo from top side
+ * Added Lab11 logo to top side
 
