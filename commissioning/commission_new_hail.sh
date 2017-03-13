@@ -35,10 +35,11 @@ tockloader set-attribute --jtag --board hail board hail
 echo "done"
 
 echo "Ensuring the submodule for Tock is checked out"
-git submodule update --init --recursive tockloader
+git submodule update --init --recursive tock
 
 echo "Flashing the hail kernel"
 pushd tock/boards/hail
+make
 tockloader flash target/sam4l/release/hail.bin --address 0x10000 --jtag --board hail
 popd
 
