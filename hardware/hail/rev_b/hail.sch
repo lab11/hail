@@ -4929,10 +4929,12 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 </part>
 <part name="J2" library="Particle" deviceset="M12" device="PTH-CST-L">
 <attribute name="DIGIKEY" value="S1011E-12-ND"/>
+<attribute name="MPN" value="MF-CON-2.54mm-01x12"/>
 <attribute name="POPULATE" value="0"/>
 </part>
 <part name="J3" library="Particle" deviceset="M12" device="PTH-CST-R">
 <attribute name="DIGIKEY" value="S1011E-12-ND"/>
+<attribute name="MPN" value="MF-CON-2.54mm-01x12"/>
 <attribute name="POPULATE" value="0"/>
 </part>
 <part name="U1" library="chips" deviceset="FT231X" device="Q"/>
@@ -4976,7 +4978,8 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 </part>
 <part name="C10" library="passives" deviceset="CAPACITOR" device="0402_CAP" value="100nF">
 <attribute name="DIGIKEY" value="490-10777-1-ND"/>
-<attribute name="MPN" value="GRM155R71A104JA01D"/>
+<attribute name="MPN" value="MF-CAP-0402-0.1uF"/>
+<attribute name="MPN1" value="GRM155R71A104JA01D"/>
 </part>
 <part name="C9" library="passives" deviceset="CAPACITOR" device="0402_CAP" value="47nF">
 <attribute name="DIGIKEY" value="445-1264-1-ND"/>
@@ -4986,17 +4989,20 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <part name="GND5" library="supply1" deviceset="GND" device=""/>
 <part name="C6" library="passives" deviceset="CAPACITOR" device="0402_CAP" value="1nF">
 <attribute name="DIGIKEY" value="490-1303-1-ND"/>
-<attribute name="MPN" value="GRM155R71H102KA01D"/>
+<attribute name="MPN" value="MF-CAP-0402-1nF"/>
+<attribute name="MPN1" value="GRM155R71H102KA01D"/>
 </part>
 <part name="P+4" library="supply1" deviceset="VCC" device=""/>
 <part name="GND6" library="supply1" deviceset="GND" device=""/>
 <part name="C11" library="passives" deviceset="CAPACITOR" device="0402_CAP" value="100nF">
 <attribute name="DIGIKEY" value="490-10777-1-ND"/>
-<attribute name="MPN" value="GRM155R71A104JA01D"/>
+<attribute name="MPN" value="MF-CAP-0402-0.1uF"/>
+<attribute name="MPN1" value="GRM155R71A104JA01D"/>
 </part>
 <part name="C12" library="passives" deviceset="CAPACITOR" device="0402_CAP" value="100nF">
 <attribute name="DIGIKEY" value="490-10777-1-ND"/>
-<attribute name="MPN" value="GRM155R71A104JA01D"/>
+<attribute name="MPN" value="MF-CAP-0402-0.1uF"/>
+<attribute name="MPN1" value="GRM155R71A104JA01D"/>
 </part>
 <part name="R4" library="passives" deviceset="RESISTOR" device="0402_RES" value="1k">
 <attribute name="DIGIKEY" value="1276-3430-1-ND"/>
@@ -5031,7 +5037,8 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 </part>
 <part name="C8" library="passives" deviceset="CAPACITOR" device="0402_CAP" value="10nF">
 <attribute name="DIGIKEY" value="490-7763-1-ND"/>
-<attribute name="MPN" value="GRM155R71H103JA88D"/>
+<attribute name="MPN" value="MF-CAP-0402-0.01uF"/>
+<attribute name="MPN1" value="GRM155R71H103JA88D"/>
 </part>
 <part name="C24" library="passives" deviceset="CAPACITOR" device="0402_CAP" value="4.7uF">
 <attribute name="DIGIKEY" value="490-13252-1-ND"/>
@@ -5048,11 +5055,13 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <part name="GND25" library="umich" deviceset="GND" device=""/>
 <part name="R11" library="passives" deviceset="RESISTOR" device="0402_RES" value="100k">
 <attribute name="DIGIKEY" value="1276-3432-1-ND"/>
-<attribute name="MPN" value="RC1005F104CS"/>
+<attribute name="MPN" value="MF-RES-0402-100K"/>
+<attribute name="MPN1" value="RC1005F104CS"/>
 </part>
 <part name="R12" library="passives" deviceset="RESISTOR" device="0402_RES" value="100k">
 <attribute name="DIGIKEY" value="1276-3432-1-ND"/>
-<attribute name="MPN" value="RC1005F104CS"/>
+<attribute name="MPN" value="MF-RES-0402-100K"/>
+<attribute name="MPN1" value="RC1005F104CS"/>
 </part>
 <part name="P+9" library="supply1" deviceset="VCC" device=""/>
 <part name="P+10" library="supply1" deviceset="VCC" device=""/>
@@ -5065,16 +5074,19 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 </part>
 <part name="R7" library="passives" deviceset="RESISTOR" device="0402_RES" value="10k">
 <attribute name="DIGIKEY" value="1276-3431-1-ND"/>
-<attribute name="MPN" value="RC1005F103CS"/>
+<attribute name="MPN" value="MF-RES-0402-10K"/>
+<attribute name="MPN1" value="RC1005F103CS"/>
 </part>
 <part name="R8" library="passives" deviceset="RESISTOR" device="0402_RES" value="10k">
 <attribute name="DIGIKEY" value="1276-3431-1-ND"/>
-<attribute name="MPN" value="RC1005F103CS"/>
+<attribute name="MPN" value="MF-RES-0402-10K"/>
+<attribute name="MPN1" value="RC1005F103CS"/>
 </part>
 <part name="P+12" library="supply1" deviceset="VCC" device=""/>
 <part name="C13" library="passives" deviceset="CAPACITOR" device="0402_CAP" value="100nF">
 <attribute name="DIGIKEY" value="490-10777-1-ND"/>
-<attribute name="MPN" value="GRM155R71A104JA01D"/>
+<attribute name="MPN" value="MF-CAP-0402-0.1uF"/>
+<attribute name="MPN1" value="GRM155R71A104JA01D"/>
 </part>
 <part name="P+13" library="supply1" deviceset="VCC" device=""/>
 <part name="GND21" library="supply1" deviceset="GND" device=""/>
@@ -5082,34 +5094,40 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <part name="U2" library="chips" deviceset="FXOS8700CQ" device=""/>
 <part name="C14" library="passives" deviceset="CAPACITOR" device="0402_CAP" value="100nF">
 <attribute name="DIGIKEY" value="490-10777-1-ND"/>
-<attribute name="MPN" value="GRM155R71A104JA01D"/>
+<attribute name="MPN" value="MF-CAP-0402-0.1uF"/>
+<attribute name="MPN1" value="GRM155R71A104JA01D"/>
 </part>
 <part name="P+2" library="supply1" deviceset="VCC" device=""/>
 <part name="GND3" library="supply1" deviceset="GND" device=""/>
 <part name="R9" library="passives" deviceset="RESISTOR" device="0402_RES" value="10k">
 <attribute name="DIGIKEY" value="1276-3431-1-ND"/>
-<attribute name="MPN" value="RC1005F103CS"/>
+<attribute name="MPN" value="MF-RES-0402-10K"/>
+<attribute name="MPN1" value="RC1005F103CS"/>
 </part>
 <part name="P+3" library="supply1" deviceset="VCC" device=""/>
 <part name="GND18" library="supply1" deviceset="GND" device=""/>
 <part name="C15" library="passives" deviceset="CAPACITOR" device="0402_CAP" value="100nF">
 <attribute name="DIGIKEY" value="490-10777-1-ND"/>
-<attribute name="MPN" value="GRM155R71A104JA01D"/>
+<attribute name="MPN" value="MF-CAP-0402-0.1uF"/>
+<attribute name="MPN1" value="GRM155R71A104JA01D"/>
 </part>
 <part name="C16" library="passives" deviceset="CAPACITOR" device="0402_CAP" value="100nF">
 <attribute name="DIGIKEY" value="490-10777-1-ND"/>
-<attribute name="MPN" value="GRM155R71A104JA01D"/>
+<attribute name="MPN" value="MF-CAP-0402-0.1uF"/>
+<attribute name="MPN1" value="GRM155R71A104JA01D"/>
 </part>
 <part name="C17" library="passives" deviceset="CAPACITOR" device="0402_CAP" value="100nF">
 <attribute name="DIGIKEY" value="490-10777-1-ND"/>
-<attribute name="MPN" value="GRM155R71A104JA01D"/>
+<attribute name="MPN" value="MF-CAP-0402-0.1uF"/>
+<attribute name="MPN1" value="GRM155R71A104JA01D"/>
 </part>
 <part name="GND20" library="supply1" deviceset="GND" device=""/>
 <part name="P+11" library="supply1" deviceset="VCC" device=""/>
 <part name="GND22" library="umich" deviceset="GND" device=""/>
 <part name="R13" library="passives" deviceset="RESISTOR" device="0402_RES" value="100k">
 <attribute name="DIGIKEY" value="1276-3432-1-ND"/>
-<attribute name="MPN" value="RC1005F104CS"/>
+<attribute name="MPN" value="MF-RES-0402-100K"/>
+<attribute name="MPN1" value="RC1005F104CS"/>
 </part>
 <part name="P+14" library="supply1" deviceset="VCC" device=""/>
 <part name="GND23" library="umich" deviceset="GND" device=""/>
@@ -5120,19 +5138,23 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <part name="GND27" library="umich" deviceset="GND" device=""/>
 <part name="C18" library="passives" deviceset="CAPACITOR" device="0402_CAP" value="100nF">
 <attribute name="DIGIKEY" value="490-10777-1-ND"/>
-<attribute name="MPN" value="GRM155R71A104JA01D"/>
+<attribute name="MPN" value="MF-CAP-0402-0.1uF"/>
+<attribute name="MPN1" value="GRM155R71A104JA01D"/>
 </part>
 <part name="C19" library="passives" deviceset="CAPACITOR" device="0402_CAP" value="100nF">
 <attribute name="DIGIKEY" value="490-10777-1-ND"/>
-<attribute name="MPN" value="GRM155R71A104JA01D"/>
+<attribute name="MPN" value="MF-CAP-0402-0.1uF"/>
+<attribute name="MPN1" value="GRM155R71A104JA01D"/>
 </part>
 <part name="C20" library="passives" deviceset="CAPACITOR" device="0402_CAP" value="100nF">
 <attribute name="DIGIKEY" value="490-10777-1-ND"/>
-<attribute name="MPN" value="GRM155R71A104JA01D"/>
+<attribute name="MPN" value="MF-CAP-0402-0.1uF"/>
+<attribute name="MPN1" value="GRM155R71A104JA01D"/>
 </part>
 <part name="C21" library="passives" deviceset="CAPACITOR" device="0402_CAP" value="100nF">
 <attribute name="DIGIKEY" value="490-10777-1-ND"/>
-<attribute name="MPN" value="GRM155R71A104JA01D"/>
+<attribute name="MPN" value="MF-CAP-0402-0.1uF"/>
+<attribute name="MPN1" value="GRM155R71A104JA01D"/>
 </part>
 <part name="FB1" library="passives" deviceset="FERRITE_BEAD" device="0402" value="1.5k">
 <attribute name="DIGIKEY" value="1276-6395-1-ND"/>
@@ -5140,7 +5162,8 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 </part>
 <part name="C22" library="passives" deviceset="CAPACITOR" device="0402_CAP" value="100nF">
 <attribute name="DIGIKEY" value="490-10777-1-ND"/>
-<attribute name="MPN" value="GRM155R71A104JA01D"/>
+<attribute name="MPN" value="MF-CAP-0402-0.1uF"/>
+<attribute name="MPN1" value="GRM155R71A104JA01D"/>
 </part>
 <part name="C25" library="passives" deviceset="CAPACITOR" device="0402_CAP" value="4.7uF">
 <attribute name="DIGIKEY" value="490-13252-1-ND"/>
@@ -5149,7 +5172,8 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <part name="P+15" library="supply1" deviceset="VCC" device=""/>
 <part name="R10" library="passives" deviceset="RESISTOR" device="0402_RES" value="10k">
 <attribute name="DIGIKEY" value="1276-3431-1-ND"/>
-<attribute name="MPN" value="RC1005F103CS"/>
+<attribute name="MPN" value="MF-RES-0402-10K"/>
+<attribute name="MPN1" value="RC1005F103CS"/>
 </part>
 <part name="GND28" library="umich" deviceset="GND" device=""/>
 <part name="C2" library="passives" deviceset="CAPACITOR" device="0402_CAP" value="8pF">
@@ -5166,7 +5190,8 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <part name="GND29" library="umich" deviceset="GND" device=""/>
 <part name="LED1" library="leds" deviceset="LED" device="0603">
 <attribute name="DIGIKEY" value="160-1837-6-ND"/>
-<attribute name="MPN" value="LTST-C194TBKT"/>
+<attribute name="MPN" value="MF-LED-0603-GREEN"/>
+<attribute name="MPN1" value="LTST-C194TBKT"/>
 </part>
 <part name="R5" library="passives" deviceset="RESISTOR" device="0402_RES" value="1k">
 <attribute name="DIGIKEY" value="1276-3430-1-ND"/>
@@ -5210,10 +5235,12 @@ Button</text>
 <instance part="GND25" gate="1" x="17.78" y="27.94"/>
 <instance part="R11" gate="G$1" x="48.26" y="50.8" rot="R90">
 <attribute name="DIGIKEY" x="48.26" y="50.8" size="1.27" layer="96" font="vector" rot="R90" display="off"/>
+<attribute name="MPN1" x="48.26" y="50.8" size="1.778" layer="96" rot="R90" display="off"/>
 <attribute name="MPN" x="48.26" y="50.8" size="1.778" layer="96" rot="R90" display="off"/>
 </instance>
 <instance part="R12" gate="G$1" x="55.88" y="50.8" rot="R90">
 <attribute name="DIGIKEY" x="55.88" y="50.8" size="1.27" layer="96" font="vector" rot="R90" display="off"/>
+<attribute name="MPN1" x="55.88" y="50.8" size="1.778" layer="96" rot="R90" display="off"/>
 <attribute name="MPN" x="55.88" y="50.8" size="1.778" layer="96" rot="R90" display="off"/>
 </instance>
 <instance part="P+9" gate="VCC" x="17.78" y="60.96"/>
@@ -5243,10 +5270,12 @@ Button</text>
 <instance part="J2" gate="G$1" x="226.06" y="91.44" rot="MR0">
 <attribute name="DIGIKEY" x="226.06" y="91.44" size="1.778" layer="96" rot="MR0" display="off"/>
 <attribute name="POPULATE" x="226.06" y="91.44" size="1.778" layer="96" rot="MR0" display="off"/>
+<attribute name="MPN" x="226.06" y="91.44" size="1.778" layer="96" rot="MR0" display="off"/>
 </instance>
 <instance part="J3" gate="G$1" x="226.06" y="50.8" rot="MR0">
 <attribute name="DIGIKEY" x="226.06" y="50.8" size="1.778" layer="96" rot="MR0" display="off"/>
 <attribute name="POPULATE" x="226.06" y="50.8" size="1.778" layer="96" rot="MR0" display="off"/>
+<attribute name="MPN" x="226.06" y="50.8" size="1.778" layer="96" rot="MR0" display="off"/>
 </instance>
 <instance part="S1" gate="G$1" x="111.76" y="58.42">
 <attribute name="MPN" x="111.76" y="58.42" size="1.778" layer="96" display="off"/>
@@ -5257,6 +5286,7 @@ Button</text>
 <instance part="GND22" gate="1" x="121.92" y="53.34"/>
 <instance part="R13" gate="G$1" x="99.06" y="35.56" rot="R90">
 <attribute name="DIGIKEY" x="99.06" y="35.56" size="1.27" layer="96" font="vector" rot="R90" display="off"/>
+<attribute name="MPN1" x="99.06" y="35.56" size="1.778" layer="96" rot="R90" display="off"/>
 <attribute name="MPN" x="99.06" y="35.56" size="1.778" layer="96" rot="R90" display="off"/>
 </instance>
 <instance part="P+14" gate="VCC" x="99.06" y="43.18"/>
@@ -5267,18 +5297,22 @@ Button</text>
 <instance part="GND27" gate="1" x="12.7" y="76.2"/>
 <instance part="C18" gate="G$1" x="40.64" y="139.7">
 <attribute name="DIGIKEY" x="40.64" y="139.7" size="1.27" layer="96" align="bottom-center" display="off"/>
+<attribute name="MPN1" x="40.64" y="139.7" size="1.778" layer="96" display="off"/>
 <attribute name="MPN" x="40.64" y="139.7" size="1.778" layer="96" display="off"/>
 </instance>
 <instance part="C19" gate="G$1" x="30.48" y="152.4">
 <attribute name="DIGIKEY" x="30.48" y="152.4" size="1.27" layer="96" align="bottom-center" display="off"/>
+<attribute name="MPN1" x="30.48" y="152.4" size="1.778" layer="96" display="off"/>
 <attribute name="MPN" x="30.48" y="152.4" size="1.778" layer="96" display="off"/>
 </instance>
 <instance part="C20" gate="G$1" x="22.86" y="152.4">
 <attribute name="DIGIKEY" x="22.86" y="152.4" size="1.27" layer="96" align="bottom-center" display="off"/>
+<attribute name="MPN1" x="22.86" y="152.4" size="1.778" layer="96" display="off"/>
 <attribute name="MPN" x="22.86" y="152.4" size="1.778" layer="96" display="off"/>
 </instance>
 <instance part="C21" gate="G$1" x="15.24" y="152.4">
 <attribute name="DIGIKEY" x="15.24" y="152.4" size="1.27" layer="96" align="bottom-center" display="off"/>
+<attribute name="MPN1" x="15.24" y="152.4" size="1.778" layer="96" display="off"/>
 <attribute name="MPN" x="15.24" y="152.4" size="1.778" layer="96" display="off"/>
 </instance>
 <instance part="FB1" gate="G$1" x="40.64" y="152.4" rot="R90">
@@ -5287,6 +5321,7 @@ Button</text>
 </instance>
 <instance part="C22" gate="G$1" x="53.34" y="129.54">
 <attribute name="DIGIKEY" x="53.34" y="129.54" size="1.27" layer="96" align="bottom-center" display="off"/>
+<attribute name="MPN1" x="53.34" y="129.54" size="1.778" layer="96" display="off"/>
 <attribute name="MPN" x="53.34" y="129.54" size="1.778" layer="96" display="off"/>
 </instance>
 <instance part="C25" gate="G$1" x="45.72" y="129.54">
@@ -5296,6 +5331,7 @@ Button</text>
 <instance part="P+15" gate="VCC" x="12.7" y="165.1"/>
 <instance part="R10" gate="G$1" x="160.02" y="149.86" rot="R90">
 <attribute name="DIGIKEY" x="160.02" y="149.86" size="1.27" layer="96" font="vector" rot="R90" display="off"/>
+<attribute name="MPN1" x="160.02" y="149.86" size="1.778" layer="96" rot="R90" display="off"/>
 <attribute name="MPN" x="160.02" y="149.86" size="1.778" layer="96" rot="R90" display="off"/>
 </instance>
 <instance part="GND28" gate="1" x="160.02" y="139.7"/>
@@ -6119,6 +6155,7 @@ Button</text>
 <instance part="GND7" gate="1" x="160.02" y="96.52"/>
 <instance part="C10" gate="G$1" x="142.24" y="60.96">
 <attribute name="DIGIKEY" x="142.24" y="60.96" size="1.778" layer="96" display="off"/>
+<attribute name="MPN1" x="142.24" y="60.96" size="1.778" layer="96" display="off"/>
 <attribute name="MPN" x="142.24" y="60.96" size="1.778" layer="96" display="off"/>
 </instance>
 <instance part="C9" gate="G$1" x="132.08" y="60.96">
@@ -6129,16 +6166,19 @@ Button</text>
 <instance part="GND5" gate="1" x="142.24" y="50.8"/>
 <instance part="C6" gate="G$1" x="137.16" y="154.94">
 <attribute name="DIGIKEY" x="137.16" y="154.94" size="1.778" layer="96" display="off"/>
+<attribute name="MPN1" x="137.16" y="154.94" size="1.778" layer="96" display="off"/>
 <attribute name="MPN" x="137.16" y="154.94" size="1.778" layer="96" display="off"/>
 </instance>
 <instance part="P+4" gate="VCC" x="106.68" y="165.1"/>
 <instance part="GND6" gate="1" x="127" y="142.24"/>
 <instance part="C11" gate="G$1" x="116.84" y="154.94">
 <attribute name="DIGIKEY" x="116.84" y="154.94" size="1.778" layer="96" display="off"/>
+<attribute name="MPN1" x="116.84" y="154.94" size="1.778" layer="96" display="off"/>
 <attribute name="MPN" x="116.84" y="154.94" size="1.778" layer="96" display="off"/>
 </instance>
 <instance part="C12" gate="G$1" x="127" y="154.94">
 <attribute name="DIGIKEY" x="127" y="154.94" size="1.778" layer="96" display="off"/>
+<attribute name="MPN1" x="127" y="154.94" size="1.778" layer="96" display="off"/>
 <attribute name="MPN" x="127" y="154.94" size="1.778" layer="96" display="off"/>
 </instance>
 <instance part="R4" gate="G$1" x="76.2" y="68.58" rot="R90">
@@ -6167,6 +6207,7 @@ Button</text>
 <instance part="GND13" gate="1" x="27.94" y="63.5"/>
 <instance part="LED1" gate="G$1" x="73.66" y="139.7" rot="R270">
 <attribute name="DIGIKEY" x="73.66" y="139.7" size="1.778" layer="96" rot="R270" display="off"/>
+<attribute name="MPN1" x="73.66" y="139.7" size="1.778" layer="96" rot="R270" display="off"/>
 <attribute name="MPN" x="73.66" y="139.7" size="1.778" layer="96" rot="R270" display="off"/>
 </instance>
 <instance part="R5" gate="G$1" x="73.66" y="132.08" rot="R90">
@@ -6465,15 +6506,18 @@ Humidity Sensor</text>
 </instance>
 <instance part="R7" gate="G$1" x="220.98" y="149.86" rot="R90">
 <attribute name="DIGIKEY" x="220.98" y="149.86" size="1.778" layer="96" rot="R90" display="off"/>
+<attribute name="MPN1" x="220.98" y="149.86" size="1.778" layer="96" rot="R90" display="off"/>
 <attribute name="MPN" x="220.98" y="149.86" size="1.778" layer="96" rot="R90" display="off"/>
 </instance>
 <instance part="R8" gate="G$1" x="228.6" y="149.86" rot="R90">
 <attribute name="DIGIKEY" x="228.6" y="149.86" size="1.778" layer="96" rot="R90" display="off"/>
+<attribute name="MPN1" x="228.6" y="149.86" size="1.778" layer="96" rot="R90" display="off"/>
 <attribute name="MPN" x="228.6" y="149.86" size="1.778" layer="96" rot="R90" display="off"/>
 </instance>
 <instance part="P+12" gate="VCC" x="223.52" y="160.02"/>
 <instance part="C13" gate="G$1" x="20.32" y="104.14">
 <attribute name="DIGIKEY" x="20.32" y="104.14" size="1.778" layer="96" display="off"/>
+<attribute name="MPN1" x="20.32" y="104.14" size="1.778" layer="96" display="off"/>
 <attribute name="MPN" x="20.32" y="104.14" size="1.778" layer="96" display="off"/>
 </instance>
 <instance part="P+13" gate="VCC" x="20.32" y="114.3"/>
@@ -6482,26 +6526,31 @@ Humidity Sensor</text>
 <instance part="U2" gate="G$1" x="193.04" y="104.14"/>
 <instance part="C14" gate="G$1" x="78.74" y="104.14">
 <attribute name="DIGIKEY" x="78.74" y="104.14" size="1.778" layer="96" display="off"/>
+<attribute name="MPN1" x="78.74" y="104.14" size="1.778" layer="96" display="off"/>
 <attribute name="MPN" x="78.74" y="104.14" size="1.778" layer="96" display="off"/>
 </instance>
 <instance part="P+2" gate="VCC" x="78.74" y="114.3"/>
 <instance part="GND3" gate="1" x="78.74" y="91.44"/>
 <instance part="R9" gate="G$1" x="116.84" y="106.68" rot="R90">
 <attribute name="DIGIKEY" x="116.84" y="106.68" size="1.778" layer="96" rot="R90" display="off"/>
+<attribute name="MPN1" x="116.84" y="106.68" size="1.778" layer="96" rot="R90" display="off"/>
 <attribute name="MPN" x="116.84" y="106.68" size="1.778" layer="96" rot="R90" display="off"/>
 </instance>
 <instance part="P+3" gate="VCC" x="154.94" y="119.38"/>
 <instance part="GND18" gate="1" x="154.94" y="91.44"/>
 <instance part="C15" gate="G$1" x="170.18" y="104.14">
 <attribute name="DIGIKEY" x="170.18" y="104.14" size="1.778" layer="96" display="off"/>
+<attribute name="MPN1" x="170.18" y="104.14" size="1.778" layer="96" display="off"/>
 <attribute name="MPN" x="170.18" y="104.14" size="1.778" layer="96" display="off"/>
 </instance>
 <instance part="C16" gate="G$1" x="162.56" y="104.14">
 <attribute name="DIGIKEY" x="162.56" y="104.14" size="1.778" layer="96" display="off"/>
+<attribute name="MPN1" x="162.56" y="104.14" size="1.778" layer="96" display="off"/>
 <attribute name="MPN" x="162.56" y="104.14" size="1.778" layer="96" display="off"/>
 </instance>
 <instance part="C17" gate="G$1" x="154.94" y="104.14">
 <attribute name="DIGIKEY" x="154.94" y="104.14" size="1.778" layer="96" display="off"/>
+<attribute name="MPN1" x="154.94" y="104.14" size="1.778" layer="96" display="off"/>
 <attribute name="MPN" x="154.94" y="104.14" size="1.778" layer="96" display="off"/>
 </instance>
 <instance part="GND20" gate="1" x="231.14" y="91.44"/>
@@ -6733,6 +6782,7 @@ Humidity Sensor</text>
 </instance>
 <instance part="C8" gate="G$1" x="200.66" y="101.6">
 <attribute name="DIGIKEY" x="200.66" y="101.6" size="1.778" layer="96" display="off"/>
+<attribute name="MPN1" x="200.66" y="101.6" size="1.778" layer="96" display="off"/>
 <attribute name="MPN" x="200.66" y="101.6" size="1.778" layer="96" display="off"/>
 </instance>
 <instance part="C24" gate="G$1" x="208.28" y="101.6">

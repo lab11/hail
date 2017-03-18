@@ -6621,6 +6621,7 @@ This DRC check is for 4-Layer Standard Capability boards to be manufactured thro
 <attribute name="VALUE" x="10.16" y="38.476" size="1.016" layer="27" font="vector" ratio="12" rot="R180" align="bottom-center"/>
 </element>
 <element name="J4" library="connector" package="TC2030-IDC-NL_NOSILK" value="TC2030-JLINK-NL_NOSILK" x="4.826" y="6.985" smashed="yes" rot="R270">
+<attribute name="IGNORE" value="1" x="4.826" y="6.985" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="POPULATE" value="0" x="4.826" y="6.985" size="1.778" layer="27" rot="R270" display="off"/>
 </element>
 <element name="D1" library="leds" package="1MM_SQ_4PAD" value="SML-LX0404SIUPGUSB" x="16.51" y="14.224" smashed="yes" rot="R90">
@@ -6652,10 +6653,12 @@ This DRC check is for 4-Layer Standard Capability boards to be manufactured thro
 </element>
 <element name="J2" library="Particle" package="1X12-CASTELLATED" value="M12PTH-CST-L" x="1.27" y="18.288" smashed="yes" rot="R180">
 <attribute name="DIGIKEY" value="S1011E-12-ND" x="1.27" y="18.288" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="MPN" value="MF-CON-2.54mm-01x12" x="1.27" y="18.288" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="POPULATE" value="0" x="1.27" y="18.288" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
 <element name="J3" library="Particle" package="1X12-CASTELLATED" value="M12PTH-CST-R" x="19.05" y="18.288" smashed="yes">
 <attribute name="DIGIKEY" value="S1011E-12-ND" x="19.05" y="18.288" size="1.778" layer="27" display="off"/>
+<attribute name="MPN" value="MF-CON-2.54mm-01x12" x="19.05" y="18.288" size="1.778" layer="27" display="off"/>
 <attribute name="POPULATE" value="0" x="19.05" y="18.288" size="1.778" layer="27" display="off"/>
 </element>
 <element name="U1" library="chips" package="QFN-20-4MM" value="FT231XQ" x="10.16" y="28.956" smashed="yes" rot="R180">
@@ -6685,6 +6688,7 @@ This DRC check is for 4-Layer Standard Capability boards to be manufactured thro
 <attribute name="VALUE" x="16.383" y="11.557" size="1.016" layer="27" font="vector" ratio="12" align="bottom-center"/>
 </element>
 <element name="J5" library="connector" package="TC2030-IDC-NL_NOSILK" value="TC2030-JLINK-NL_NOSILK" x="4.826" y="6.985" smashed="yes" rot="MR270">
+<attribute name="IGNORE" value="1" x="4.826" y="6.985" size="1.778" layer="28" rot="MR270" display="off"/>
 <attribute name="POPULATE" value="0" x="4.826" y="6.985" size="1.778" layer="28" rot="MR270" display="off"/>
 <attribute name="VALUE" x="8.3185" y="6.985" size="1.016" layer="28" font="vector" ratio="12" rot="MR270" align="bottom-center"/>
 </element>
@@ -6705,7 +6709,8 @@ This DRC check is for 4-Layer Standard Capability boards to be manufactured thro
 </element>
 <element name="C10" library="passives" package="0402_CAP" value="100nF" x="14.478" y="2.413" smashed="yes">
 <attribute name="DIGIKEY" value="490-10777-1-ND" x="14.478" y="2.413" size="1.778" layer="27" display="off"/>
-<attribute name="MPN" value="GRM155R71A104JA01D" x="14.478" y="2.413" size="1.778" layer="27" display="off"/>
+<attribute name="MPN" value="MF-CAP-0402-0.1uF" x="14.478" y="2.413" size="1.778" layer="27" display="off"/>
+<attribute name="MPN1" value="GRM155R71A104JA01D" x="14.478" y="2.413" size="1.778" layer="27" display="off"/>
 <attribute name="NAME" x="14.4526" y="2.6924" size="0.508" layer="25" font="vector" ratio="18" align="bottom-center"/>
 </element>
 <element name="C9" library="passives" package="0402_CAP" value="47nF" x="9.144" y="8.255" smashed="yes" rot="R180">
@@ -6715,17 +6720,20 @@ This DRC check is for 4-Layer Standard Capability boards to be manufactured thro
 </element>
 <element name="C6" library="passives" package="0402_CAP" value="1nF" x="10.033" y="3.2004" smashed="yes" rot="R270">
 <attribute name="DIGIKEY" value="490-1303-1-ND" x="10.033" y="3.2004" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="MPN" value="GRM155R71H102KA01D" x="10.033" y="3.2004" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="MPN" value="MF-CAP-0402-1nF" x="10.033" y="3.2004" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="MPN1" value="GRM155R71H102KA01D" x="10.033" y="3.2004" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="NAME" x="9.144" y="3.2004" size="0.508" layer="25" font="vector" ratio="18" rot="R270" align="bottom-center"/>
 </element>
 <element name="C11" library="passives" package="0402_CAP" value="100nF" x="16.2306" y="2.413" smashed="yes" rot="R180">
 <attribute name="DIGIKEY" value="490-10777-1-ND" x="16.2306" y="2.413" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="MPN" value="GRM155R71A104JA01D" x="16.2306" y="2.413" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="MPN" value="MF-CAP-0402-0.1uF" x="16.2306" y="2.413" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="MPN1" value="GRM155R71A104JA01D" x="16.2306" y="2.413" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="NAME" x="16.256" y="3.2004" size="0.508" layer="25" font="vector" ratio="18" rot="R180" align="bottom-center"/>
 </element>
 <element name="C12" library="passives" package="0402_CAP" value="100nF" x="17.2974" y="10.5664" smashed="yes" rot="R180">
 <attribute name="DIGIKEY" value="490-10777-1-ND" x="17.2974" y="10.5664" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="MPN" value="GRM155R71A104JA01D" x="17.2974" y="10.5664" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="MPN" value="MF-CAP-0402-0.1uF" x="17.2974" y="10.5664" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="MPN1" value="GRM155R71A104JA01D" x="17.2974" y="10.5664" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="NAME" x="19.0246" y="10.922" size="0.508" layer="25" font="vector" ratio="18" rot="R180" align="bottom-center"/>
 </element>
 <element name="R4" library="passives" package="0402_RES" value="1k" x="10.033" y="9.779" smashed="yes" rot="R90">
@@ -6762,7 +6770,8 @@ This DRC check is for 4-Layer Standard Capability boards to be manufactured thro
 </element>
 <element name="C8" library="passives" package="0402_CAP" value="10nF" x="4.191" y="32.131" smashed="yes">
 <attribute name="DIGIKEY" value="490-7763-1-ND" x="4.191" y="32.131" size="1.778" layer="27" display="off"/>
-<attribute name="MPN" value="GRM155R71H103JA88D" x="4.191" y="32.131" size="1.778" layer="27" display="off"/>
+<attribute name="MPN" value="MF-CAP-0402-0.01uF" x="4.191" y="32.131" size="1.778" layer="27" display="off"/>
+<attribute name="MPN1" value="GRM155R71H103JA88D" x="4.191" y="32.131" size="1.778" layer="27" display="off"/>
 <attribute name="NAME" x="5.1816" y="32.3342" size="0.508" layer="25" font="vector" ratio="18" rot="R270" align="bottom-center"/>
 </element>
 <element name="C24" library="passives" package="0402_CAP" value="4.7uF" x="4.064" y="27.813" smashed="yes">
@@ -6772,13 +6781,15 @@ This DRC check is for 4-Layer Standard Capability boards to be manufactured thro
 </element>
 <element name="R11" library="passives" package="0402_RES" value="100k" x="6.7056" y="10.9474" smashed="yes" rot="R90">
 <attribute name="DIGIKEY" value="1276-3432-1-ND" x="-6.5024" y="0.2794" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="MPN" value="RC1005F104CS" x="6.7056" y="10.9474" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="MPN" value="MF-RES-0402-100K" x="6.7056" y="10.9474" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="MPN1" value="RC1005F104CS" x="6.7056" y="10.9474" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="NAME" x="6.2484" y="10.4648" size="0.508" layer="25" font="vector" ratio="18" rot="R90" align="bottom-center"/>
 <attribute name="VALUE" x="8.1026" y="10.9474" size="1.016" layer="27" font="vector" ratio="12" rot="R90" align="bottom-center"/>
 </element>
 <element name="R12" library="passives" package="0402_RES" value="100k" x="7.7216" y="10.9474" smashed="yes" rot="R90">
 <attribute name="DIGIKEY" value="1276-3432-1-ND" x="-1.6764" y="-5.0546" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="MPN" value="RC1005F104CS" x="7.7216" y="10.9474" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="MPN" value="MF-RES-0402-100K" x="7.7216" y="10.9474" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="MPN1" value="RC1005F104CS" x="7.7216" y="10.9474" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="NAME" x="8.5598" y="9.6774" size="0.508" layer="25" font="vector" ratio="18" rot="R90" align="bottom-center"/>
 <attribute name="VALUE" x="9.1186" y="10.9474" size="1.016" layer="27" font="vector" ratio="12" rot="R90" align="bottom-center"/>
 </element>
@@ -6789,19 +6800,22 @@ This DRC check is for 4-Layer Standard Capability boards to be manufactured thro
 </element>
 <element name="R7" library="passives" package="0402_RES" value="10k" x="3.81" y="16.637" smashed="yes" rot="R90">
 <attribute name="DIGIKEY" value="1276-3431-1-ND" x="3.81" y="16.637" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="MPN" value="RC1005F103CS" x="3.81" y="16.637" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="MPN" value="MF-RES-0402-10K" x="3.81" y="16.637" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="MPN1" value="RC1005F103CS" x="3.81" y="16.637" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="NAME" x="4.0386" y="15.2654" size="0.508" layer="25" font="vector" ratio="18" rot="R90" align="bottom-center"/>
 <attribute name="VALUE" x="5.207" y="16.637" size="1.016" layer="27" font="vector" ratio="12" rot="R90" align="bottom-center"/>
 </element>
 <element name="R8" library="passives" package="0402_RES" value="10k" x="2.794" y="25.908" smashed="yes">
 <attribute name="DIGIKEY" value="1276-3431-1-ND" x="2.794" y="25.908" size="1.778" layer="27" display="off"/>
-<attribute name="MPN" value="RC1005F103CS" x="2.794" y="25.908" size="1.778" layer="27" display="off"/>
+<attribute name="MPN" value="MF-RES-0402-10K" x="2.794" y="25.908" size="1.778" layer="27" display="off"/>
+<attribute name="MPN1" value="RC1005F103CS" x="2.794" y="25.908" size="1.778" layer="27" display="off"/>
 <attribute name="NAME" x="1.3716" y="26.162" size="0.508" layer="25" font="vector" ratio="18" rot="R180" align="bottom-center"/>
 <attribute name="VALUE" x="2.794" y="24.511" size="1.016" layer="27" font="vector" ratio="12" align="bottom-center"/>
 </element>
 <element name="C13" library="passives" package="0402_CAP" value="100nF" x="8.509" y="25.527" smashed="yes" rot="R180">
 <attribute name="DIGIKEY" value="490-10777-1-ND" x="8.509" y="25.527" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="MPN" value="GRM155R71A104JA01D" x="8.509" y="25.527" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="MPN" value="MF-CAP-0402-0.1uF" x="8.509" y="25.527" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="MPN1" value="GRM155R71A104JA01D" x="8.509" y="25.527" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="NAME" x="8.1026" y="26.3906" size="0.508" layer="25" font="vector" ratio="18" rot="R180" align="bottom-center"/>
 </element>
 <element name="U3" library="chips" package="ODFN-6-1.5MMX1.6MM" value="ISL29035" x="4.318" y="12.446" smashed="yes" rot="R90">
@@ -6816,33 +6830,39 @@ This DRC check is for 4-Layer Standard Capability boards to be manufactured thro
 </element>
 <element name="C14" library="passives" package="0402_CAP" value="100nF" x="5.842" y="11.811" smashed="yes" rot="R90">
 <attribute name="DIGIKEY" value="490-10777-1-ND" x="5.842" y="11.811" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="MPN" value="GRM155R71A104JA01D" x="5.842" y="11.811" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="MPN" value="MF-CAP-0402-0.1uF" x="5.842" y="11.811" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="MPN1" value="GRM155R71A104JA01D" x="5.842" y="11.811" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="NAME" x="5.6896" y="10.4394" size="0.508" layer="25" font="vector" ratio="18" rot="R90" align="bottom-center"/>
 </element>
 <element name="R9" library="passives" package="0402_RES" value="10k" x="4.4958" y="14.224" smashed="yes">
 <attribute name="DIGIKEY" value="1276-3431-1-ND" x="4.4958" y="14.224" size="1.778" layer="27" display="off"/>
-<attribute name="MPN" value="RC1005F103CS" x="4.4958" y="14.224" size="1.778" layer="27" display="off"/>
+<attribute name="MPN" value="MF-RES-0402-10K" x="4.4958" y="14.224" size="1.778" layer="27" display="off"/>
+<attribute name="MPN1" value="RC1005F103CS" x="4.4958" y="14.224" size="1.778" layer="27" display="off"/>
 <attribute name="NAME" x="4.5466" y="13.462" size="0.508" layer="25" font="vector" ratio="18" align="bottom-center"/>
 <attribute name="VALUE" x="4.4958" y="12.827" size="1.016" layer="27" font="vector" ratio="12" align="bottom-center"/>
 </element>
 <element name="C15" library="passives" package="0402_CAP" value="100nF" x="14.986" y="32.766" smashed="yes" rot="R90">
 <attribute name="DIGIKEY" value="490-10777-1-ND" x="14.986" y="32.766" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="MPN" value="GRM155R71A104JA01D" x="14.986" y="32.766" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="MPN" value="MF-CAP-0402-0.1uF" x="14.986" y="32.766" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="MPN1" value="GRM155R71A104JA01D" x="14.986" y="32.766" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="NAME" x="15.4686" y="31.3944" size="0.508" layer="25" font="vector" ratio="18" rot="R90" align="bottom-center"/>
 </element>
 <element name="C16" library="passives" package="0402_CAP" value="100nF" x="12.954" y="30.734" smashed="yes" rot="R90">
 <attribute name="DIGIKEY" value="490-10777-1-ND" x="12.954" y="30.734" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="MPN" value="GRM155R71A104JA01D" x="12.954" y="30.734" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="MPN" value="MF-CAP-0402-0.1uF" x="12.954" y="30.734" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="MPN1" value="GRM155R71A104JA01D" x="12.954" y="30.734" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="NAME" x="13.1064" y="29.337" size="0.508" layer="25" font="vector" ratio="18" rot="R90" align="bottom-center"/>
 </element>
 <element name="C17" library="passives" package="0402_CAP" value="100nF" x="15.875" y="32.766" smashed="yes" rot="R90">
 <attribute name="DIGIKEY" value="490-10777-1-ND" x="15.875" y="32.766" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="MPN" value="GRM155R71A104JA01D" x="15.875" y="32.766" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="MPN" value="MF-CAP-0402-0.1uF" x="15.875" y="32.766" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="MPN1" value="GRM155R71A104JA01D" x="15.875" y="32.766" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="NAME" x="16.0528" y="31.3944" size="0.508" layer="25" font="vector" ratio="18" rot="R90" align="bottom-center"/>
 </element>
 <element name="R13" library="passives" package="0402_RES" value="100k" x="16.764" y="32.766" smashed="yes" rot="R270">
 <attribute name="DIGIKEY" value="1276-3432-1-ND" x="16.764" y="32.766" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="MPN" value="RC1005F104CS" x="16.764" y="32.766" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="MPN" value="MF-RES-0402-100K" x="16.764" y="32.766" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="MPN1" value="RC1005F104CS" x="16.764" y="32.766" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="NAME" x="16.637" y="31.4706" size="0.508" layer="25" font="vector" ratio="18" rot="R270" align="bottom-center"/>
 <attribute name="VALUE" x="15.367" y="32.766" size="1.016" layer="27" font="vector" ratio="12" rot="R270" align="bottom-center"/>
 </element>
@@ -6854,22 +6874,26 @@ This DRC check is for 4-Layer Standard Capability boards to be manufactured thro
 </element>
 <element name="C18" library="passives" package="0402_CAP" value="100nF" x="5.08" y="18.288" smashed="yes" rot="R90">
 <attribute name="DIGIKEY" value="490-10777-1-ND" x="5.08" y="19.304" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="MPN" value="GRM155R71A104JA01D" x="5.08" y="18.288" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="MPN" value="MF-CAP-0402-0.1uF" x="5.08" y="18.288" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="MPN1" value="GRM155R71A104JA01D" x="5.08" y="18.288" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="NAME" x="5.334" y="19.8628" size="0.508" layer="25" font="vector" ratio="18" rot="R90" align="bottom-center"/>
 </element>
 <element name="C19" library="passives" package="0402_CAP" value="100nF" x="9.144" y="12.192" smashed="yes" rot="R180">
 <attribute name="DIGIKEY" value="490-10777-1-ND" x="11.684" y="14.986" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="MPN" value="GRM155R71A104JA01D" x="9.144" y="12.192" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="MPN" value="MF-CAP-0402-0.1uF" x="9.144" y="12.192" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="MPN1" value="GRM155R71A104JA01D" x="9.144" y="12.192" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="NAME" x="9.3218" y="13.0302" size="0.508" layer="25" font="vector" ratio="18" rot="R180" align="bottom-center"/>
 </element>
 <element name="C20" library="passives" package="0402_CAP" value="100nF" x="17.272" y="15.748" smashed="yes">
 <attribute name="DIGIKEY" value="490-10777-1-ND" x="18.288" y="12.954" size="1.778" layer="27" display="off"/>
-<attribute name="MPN" value="GRM155R71A104JA01D" x="17.272" y="15.748" size="1.778" layer="27" display="off"/>
+<attribute name="MPN" value="MF-CAP-0402-0.1uF" x="17.272" y="15.748" size="1.778" layer="27" display="off"/>
+<attribute name="MPN1" value="GRM155R71A104JA01D" x="17.272" y="15.748" size="1.778" layer="27" display="off"/>
 <attribute name="NAME" x="18.8722" y="15.494" size="0.508" layer="25" font="vector" ratio="18" align="bottom-center"/>
 </element>
 <element name="C21" library="passives" package="0402_CAP" value="100nF" x="17.526" y="20.828" smashed="yes">
 <attribute name="DIGIKEY" value="490-10777-1-ND" x="14.986" y="15.24" size="1.778" layer="27" display="off"/>
-<attribute name="MPN" value="GRM155R71A104JA01D" x="17.526" y="20.828" size="1.778" layer="27" display="off"/>
+<attribute name="MPN" value="MF-CAP-0402-0.1uF" x="17.526" y="20.828" size="1.778" layer="27" display="off"/>
+<attribute name="MPN1" value="GRM155R71A104JA01D" x="17.526" y="20.828" size="1.778" layer="27" display="off"/>
 <attribute name="NAME" x="19.0754" y="20.5994" size="0.508" layer="25" font="vector" ratio="18" align="bottom-center"/>
 </element>
 <element name="FB1" library="passives" package="0402_CAP" value="1.5k" x="3.81" y="18.288" smashed="yes" rot="R270">
@@ -6879,7 +6903,8 @@ This DRC check is for 4-Layer Standard Capability boards to be manufactured thro
 </element>
 <element name="C22" library="passives" package="0402_CAP" value="100nF" x="11.43" y="24.638" smashed="yes" rot="R90">
 <attribute name="DIGIKEY" value="490-10777-1-ND" x="19.812" y="25.654" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="MPN" value="GRM155R71A104JA01D" x="11.43" y="24.638" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="MPN" value="MF-CAP-0402-0.1uF" x="11.43" y="24.638" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="MPN1" value="GRM155R71A104JA01D" x="11.43" y="24.638" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="NAME" x="11.0998" y="24.5618" size="0.508" layer="25" font="vector" ratio="18" rot="R90" align="bottom-center"/>
 </element>
 <element name="C25" library="passives" package="0402_CAP" value="4.7uF" x="12.446" y="24.638" smashed="yes" rot="R90">
@@ -6889,7 +6914,8 @@ This DRC check is for 4-Layer Standard Capability boards to be manufactured thro
 </element>
 <element name="R10" library="passives" package="0402_RES" value="10k" x="13.335" y="24.003" smashed="yes" rot="R270">
 <attribute name="DIGIKEY" value="1276-3431-1-ND" x="19.939" y="22.479" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="MPN" value="RC1005F103CS" x="13.335" y="24.003" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="MPN" value="MF-RES-0402-10K" x="13.335" y="24.003" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="MPN1" value="RC1005F103CS" x="13.335" y="24.003" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="NAME" x="13.8684" y="23.6474" size="0.508" layer="25" font="vector" ratio="18" rot="R270" align="bottom-center"/>
 <attribute name="VALUE" x="11.938" y="24.003" size="1.016" layer="27" font="vector" ratio="12" rot="R270" align="bottom-center"/>
 </element>
@@ -6910,14 +6936,17 @@ This DRC check is for 4-Layer Standard Capability boards to be manufactured thro
 <attribute name="VALUE" x="12.748" y="24.892" size="1.016" layer="27" font="vector" ratio="12" rot="R270" align="bottom-center"/>
 </element>
 <element name="U$2" library="Spark" package="PHOTON-TOP-SS" value="" x="0" y="0.508" smashed="yes">
+<attribute name="IGNORE" value="1" x="0" y="0.508" size="1.778" layer="27" display="off"/>
 <attribute name="POPULATE" value="0" x="0" y="0.508" size="1.778" layer="27" display="off"/>
 </element>
 <element name="U$1" library="Spark" package="PHOTON-BOTTOM-SS" value="" x="0" y="0.508">
+<attribute name="IGNORE" value="1" x="0" y="0.508" size="1.778" layer="27" display="off"/>
 <attribute name="POPULATE" value="0" x="0" y="0.508" size="1.778" layer="27" display="off"/>
 </element>
 <element name="LED1" library="leds" package="LED-0603" value="LED0603" x="16.6116" y="1.0668" smashed="yes" rot="R270">
 <attribute name="DIGIKEY" value="160-1837-6-ND" x="16.6116" y="1.0668" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="MPN" value="LTST-C194TBKT" x="16.6116" y="1.0668" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="MPN" value="MF-LED-0603-GREEN" x="16.6116" y="1.0668" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="MPN1" value="LTST-C194TBKT" x="16.6116" y="1.0668" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="NAME" x="16.4592" y="1.5367" size="0.508" layer="25" font="vector" ratio="18" align="bottom-center"/>
 <attribute name="VALUE" x="16.6116" y="0.2413" size="1.016" layer="27" font="vector" ratio="12" align="top-center"/>
 </element>
@@ -6929,66 +6958,79 @@ This DRC check is for 4-Layer Standard Capability boards to be manufactured thro
 <attribute name="VALUE" x="16.9672" y="1.6002" size="1.016" layer="27" font="vector" ratio="12" rot="R270" align="bottom-center"/>
 </element>
 <element name="TP8" library="testpad" package="B1,27" value="TPB1,27" x="13.9954" y="24.4602" smashed="yes" rot="MR0">
+<attribute name="IGNORE" value="1" x="13.9954" y="24.4602" size="1.778" layer="28" rot="MR0" display="off"/>
 <attribute name="POPULATE" value="0" x="13.9954" y="24.4602" size="1.778" layer="28" rot="MR0" display="off"/>
 <attribute name="TP_SIGNAL_NAME" value="" x="14.6304" y="22.5552" size="1" layer="38" rot="MR0"/>
 <attribute name="VALUE" x="14.6304" y="23.6982" size="0.0254" layer="28" rot="MR0"/>
 </element>
 <element name="TP9" library="testpad" package="B1,27" value="TPB1,27" x="15.0876" y="27.4066" smashed="yes" rot="MR0">
+<attribute name="IGNORE" value="1" x="15.0876" y="27.4066" size="1.778" layer="28" rot="MR0" display="off"/>
 <attribute name="POPULATE" value="0" x="15.0876" y="27.4066" size="1.778" layer="28" rot="MR0" display="off"/>
 <attribute name="TP_SIGNAL_NAME" value="" x="15.7226" y="25.5016" size="1" layer="38" rot="MR0"/>
 <attribute name="VALUE" x="15.7226" y="26.6446" size="0.0254" layer="28" rot="MR0"/>
 </element>
 <element name="TP10" library="testpad" package="B1,27" value="TPB1,27" x="8.636" y="14.1732" smashed="yes" rot="MR0">
+<attribute name="IGNORE" value="1" x="8.636" y="14.1732" size="1.778" layer="28" rot="MR0" display="off"/>
 <attribute name="POPULATE" value="0" x="8.636" y="14.1732" size="1.778" layer="28" rot="MR0" display="off"/>
 <attribute name="TP_SIGNAL_NAME" value="" x="9.271" y="12.2682" size="1" layer="38" rot="MR0"/>
 <attribute name="VALUE" x="9.271" y="13.4112" size="0.0254" layer="28" rot="MR0"/>
 </element>
 <element name="TP11" library="testpad" package="B1,27" value="TPB1,27" x="9.3472" y="24.2316" smashed="yes" rot="MR0">
+<attribute name="IGNORE" value="1" x="9.3472" y="24.2316" size="1.778" layer="28" rot="MR0" display="off"/>
 <attribute name="POPULATE" value="0" x="9.3472" y="24.2316" size="1.778" layer="28" rot="MR0" display="off"/>
 <attribute name="TP_SIGNAL_NAME" value="" x="9.9822" y="22.3266" size="1" layer="38" rot="MR0"/>
 <attribute name="VALUE" x="9.9822" y="23.4696" size="0.0254" layer="28" rot="MR0"/>
 </element>
 <element name="TP6" library="testpad" package="B1,27" value="TPB1,27" x="14.0208" y="32.9946" smashed="yes" rot="MR0">
+<attribute name="IGNORE" value="1" x="14.0208" y="32.9946" size="1.778" layer="28" rot="MR0" display="off"/>
 <attribute name="POPULATE" value="0" x="14.0208" y="32.9946" size="1.778" layer="28" rot="MR0" display="off"/>
 <attribute name="TP_SIGNAL_NAME" value="" x="14.6558" y="31.0896" size="1" layer="38" rot="MR0"/>
 <attribute name="VALUE" x="14.6558" y="32.2326" size="0.0254" layer="28" rot="MR0"/>
 </element>
 <element name="TP7" library="testpad" package="B1,27" value="TPB1,27" x="16.1798" y="33.147" smashed="yes" rot="MR0">
+<attribute name="IGNORE" value="1" x="16.1798" y="33.147" size="1.778" layer="28" rot="MR0" display="off"/>
 <attribute name="POPULATE" value="0" x="16.1798" y="33.147" size="1.778" layer="28" rot="MR0" display="off"/>
 <attribute name="TP_SIGNAL_NAME" value="" x="16.8148" y="31.242" size="1" layer="38" rot="MR0"/>
 <attribute name="VALUE" x="16.8148" y="32.385" size="0.0254" layer="28" rot="MR0"/>
 </element>
 <element name="TP1" library="testpad" package="B1,27" value="TPB1,27" x="6.5532" y="21.463" smashed="yes" rot="MR0">
+<attribute name="IGNORE" value="1" x="6.5532" y="21.463" size="1.778" layer="28" rot="MR0" display="off"/>
 <attribute name="POPULATE" value="0" x="6.5532" y="21.463" size="1.778" layer="28" rot="MR0" display="off"/>
 <attribute name="TP_SIGNAL_NAME" value="" x="7.1882" y="19.558" size="1" layer="38" rot="MR0"/>
 <attribute name="VALUE" x="7.1882" y="20.701" size="0.0254" layer="28" rot="MR0"/>
 </element>
 <element name="TP2" library="testpad" package="B1,27" value="TPB1,27" x="6.8072" y="19.177" smashed="yes" rot="MR0">
+<attribute name="IGNORE" value="1" x="6.8072" y="19.177" size="1.778" layer="28" rot="MR0" display="off"/>
 <attribute name="POPULATE" value="0" x="6.8072" y="19.177" size="1.778" layer="28" rot="MR0" display="off"/>
 <attribute name="TP_SIGNAL_NAME" value="" x="7.4422" y="17.272" size="1" layer="38" rot="MR0"/>
 <attribute name="VALUE" x="7.4422" y="18.415" size="0.0254" layer="28" rot="MR0"/>
 </element>
 <element name="TP3" library="testpad" package="B1,27" value="TPB1,27" x="14.5288" y="14.351" smashed="yes" rot="MR0">
+<attribute name="IGNORE" value="1" x="14.5288" y="14.351" size="1.778" layer="28" rot="MR0" display="off"/>
 <attribute name="POPULATE" value="0" x="14.5288" y="14.351" size="1.778" layer="28" rot="MR0" display="off"/>
 <attribute name="TP_SIGNAL_NAME" value="" x="15.1638" y="12.446" size="1" layer="38" rot="MR0"/>
 <attribute name="VALUE" x="15.1638" y="13.589" size="0.0254" layer="28" rot="MR0"/>
 </element>
 <element name="TP4" library="testpad" package="B1,27" value="TPB1,27" x="13.1572" y="13.8684" smashed="yes" rot="MR0">
+<attribute name="IGNORE" value="1" x="13.1572" y="13.8684" size="1.778" layer="28" rot="MR0" display="off"/>
 <attribute name="POPULATE" value="0" x="13.1572" y="13.8684" size="1.778" layer="28" rot="MR0" display="off"/>
 <attribute name="TP_SIGNAL_NAME" value="" x="13.7922" y="11.9634" size="1" layer="38" rot="MR0"/>
 <attribute name="VALUE" x="13.7922" y="13.1064" size="0.0254" layer="28" rot="MR0"/>
 </element>
 <element name="TP5" library="testpad" package="B1,27" value="TPB1,27" x="13.081" y="11.5062" smashed="yes" rot="MR0">
+<attribute name="IGNORE" value="1" x="13.081" y="11.5062" size="1.778" layer="28" rot="MR0" display="off"/>
 <attribute name="POPULATE" value="0" x="13.081" y="11.5062" size="1.778" layer="28" rot="MR0" display="off"/>
 <attribute name="TP_SIGNAL_NAME" value="" x="13.716" y="9.6012" size="1" layer="38" rot="MR0"/>
 <attribute name="VALUE" x="13.716" y="10.7442" size="0.0254" layer="28" rot="MR0"/>
 </element>
 <element name="TP12" library="testpad" package="B1,27" value="TPB1,27" x="8.4582" y="28.2702" smashed="yes" rot="MR0">
+<attribute name="IGNORE" value="1" x="8.4582" y="28.2702" size="1.778" layer="28" rot="MR0" display="off"/>
 <attribute name="POPULATE" value="0" x="8.4582" y="28.2702" size="1.778" layer="28" rot="MR0" display="off"/>
 <attribute name="TP_SIGNAL_NAME" value="" x="9.0932" y="26.3652" size="1" layer="38" rot="MR0"/>
 <attribute name="VALUE" x="9.0932" y="27.5082" size="0.0254" layer="28" rot="MR0"/>
 </element>
 <element name="TP13" library="testpad" package="B1,27" value="TPB1,27" x="11.9888" y="24.8666" smashed="yes" rot="MR0">
+<attribute name="IGNORE" value="1" x="11.9888" y="24.8666" size="1.778" layer="28" rot="MR0" display="off"/>
 <attribute name="POPULATE" value="0" x="11.9888" y="24.8666" size="1.778" layer="28" rot="MR0" display="off"/>
 <attribute name="TP_SIGNAL_NAME" value="" x="12.6238" y="22.9616" size="1" layer="38" rot="MR0"/>
 <attribute name="VALUE" x="12.6238" y="24.1046" size="0.0254" layer="28" rot="MR0"/>
@@ -7001,6 +7043,7 @@ This DRC check is for 4-Layer Standard Capability boards to be manufactured thro
 <attribute name="VALUE" x="10.2362" y="24.13" size="1.016" layer="27" font="vector" ratio="12" align="bottom-center"/>
 </element>
 <element name="U$3" library="logos" package="LAB11_SOLID_80MIL" value="" x="8.128" y="23.114">
+<attribute name="IGNORE" value="1" x="8.128" y="23.114" size="1.778" layer="27" display="off"/>
 <attribute name="POPULATE" value="0" x="8.128" y="23.114" size="1.778" layer="27" display="off"/>
 </element>
 </elements>
