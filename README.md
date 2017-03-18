@@ -1,9 +1,7 @@
 Hail
 ====
 
-<img src="media/hail_reva_noheaders_1000x536.jpg" width="30%">
-<img src="media/hail_breadboard_1000x859.jpg" width="30%">
-<img src="media/hail_reva_noheaders_labeled.png" width="30%">
+<img src="media/hail_reva_noheaders_1000x536.jpg" width="30%"><img src="media/hail_breadboard_1000x859.jpg" width="30%"><img src="media/hail_reva_noheaders_labeled.png" width="30%">
 
 Hail is an IoT development module that runs the
 [Tock](https://github.com/helena-project/tock) operating system.
