@@ -3,13 +3,20 @@ Commissioning
 
 This folder contains resources for setting up new Hail boards.
 
+Commissioning Overview
+----------------------
+
+The commissioning process covers a few things:
+
+1. Set the FTDI device name and serial number.
+2. Flashes the boatloader on to the SAM4L.
+3. Sets the `board` and `id` attributes in the flash of the SAM4L.
+4. Flashes the `hail` TockOS kernel on the SAM4L.
+5. Flashes the "hail" app on the SAM4L.
+6. Flashes the serialization code on the nRF51822 and programs the ID.
+
 Initial software installation
 -----------------------------
-
-The `commission_new_hail.sh` script sets the FTDI device name, flashes the
-bootloader on the SAM4L, and loads the BLE serialization code onto the
-nRF51822. The script also sets the BLE address for the device, which is also
-written as the device serial number to the FTDI chip.
 
 To initialize a Hail board:
 
