@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="8.0.2">
+<eagle version="8.1.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -23,7 +23,7 @@
 <layer number="13" name="Route13" color="4" fill="5" visible="no" active="no"/>
 <layer number="14" name="Route14" color="1" fill="6" visible="no" active="no"/>
 <layer number="15" name="Route15" color="4" fill="6" visible="no" active="no"/>
-<layer number="16" name="Bottom" color="1" fill="1" visible="no" active="yes"/>
+<layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
 <layer number="17" name="Pads" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="18" name="Vias" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="19" name="Unrouted" color="6" fill="1" visible="yes" active="yes"/>
@@ -197,7 +197,7 @@
 <text x="27.432" y="4.318" size="1.016" layer="21" font="vector" ratio="12" align="center-right">D0</text>
 <text x="34.29" y="-0.254" size="1.27" layer="21" font="vector" ratio="12" align="bottom-center">RESET</text>
 <text x="28.702" y="-12.954" size="1.016" layer="21" font="vector" ratio="12">Brad Campbell
-2017-03-13</text>
+2017-03-18</text>
 <text x="16.256" y="38.354" size="1.778" layer="21" font="vector" ratio="12" align="bottom-center">Hail Debug Board</text>
 <text x="30.734" y="-20.574" size="1.016" layer="21" font="vector" ratio="12" align="bottom-center">A</text>
 <wire x1="29.972" y1="-20.828" x2="31.242" y2="-20.828" width="0.254" layer="21"/>
@@ -1616,12 +1616,14 @@ This Sunstone Circuits 2 Layer .DRU has been set to cover our minimum requiremen
 <approved hash="4,1,e953b823bd82d6c6"/>
 <approved hash="4,1,18b53715f5f830dd"/>
 <approved hash="4,1,ea9fb0c7b262d7f6"/>
-<approved hash="4,1,b0bcf05a824b4b7a"/>
-<approved hash="4,1,b6cb406c767e7b0a"/>
 <approved hash="4,1,7a3eb329cee6a88e"/>
 <approved hash="4,1,4bc86f607f568685"/>
+<approved hash="4,1,b0bcf05a824b4b7a"/>
+<approved hash="4,1,b6cb406c767e7b0a"/>
 <approved hash="4,1,43adb7cdf315a219"/>
 <approved hash="4,1,a4bcf181b1407141"/>
+<approved hash="4,1,40bdd76f9e569375"/>
+<approved hash="4,1,497b283b7bb28003"/>
 </errors>
 </board>
 </drawing>
