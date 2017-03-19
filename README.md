@@ -16,6 +16,8 @@ Its features:
 - USB Programming
 - Particle [Photon](https://www.particle.io/products/hardware/photon-wifi-dev-kit) Form-Factor and Pinout
 
+**[Buy Now!](https://www.tockos.org/hardware/)**
+
 
 Hail + Tock
 -----------
