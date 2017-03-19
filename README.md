@@ -38,12 +38,10 @@ Commissioning New Hail Boards
 There a couple steps to provision a newly populated Hail board.
 See the [commissioning](commissioning) folder for more information.
 
-Programming the nRF51822
-------------------------
+nRF51822 BLE Radio
+------------------
 
-The nRF51822 BLE radio on Hail can be programmed over JTAG with various
-applications, which are located in [nrf-software](nrf-software). By default,
-the nRF51822 is commissioned with the
+By default, the nRF51822 is commissioned with the
 [serialization](https://github.com/helena-project/tock-nrf-serialization)
 application which allows softdevice commands to be sent over a UART connection
 from the SAM4L.

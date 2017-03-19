@@ -1,6 +1,3 @@
-[submodule "nrf-software/nrf5x-base"]
-	path = nrf-software/nrf5x-base
-	url = https://github.com/lab11/nrf5x-base.git
 [submodule "commissioning/tock-nrf-serialization"]
 	path = commissioning/tock-nrf-serialization
 	url = https://github.com/helena-project/tock-nrf-serialization
