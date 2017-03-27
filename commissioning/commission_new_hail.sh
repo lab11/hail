@@ -36,12 +36,6 @@ echo "Flashing the bootloader using JTAG..."
 tockloader flash hail_bootloader.bin --address 0 --jtag-device ATSAM4LC8C --arch cortex-m4 --board hail --jtag
 echo "done"
 
-echo "Setting the correct board attribute..."
-tockloader set-attribute --jtag --jtag-device ATSAM4LC8C --arch cortex-m4 --board hail board hail
-tockloader set-attribute --jtag --jtag-device ATSAM4LC8C --arch cortex-m4 --board hail arch cortex-m4
-tockloader set-attribute --jtag --jtag-device ATSAM4LC8C --arch cortex-m4 --board hail jldevice ATSAM4LC8C
-echo "done"
-
 echo "Setting the id attribute..."
 tockloader set-attribute --jtag id $idnocolon
 echo "done"
