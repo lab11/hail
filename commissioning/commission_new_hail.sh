@@ -45,15 +45,14 @@ git submodule update --init --recursive tock
 
 echo "Flashing the hail kernel"
 pushd tock/boards/hail
-make
-tockloader flash target/sam4l/release/hail.bin --address 0x10000 --jtag --board hail
+make flash
 popd
 echo "done"
 
 echo "Flashing the hail app"
 pushd tock/userland/examples/tests/hail
 make
-tockloader install --jtag --board hail
+tockloader install --jtag --erase
 popd
 echo "done"
 
