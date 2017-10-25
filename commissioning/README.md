@@ -18,7 +18,12 @@ The commissioning process covers a few things:
 Initial software installation
 -----------------------------
 
-**Pre-Requisites:** You need the `libftdi-dev` package (or equivalent).
+### Pre-Requisites:
+
+  - You need the `libftdi-dev` package (or equivalent).
+  - [JLinkExe](https://www.segger.com/downloads/jlink#J-LinkSoftwareAndDocumentationPack)
+
+-------------
 
 To initialize a Hail board:
 
@@ -40,3 +45,24 @@ The `ftx_prog` executable comes from here:
 https://github.com/richardeoin/ftx-prog.
 It was built for linux amd64, so if the executable doesn't work for you,
 you will have to recompile it for your platform.
+
+
+Troubleshooting
+---------------
+
+### Permissions
+
+    ftdi_usb_open() failed for 0403:6015: inappropriate permissions on device!
+
+You need to add a udev rule for FTDI devices:
+
+    sudo cp udev/99-ftdi.rules /etc/udev/rules.d/
+
+Then unplug and replug attached FTDI devices.
+
+
+### Device not found
+
+    ftdi_usb_open() failed for 0403:6015: device not found
+
+This seems to occasionally happen. Just run the script again.
