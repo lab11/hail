@@ -46,6 +46,19 @@ https://github.com/richardeoin/ftx-prog.
 It was built for linux amd64, so if the executable doesn't work for you,
 you will have to recompile it for your platform.
 
+Testing
+-------
+
+1. Connect Hail to USB
+2. Run `tockloader listen` and verify that code is running
+3. Press the reset button and verify that code restarts
+4. Press the User button and verify that the green led activates
+5. Hold the Hail in your hand and verify that the light and acceleration measurements change
+6. Verify that BLE is transmitting with the name of `Hail` and that the address matches the sticker
+
+For BLE testing, I recommend running
+`sudo stdbuf -oL hcitool lescan --duplicates | grep Hail` in the background.
+
 
 Troubleshooting
 ---------------
