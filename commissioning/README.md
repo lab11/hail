@@ -18,6 +18,8 @@ The commissioning process covers a few things:
 Initial software installation
 -----------------------------
 
+**Pre-Requisites:** You need the `libftdi-dev` package (or equivalent).
+
 To initialize a Hail board:
 
  * Connect USB to the board
