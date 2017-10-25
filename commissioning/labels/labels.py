@@ -87,6 +87,7 @@ label_id_pos_y = 22
 label_id_font  = 7.5
 label_id_letterspacing = -0.7
 label_rotate = False
+label_y_adjust = -3
 
 label_sheet = sg.SVGFigure('612', '792') # 8.5"x11" paper at 72dpi
 labels = []
@@ -99,9 +100,11 @@ for nodeid in ids:
 
 	rawlabel = sg.fromfile(label_svg)
 	rawlabelr = rawlabel.getroot()
+	rawlabelr.moveto(0, label_y_adjust)
 
 	txt = sg.TextElement(label_id_pos_x,
-	                     label_id_pos_y, nodeid,
+	                     label_id_pos_y + label_y_adjust,
+			     nodeid,
 	                     anchor='middle',
 	                     size=label_id_font,
 	                     font='Courier',
