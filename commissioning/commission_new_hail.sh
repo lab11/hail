@@ -17,14 +17,22 @@ idcolon=`echo $1 | sed 's/\(..\)/\1:/g;s/:$//'`
 echo "Configuring this Hail with ID: $1"
 echo ""
 
-echo "Configuring the FTDI with Hail parameters..."
-./ftx_prog --manufacturer Lab11 --product "Hail IoT Module - TockOS" --new-serial-number $idnocolon > /dev/null
-rc=$?;
-if [[ $rc != 22 ]]; then
-	echo "Error programming FTDI"
-	exit 2
+if [[ "$OSTYPE" == "darwin"* ]]; then
+	echo "$(tput bold)WARNING!!"
+	echo
+	echo "Running on OS X, which cannot configure FTDI.$(tput sgr0)"
+	echo
+	read -n1 -r -p "Press any key to skip FTDI or Ctrl-C to quit." key
+else
+	echo "Configuring the FTDI with Hail parameters..."
+	./ftx_prog --manufacturer Lab11 --product "Hail IoT Module - TockOS" --new-serial-number $idnocolon > /dev/null
+	rc=$?;
+	if [[ $rc != 22 ]]; then
+		echo "Error programming FTDI"
+		exit 2
+	fi
+	echo "done"
 fi
-echo "done"
 
 echo ""
 echo "Finished configuring FTDI."
