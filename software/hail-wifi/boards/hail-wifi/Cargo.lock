@@ -1,0 +1,78 @@
+[[package]]
+name = "capsules"
+version = "0.1.0"
+source = "git+https://github.com/tock/tock?branch=uart-receive-terminator#4956b39fa7dc79b715d1b1c48fea035426ed2957"
+dependencies = [
+ "enum_primitive 0.1.0 (git+https://github.com/tock/tock?branch=uart-receive-terminator)",
+ "kernel 0.1.0 (git+https://github.com/tock/tock?branch=uart-receive-terminator)",
+]
+
+[[package]]
+name = "cortexm"
+version = "0.1.0"
+source = "git+https://github.com/tock/tock?branch=uart-receive-terminator#4956b39fa7dc79b715d1b1c48fea035426ed2957"
+dependencies = [
+ "kernel 0.1.0 (git+https://github.com/tock/tock?branch=uart-receive-terminator)",
+]
+
+[[package]]
+name = "cortexm4"
+version = "0.1.0"
+source = "git+https://github.com/tock/tock?branch=uart-receive-terminator#4956b39fa7dc79b715d1b1c48fea035426ed2957"
+dependencies = [
+ "cortexm 0.1.0 (git+https://github.com/tock/tock?branch=uart-receive-terminator)",
+ "kernel 0.1.0 (git+https://github.com/tock/tock?branch=uart-receive-terminator)",
+]
+
+[[package]]
+name = "enum_primitive"
+version = "0.1.0"
+source = "git+https://github.com/tock/tock?branch=uart-receive-terminator#4956b39fa7dc79b715d1b1c48fea035426ed2957"
+
+[[package]]
+name = "hailwifi"
+version = "0.1.0"
+dependencies = [
+ "capsules 0.1.0 (git+https://github.com/tock/tock?branch=uart-receive-terminator)",
+ "cortexm4 0.1.0 (git+https://github.com/tock/tock?branch=uart-receive-terminator)",
+ "kernel 0.1.0 (git+https://github.com/tock/tock?branch=uart-receive-terminator)",
+ "sam4l 0.1.0 (git+https://github.com/tock/tock?branch=uart-receive-terminator)",
+]
+
+[[package]]
+name = "kernel"
+version = "0.1.0"
+source = "git+https://github.com/tock/tock?branch=uart-receive-terminator#4956b39fa7dc79b715d1b1c48fea035426ed2957"
+dependencies = [
+ "tock-cells 0.1.0 (git+https://github.com/tock/tock?branch=uart-receive-terminator)",
+ "tock-registers 0.2.0 (git+https://github.com/tock/tock?branch=uart-receive-terminator)",
+]
+
+[[package]]
+name = "sam4l"
+version = "0.1.0"
+source = "git+https://github.com/tock/tock?branch=uart-receive-terminator#4956b39fa7dc79b715d1b1c48fea035426ed2957"
+dependencies = [
+ "cortexm4 0.1.0 (git+https://github.com/tock/tock?branch=uart-receive-terminator)",
+ "kernel 0.1.0 (git+https://github.com/tock/tock?branch=uart-receive-terminator)",
+]
+
+[[package]]
+name = "tock-cells"
+version = "0.1.0"
+source = "git+https://github.com/tock/tock?branch=uart-receive-terminator#4956b39fa7dc79b715d1b1c48fea035426ed2957"
+
+[[package]]
+name = "tock-registers"
+version = "0.2.0"
+source = "git+https://github.com/tock/tock?branch=uart-receive-terminator#4956b39fa7dc79b715d1b1c48fea035426ed2957"
+
+[metadata]
+"checksum capsules 0.1.0 (git+https://github.com/tock/tock?branch=uart-receive-terminator)" = "<none>"
+"checksum cortexm 0.1.0 (git+https://github.com/tock/tock?branch=uart-receive-terminator)" = "<none>"
+"checksum cortexm4 0.1.0 (git+https://github.com/tock/tock?branch=uart-receive-terminator)" = "<none>"
+"checksum enum_primitive 0.1.0 (git+https://github.com/tock/tock?branch=uart-receive-terminator)" = "<none>"
+"checksum kernel 0.1.0 (git+https://github.com/tock/tock?branch=uart-receive-terminator)" = "<none>"
+"checksum sam4l 0.1.0 (git+https://github.com/tock/tock?branch=uart-receive-terminator)" = "<none>"
+"checksum tock-cells 0.1.0 (git+https://github.com/tock/tock?branch=uart-receive-terminator)" = "<none>"
+"checksum tock-registers 0.2.0 (git+https://github.com/tock/tock?branch=uart-receive-terminator)" = "<none>"
