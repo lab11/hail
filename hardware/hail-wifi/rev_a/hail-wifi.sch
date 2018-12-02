@@ -1354,16 +1354,16 @@ Standard SMD solder jumper. Used to automate production. Two varients : Normally
 <part name="U2" library="SparkFun-PowerIC" deviceset="V_REG_LDO" device="SMD"/>
 <part name="GND1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="GND2" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="C1" library="passives" deviceset="CAPACITOR" device="0603_CAP" value="1uF"/>
-<part name="C2" library="passives" deviceset="CAPACITOR" device="0603_CAP" value="1uF"/>
+<part name="C3" library="passives" deviceset="CAPACITOR" device="0603_CAP" value="1uF"/>
+<part name="C4" library="passives" deviceset="CAPACITOR" device="0603_CAP" value="1uF"/>
 <part name="GND3" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="GND4" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="C3" library="passives" deviceset="CAPACITOR" device="0603_CAP" value="0.1uF"/>
-<part name="C4" library="passives" deviceset="CAPACITOR" device="0603_CAP" value="10uF"/>
+<part name="C1" library="passives" deviceset="CAPACITOR" device="0603_CAP" value="0.1uF"/>
+<part name="C5" library="passives" deviceset="CAPACITOR" device="0603_CAP" value="10uF"/>
 <part name="GND5" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="GND6" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="R1" library="passives" deviceset="RESISTOR" device="0603_RES" value="10k"/>
-<part name="C5" library="passives" deviceset="CAPACITOR" device="0603_CAP" value="0.1uF"/>
+<part name="C2" library="passives" deviceset="CAPACITOR" device="0603_CAP" value="0.1uF"/>
 <part name="GND7" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="R2" library="passives" deviceset="RESISTOR" device="0603_RES" value="10k"/>
 <part name="R3" library="passives" deviceset="RESISTOR" device="0603_RES" value="10k"/>
@@ -1396,16 +1396,16 @@ Standard SMD solder jumper. Used to automate production. Two varients : Normally
 <instance part="U2" gate="G$1" x="147.32" y="182.88"/>
 <instance part="GND1" gate="1" x="134.62" y="167.64"/>
 <instance part="GND2" gate="1" x="154.94" y="93.98"/>
-<instance part="C1" gate="G$1" x="127" y="182.88"/>
-<instance part="C2" gate="G$1" x="162.56" y="182.88"/>
+<instance part="C3" gate="G$1" x="127" y="182.88"/>
+<instance part="C4" gate="G$1" x="162.56" y="182.88"/>
 <instance part="GND3" gate="1" x="127" y="167.64"/>
 <instance part="GND4" gate="1" x="162.56" y="167.64"/>
-<instance part="C3" gate="G$1" x="127" y="132.08"/>
-<instance part="C4" gate="G$1" x="134.62" y="132.08"/>
+<instance part="C1" gate="G$1" x="127" y="132.08"/>
+<instance part="C5" gate="G$1" x="134.62" y="132.08"/>
 <instance part="GND5" gate="1" x="127" y="93.98"/>
 <instance part="GND6" gate="1" x="134.62" y="93.98"/>
 <instance part="R1" gate="G$1" x="142.24" y="132.08" rot="R90"/>
-<instance part="C5" gate="G$1" x="142.24" y="119.38"/>
+<instance part="C2" gate="G$1" x="142.24" y="119.38"/>
 <instance part="GND7" gate="1" x="142.24" y="93.98"/>
 <instance part="R2" gate="G$1" x="200.66" y="144.78" rot="R90"/>
 <instance part="R3" gate="G$1" x="205.74" y="149.86" rot="R90"/>
@@ -1416,7 +1416,7 @@ Standard SMD solder jumper. Used to automate production. Two varients : Normally
 <instance part="+3V1" gate="G$1" x="127" y="142.24"/>
 <instance part="+3V2" gate="G$1" x="213.36" y="160.02"/>
 <instance part="SJ1" gate="1" x="83.82" y="142.24"/>
-<instance part="GND8" gate="1" x="256.54" y="119.38"/>
+<instance part="GND8" gate="1" x="147.32" y="53.34"/>
 <instance part="GND9" gate="1" x="93.98" y="127"/>
 <instance part="GND10" gate="1" x="35.56" y="137.16"/>
 <instance part="R8" gate="G$1" x="215.9" y="101.6" rot="R90"/>
@@ -1426,7 +1426,7 @@ Standard SMD solder jumper. Used to automate production. Two varients : Normally
 <instance part="SJ2" gate="1" x="208.28" y="99.06" smashed="yes" rot="R90">
 <attribute name="NAME" x="205.74" y="96.52" size="1.778" layer="95" rot="R90"/>
 </instance>
-<instance part="JP2" gate="A" x="276.86" y="127"/>
+<instance part="JP2" gate="A" x="157.48" y="60.96"/>
 </instances>
 <busses>
 </busses>
@@ -1447,7 +1447,7 @@ Standard SMD solder jumper. Used to automate production. Two varients : Normally
 <wire x1="137.16" y1="177.8" x2="132.08" y2="177.8" width="0.1524" layer="91"/>
 <wire x1="132.08" y1="177.8" x2="132.08" y2="187.96" width="0.1524" layer="91"/>
 <junction x="132.08" y="187.96"/>
-<pinref part="C1" gate="G$1" pin="1"/>
+<pinref part="C3" gate="G$1" pin="1"/>
 <wire x1="127" y1="185.42" x2="127" y2="187.96" width="0.1524" layer="91"/>
 <junction x="127" y="187.96"/>
 </segment>
@@ -1466,37 +1466,35 @@ Standard SMD solder jumper. Used to automate production. Two varients : Normally
 <pinref part="GND2" gate="1" pin="GND"/>
 </segment>
 <segment>
-<pinref part="C1" gate="G$1" pin="2"/>
+<pinref part="C3" gate="G$1" pin="2"/>
 <wire x1="127" y1="177.8" x2="127" y2="170.18" width="0.1524" layer="91"/>
 <pinref part="GND3" gate="1" pin="GND"/>
 </segment>
 <segment>
-<pinref part="C2" gate="G$1" pin="2"/>
+<pinref part="C4" gate="G$1" pin="2"/>
 <wire x1="162.56" y1="177.8" x2="162.56" y2="170.18" width="0.1524" layer="91"/>
 <pinref part="GND4" gate="1" pin="GND"/>
 </segment>
 <segment>
-<pinref part="C3" gate="G$1" pin="2"/>
+<pinref part="C1" gate="G$1" pin="2"/>
 <wire x1="127" y1="127" x2="127" y2="96.52" width="0.1524" layer="91"/>
 <pinref part="GND5" gate="1" pin="GND"/>
 </segment>
 <segment>
-<pinref part="C4" gate="G$1" pin="2"/>
+<pinref part="C5" gate="G$1" pin="2"/>
 <wire x1="134.62" y1="96.52" x2="134.62" y2="127" width="0.1524" layer="91"/>
 <pinref part="GND6" gate="1" pin="GND"/>
 </segment>
 <segment>
 <pinref part="GND7" gate="1" pin="GND"/>
-<pinref part="C5" gate="G$1" pin="2"/>
+<pinref part="C2" gate="G$1" pin="2"/>
 <wire x1="142.24" y1="96.52" x2="142.24" y2="114.3" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<wire x1="256.54" y1="124.46" x2="259.08" y2="124.46" width="0.1524" layer="91"/>
 <pinref part="GND8" gate="1" pin="GND"/>
-<wire x1="259.08" y1="124.46" x2="264.16" y2="124.46" width="0.1524" layer="91"/>
-<wire x1="256.54" y1="121.92" x2="256.54" y2="124.46" width="0.1524" layer="91"/>
+<wire x1="147.32" y1="55.88" x2="147.32" y2="58.42" width="0.1524" layer="91"/>
 <pinref part="JP2" gate="A" pin="4"/>
-<wire x1="264.16" y1="124.46" x2="274.32" y2="124.46" width="0.1524" layer="91"/>
+<wire x1="147.32" y1="58.42" x2="154.94" y2="58.42" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="U3" gate="G$1" pin="GND@21"/>
@@ -1523,7 +1521,7 @@ Standard SMD solder jumper. Used to automate production. Two varients : Normally
 </net>
 <net name="N$6" class="0">
 <segment>
-<pinref part="C5" gate="G$1" pin="1"/>
+<pinref part="C2" gate="G$1" pin="1"/>
 <pinref part="R1" gate="G$1" pin="1"/>
 <wire x1="142.24" y1="121.92" x2="142.24" y2="124.46" width="0.1524" layer="91"/>
 <pinref part="U1" gate="G$1" pin="EN"/>
@@ -1662,13 +1660,13 @@ Standard SMD solder jumper. Used to automate production. Two varients : Normally
 <pinref part="U1" gate="G$1" pin="3V3"/>
 <wire x1="121.92" y1="137.16" x2="127" y2="137.16" width="0.1524" layer="91"/>
 <label x="121.92" y="137.16" size="1.27" layer="95" rot="R180" xref="yes"/>
-<pinref part="C3" gate="G$1" pin="1"/>
+<pinref part="C1" gate="G$1" pin="1"/>
 <wire x1="127" y1="137.16" x2="134.62" y2="137.16" width="0.1524" layer="91"/>
 <wire x1="134.62" y1="137.16" x2="142.24" y2="137.16" width="0.1524" layer="91"/>
 <wire x1="142.24" y1="137.16" x2="157.48" y2="137.16" width="0.1524" layer="91"/>
 <wire x1="127" y1="134.62" x2="127" y2="137.16" width="0.1524" layer="91"/>
 <junction x="127" y="137.16"/>
-<pinref part="C4" gate="G$1" pin="1"/>
+<pinref part="C5" gate="G$1" pin="1"/>
 <wire x1="134.62" y1="134.62" x2="134.62" y2="137.16" width="0.1524" layer="91"/>
 <junction x="134.62" y="137.16"/>
 <pinref part="R1" gate="G$1" pin="2"/>
@@ -1681,16 +1679,15 @@ Standard SMD solder jumper. Used to automate production. Two varients : Normally
 <pinref part="U2" gate="G$1" pin="OUT"/>
 <wire x1="154.94" y1="187.96" x2="162.56" y2="187.96" width="0.1524" layer="91"/>
 <label x="165.1" y="187.96" size="1.27" layer="95" xref="yes"/>
-<pinref part="C2" gate="G$1" pin="1"/>
+<pinref part="C4" gate="G$1" pin="1"/>
 <wire x1="162.56" y1="187.96" x2="165.1" y2="187.96" width="0.1524" layer="91"/>
 <wire x1="162.56" y1="185.42" x2="162.56" y2="187.96" width="0.1524" layer="91"/>
 <junction x="162.56" y="187.96"/>
 </segment>
 <segment>
-<wire x1="256.54" y1="127" x2="264.16" y2="127" width="0.1524" layer="91"/>
-<label x="256.54" y="127" size="1.27" layer="95" rot="R180" xref="yes"/>
+<label x="147.32" y="60.96" size="1.27" layer="95" rot="R180" xref="yes"/>
 <pinref part="JP2" gate="A" pin="3"/>
-<wire x1="264.16" y1="127" x2="274.32" y2="127" width="0.1524" layer="91"/>
+<wire x1="147.32" y1="60.96" x2="154.94" y2="60.96" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$3" class="0">
@@ -1719,10 +1716,9 @@ Standard SMD solder jumper. Used to automate production. Two varients : Normally
 <label x="154.94" y="124.46" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
-<wire x1="256.54" y1="132.08" x2="264.16" y2="132.08" width="0.1524" layer="91"/>
-<label x="256.54" y="132.08" size="1.27" layer="95" rot="R180" xref="yes"/>
+<label x="147.32" y="66.04" size="1.27" layer="95" rot="R180" xref="yes"/>
 <pinref part="JP2" gate="A" pin="1"/>
-<wire x1="264.16" y1="132.08" x2="274.32" y2="132.08" width="0.1524" layer="91"/>
+<wire x1="147.32" y1="66.04" x2="154.94" y2="66.04" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="TX" class="0">
@@ -1732,10 +1728,9 @@ Standard SMD solder jumper. Used to automate production. Two varients : Normally
 <label x="154.94" y="127" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
-<wire x1="256.54" y1="129.54" x2="264.16" y2="129.54" width="0.1524" layer="91"/>
-<label x="256.54" y="129.54" size="1.27" layer="95" rot="R180" xref="yes"/>
+<label x="147.32" y="63.5" size="1.27" layer="95" rot="R180" xref="yes"/>
 <pinref part="JP2" gate="A" pin="2"/>
-<wire x1="264.16" y1="129.54" x2="274.32" y2="129.54" width="0.1524" layer="91"/>
+<wire x1="147.32" y1="63.5" x2="154.94" y2="63.5" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$10" class="0">
