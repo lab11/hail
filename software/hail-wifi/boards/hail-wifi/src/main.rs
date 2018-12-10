@@ -5,7 +5,7 @@
 
 #![no_std]
 #![no_main]
-#![feature(panic_implementation)]
+#![feature(in_band_lifetimes)]
 #![deny(missing_docs)]
 
 extern crate capsules;
@@ -26,6 +26,9 @@ use kernel::hil::rng::Rng;
 use kernel::hil::spi::SpiMaster;
 use kernel::hil::Controller;
 use kernel::Platform;
+
+mod at_commands_driver;
+mod uart_receive_until_terminator;
 
 /// Support routines for debugging I/O.
 ///
@@ -81,8 +84,9 @@ struct Hail {
     ipc: kernel::ipc::IPC,
     crc: &'static capsules::crc::Crc<'static, sam4l::crccu::Crccu<'static>>,
     dac: &'static capsules::dac::Dac<'static>,
-    at: &'static capsules::at_commands_driver::AtCommands<'static,
-    capsules::uart_receive_until_terminator::UartTerminatorReceiver<'static, sam4l::usart::USART>>,
+    // at: &'static at_commands_driver::AtCommands<'static,
+    // uart_receive_until_terminator::UartTerminatorReceiver<'static, sam4l::usart::USART>>,
+    at: &'static at_commands_driver::AtCommands<'static, sam4l::usart::USART>,
 }
 
 /// Mapping of integer syscalls to objects that implement syscalls.
@@ -111,7 +115,7 @@ impl Platform for Hail {
             capsules::crc::DRIVER_NUM => f(Some(self.crc)),
 
             capsules::dac::DRIVER_NUM => f(Some(self.dac)),
-            capsules::at_commands_driver::DRIVER_NUM => f(Some(self.at)),
+            at_commands_driver::DRIVER_NUM => f(Some(self.at)),
 
             kernel::ipc::DRIVER_NUM => f(Some(&self.ipc)),
             _ => f(None),
@@ -547,22 +551,25 @@ pub unsafe fn reset_handler() {
     // terminator functionality. This is needed for the AT commands which
     // can return an arbitrary amount of data until a terminator command
     // is received.
-    let uart_recv_terminator = static_init!(
-        capsules::uart_receive_until_terminator::UartTerminatorReceiver<'static, sam4l::usart::USART>,
-        capsules::uart_receive_until_terminator::UartTerminatorReceiver::new(
-            &sam4l::usart::USART2)
-        );
+    // let uart_recv_terminator = static_init!(
+    //     uart_receive_until_terminator::UartTerminatorReceiver<'static, sam4l::usart::USART>,
+    //     uart_receive_until_terminator::UartTerminatorReceiver::new(
+    //         &sam4l::usart::USART2)
+    //     );
+    // hil::uart::UART::set_client(&sam4l::usart::USART2, uart_recv_terminator);
 
     // Next we create the AT command driver that the userland app will use.
     let at_driver = static_init!(
-        capsules::at_commands_driver::AtCommands<'static, capsules::uart_receive_until_terminator::UartTerminatorReceiver<'static, sam4l::usart::USART>>,
-        capsules::at_commands_driver::AtCommands::new(
-            uart_recv_terminator,
-            &mut capsules::at_commands_driver::TX_BUF,
-            &mut capsules::at_commands_driver::RX_BUF,
+        // at_commands_driver::AtCommands<'static, uart_receive_until_terminator::UartTerminatorReceiver<'static, sam4l::usart::USART>>,
+        at_commands_driver::AtCommands<'static, sam4l::usart::USART>,
+        at_commands_driver::AtCommands::new(
+            &sam4l::usart::USART2,
+            &mut at_commands_driver::TX_BUF,
+            &mut at_commands_driver::RX_BUF,
             board_kernel.create_grant(&memory_allocation_capability)
         )
-        );
+    );
+    hil::uart::UART::set_client(&sam4l::usart::USART2, at_driver);
 
 
     // // DEBUG Restart All Apps

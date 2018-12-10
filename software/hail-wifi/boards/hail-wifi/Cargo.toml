@@ -17,7 +17,11 @@ opt-level = "z"
 debug = true
 
 [dependencies]
-cortexm4 = { git = "https://github.com/tock/tock", branch = "uart-receive-terminator" }
-capsules = { git = "https://github.com/tock/tock", branch = "uart-receive-terminator" }
-kernel = { git = "https://github.com/tock/tock", branch = "uart-receive-terminator" }
-sam4l = { git = "https://github.com/tock/tock", branch = "uart-receive-terminator" }
+#cortexm4 = { git = "https://github.com/tock/tock", branch = "uart-receive-terminator" }
+#capsules = { git = "https://github.com/tock/tock", branch = "uart-receive-terminator" }
+#kernel = { git = "https://github.com/tock/tock", branch = "uart-receive-terminator" }
+#sam4l = { git = "https://github.com/tock/tock", branch = "uart-receive-terminator" }
+cortexm4 = { path = "../../../../../tock/arch/cortex-m4" }
+capsules = { path = "../../../../../tock/capsules" }
+kernel = { path = "../../../../../tock/kernel" }
+sam4l = { path = "../../../../../tock/chips/sam4l" }
